@@ -1,4 +1,4 @@
-import http from "./httpService";
+//import http from "./httpService";
 import { apiUrl } from "../config.json";
 
 const routeQueryEndpoint = apiUrl + "/route";
@@ -32,10 +32,16 @@ export function getRouteInfo(start, destination) {
 }
 
 // this is  POST REST request
-export function registerUser(routeQuery) {
+export function getRouteData(routeQuery) {
   // return http.post(routeQueryEndpoint, {
   //   currRouteStart: routeQuery.start,
   //   currRouteDest: routeQuery.destination,
   //   routeInfo: routeQuery.routeInfo
   // });
+
+
+  //public RouteQuery(String currRouteStart, String currRouteDest, String routeInfo, boolean successfulLastSearch) {
+
+
+
 }

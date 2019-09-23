@@ -21,6 +21,7 @@ react-routeplanner-app
 - db: new_routeplanner_shopping
  - create table user (id bigint, active boolean, password varchar(50), roles varchar(50), user_name varchar(50) );
  - insert into user values (1, 1, 'pass', 'ROLE_USER', 'user'); 
+ - insert into user values (2, 1, 'pass', 'ROLE_ADMIN', 'admin');
  
 ------------------------------------------------------------
 
@@ -57,7 +58,6 @@ HttpSession sess = request.getSession();
     	
     	
  Shopping
- --> user
  --> basket
      --> ticketList
      --> open

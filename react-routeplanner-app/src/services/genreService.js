@@ -1,9 +1,9 @@
-import http from "./httpService";
+// import http from "./httpService";
 
-// note destructuring here...
-//import config from "../config.json";
-import { apiUrl } from "../config.json";
+// // note destructuring here...
+// //import config from "../config.json";
+// import { apiUrl } from "../config.json";
 
-export function getGenres() {
-  return http.get(apiUrl + "/genres");
-}
+// export function getGenres() {
+//   return http.get(apiUrl + "/genres");
+// }

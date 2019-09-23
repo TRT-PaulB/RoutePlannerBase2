@@ -15,8 +15,15 @@ class RoutePlanner extends Form {
     },
     stations: [],
     successfulLastSearch: false,
-    routeInfo: "",
-    errors: {}
+    routeQuery: {
+      currRouteStart: "init",
+      currRouteDest: "init",
+      routeInfo: "init"
+    },
+    errors: {},
+    home: {
+      test1: "init"
+    }
   };
 
   schema = {
@@ -26,16 +33,67 @@ class RoutePlanner extends Form {
       .label("Start"),
     destination: Joi.string()
       .required()
-      .label("Destination")
+      .label("Destination"),
   };
 
   async componentDidMount() {
     this.populateStations();
+    this.getTest();
+
+    
   }
 
   async populateStations() {
     this.setState({ stations: getStations() });
   }
+
+
+
+
+  // GET TEST:  poc only, obviously only call setState() once...
+  async getTest() {
+    fetch('/home')
+      .then(response => response.json())
+      .then(data => this.setState({home: data}));
+
+
+      // :movieId?/:movieId?
+      fetch('/route/start1/destination1')
+      .then(response => response.json())
+      .then(data => this.setState({routeQuery: data}));
+
+      
+
+
+
+  }
+
+  // REMOVE
+  // async remove(id) {
+  //   await fetch(`/api/group/${id}`, {
+  //     method: 'DELETE',
+  //     headers: {
+  //       'Accept': 'application/json',
+  //       'Content-Type': 'application/json'
+  //     }
+  //   }).then(() => {
+  //     let updatedGroups = [...this.state.groups].filter(i => i.id !== id);
+  //     this.setState({groups: updatedGroups});
+  //   });
+  // }
+
+  // POST / PUT [+ change window]
+  // await fetch('/api/group', {
+  //   method: (item.id) ? 'PUT' : 'POST',
+  //   headers: {
+  //     'Accept': 'application/json',
+  //     'Content-Type': 'application/json'
+  //   },
+  //   body: JSON.stringify(item),
+  // });
+  // this.props.history.push('/groups');
+
+
 
   populateRouteQuery(start, destination) {
     const routeData = getRouteInfo(start, destination);
@@ -82,6 +140,15 @@ class RoutePlanner extends Form {
   render() {
     const { match, history } = this.props;
     const { routeInfo, successfulLastSearch } = this.state;
+
+    console.log("get should have been fetched: " + this.state.home.test1);
+    console.log("route info: " + this.state.routeQuery.currRouteStart);
+    console.log("route info: " + this.state.routeQuery.currRouteDest);
+    console.log("route info: " + this.state.routeQuery.routeInfo);
+
+    
+
+
 
     return (
       <React.Fragment>
