@@ -14,11 +14,11 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.routeplanner.shopping.RegistrationDetails;
 import com.routeplanner.shopping.Role;
-import com.routeplanner.shopping.User;
+import com.routeplanner.shopping.OldUser;
 import com.routeplanner.shopping.ex.UsernameNotFoundException;
 import com.routeplanner.shopping.repository.RegistrationDetailsRepository;
 import com.routeplanner.shopping.repository.RoleRepository;
-import com.routeplanner.shopping.repository.UserRepository;
+import com.routeplanner.shopping.repository.OldUserRepository;
 
 
 @Transactional(isolation = Isolation.DEFAULT, propagation=Propagation.REQUIRED) 
@@ -31,7 +31,7 @@ public class UserService {
 	private RoleRepository roleRepository;
 	
 	@Autowired
-	private UserRepository<User> userRepository;
+	private OldUserRepository<OldUser> userRepository;
 	
 	@Autowired
 	private RegistrationDetailsRepository<RegistrationDetails> regDetailsRepository;
@@ -40,14 +40,14 @@ public class UserService {
 		
 	}
 	
-	public void save(User user) {
+	public void save(OldUser user) {
 		userRepository.save(user);
 		logger.debug("User saved with id: " + user.getId());
 	}
 	
 	// TODO SPRING SECURITY add: 	return optionalUser.map(CustomUserDetails::new).get();
-	public User findByUsername(String username, String password) throws UsernameNotFoundException {
-		Optional<User> optUser = userRepository.fetchUserFromLoginCredentials(username, password);
+	public OldUser findByUsername(String username, String password) throws UsernameNotFoundException {
+		Optional<OldUser> optUser = userRepository.fetchUserFromLoginCredentials(username, password);
 		optUser.orElseThrow(()-> new UsernameNotFoundException("Username not found"));
 		return optUser.get();
 	}

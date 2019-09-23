@@ -26,7 +26,7 @@ public enum RoleLevel {
 		return id;
 	}
 	
-	public static boolean isMember(User user) {
+	public static boolean isMember(OldUser user) {
 		if (user.getRoles() != null) {
 			return user.getRoles().stream().filter(r->r.getRole().equals(prop.getString("role.level.member"))).findFirst().isPresent();
 		}
@@ -34,7 +34,7 @@ public enum RoleLevel {
 		return false;
 	}
 	
-	public static boolean isAdmin(User user) {
+	public static boolean isAdmin(OldUser user) {
 		if (user.getRoles() != null) { 
 			return user.getRoles().stream().filter(r->r.getRole().equals(prop.getString("role.level.admin"))).findFirst().isPresent();
 		}
@@ -43,7 +43,7 @@ public enum RoleLevel {
 
 	
 	// TODO THIS IS A TEMPORARY SOLUTION UNTIL SPRING SECURITY IS IMPLEMENTED	
-	public static RoleLevel getHighestRole(User user) {
+	public static RoleLevel getHighestRole(OldUser user) {
 		if (isAdmin(user)) {
 			return RoleLevel.ADMIN;
 		} else if (isMember(user)) {

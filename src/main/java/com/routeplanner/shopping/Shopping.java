@@ -2,21 +2,21 @@ package com.routeplanner.shopping;
 
 public class Shopping {
 
-	private User user;
+	private OldUser user;
 	private Basket basket;
 	private Order order;
 	private Purchase purchase;
 		
-	public Shopping(User user) {
+	public Shopping(OldUser user) {
 		this.user = user;
 		this.basket = new Basket();
 	}
 
-	public User getUser() {
+	public OldUser getUser() {
 		return user;
 	}
 
-	public void setUser(User user) {
+	public void setUser(OldUser user) {
 		this.user = user;
 	}
 

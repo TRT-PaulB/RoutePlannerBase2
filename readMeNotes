@@ -1,0 +1,83 @@
+Based on approach in Java Jugtours:
+https://developer.okta.com/blog/2018/07/19/simple-crud-react-and-spring-boot
+
+
+BASIC SPRING SECURITY MYSQL TUTORIAL:
+https://www.youtube.com/watch?v=TNt3GHuayXs
+
+
+http://localhost:8080/
+http://localhost:8080/home
+
+http://localhost:8080/user
+http://localhost:8080/admin*
+
+http://localhost:8080/error
+
+
+INTERNAL REACT APP:
+react-routeplanner-app
+
+- db: new_routeplanner_shopping
+ - create table user (id bigint, active boolean, password varchar(50), roles varchar(50), user_name varchar(50) );
+ - insert into user values (1, 1, 'pass', 'ROLE_USER', 'user'); 
+ 
+------------------------------------------------------------
+
+logs:
+https://www.tutorialspoint.com/log4j/log4j_logging_files.htm
+
+
+//  REACT ROUTES: ==> http://localhost:8080/
+	//  --> routeplanner/                home
+    //  --> routeplanner/login           login attempt 		
+	//  --> routeplanner/query           query page after successful login
+
+
+Apply registration page
+Add admin pages + permissions
+
+========================================================================
+
+HttpSession sess = request.getSession();
+    	sess.setAttribute("stationList", travelInfoService.getStationList());
+    	sess.setAttribute("ticketTypeList", TicketType.values());
+    	sess.setAttribute("passengerTypeList", PassengerType.values());
+    	sess.setAttribute("cardTypeList", CardType.values());
+    	sess.setAttribute("titleList", getTitleLiterals());
+    	sess.setAttribute("currUser", user);
+      	
+    	
+    	private String[] getTitleLiterals() {
+    	return new String[] {"rp.person.title.mr", 
+    			"rp.person.title.mrs", 
+    			"rp.person.title.miss"};
+    }
+    
+    	
+    	
+ Shopping
+ --> user
+ --> basket
+     --> ticketList
+     --> open
+     --> user
+ --> order
+     --> PaymentInfo
+     --> ContactDetails
+     --> Basket
+     --> User
+ --> purchase
+     --> Order
+     --> TransactionDate
+     --> User
+
+ ========================================================================
+////////////////
+
+//Insert
+			//logger.info("Inserting -> {}", userRepository.save(new User("John", "A1234657")));
+//	logger.info("Student id 10001 -> {}", stuRepository.findById(10001L));
+//	logger.info("All users 1 -> {}", stuRepository.findAll());
+	//Update
+			//logger.info("Update 10001 -> {}", stuRepository.save(newStudent));

@@ -1,0 +1,26 @@
+- design rp
+  Parts:  navbar
+  - NAVBAR: Login + Register / Logout + Purchase History
+  - NAVBAR: RoutePlanner + View Basket + Admin
+  --> Login
+  --> RoutePlanner screen (start+dest=results)
+  --> View Basket (and add ticket)
+  --> Contact Details
+  --> Payment Details
+  --> Sale Confirmation
+  ++ Purchase History could include:
+     --> pagination
+     --> filtering
+     --> searching	 
+  - Admin  
+  --> what about internationalization in react?
+
+
+RouteQuery (apparently a duplicate of JourneySummary)
+--> currRouteStart
+--> currRouteDest
+--> successfulLastSearch
+--> routeInfo
+
+ 
+ 

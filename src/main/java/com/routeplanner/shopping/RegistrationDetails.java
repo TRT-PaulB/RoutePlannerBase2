@@ -11,18 +11,18 @@ public class RegistrationDetails extends ContactDetails {
 
 	@NotNull
 	@OneToOne
-	private User user;
+	private OldUser user;
 	
 	public RegistrationDetails() {
 		super();
-		this.user = new User();
+		this.user = new OldUser();
 	}
 	
-	public User getUser() {
+	public OldUser getUser() {
 		return user;
 	}
 
-	public void setUser(User user) {
+	public void setUser(OldUser user) {
 		this.user = user;
 	}
 	

@@ -8,7 +8,7 @@ import javax.persistence.Table;
 public class Order extends DataModel {
 	
 	@OneToOne
-	private User user;
+	private OldUser user;
 	
 	@OneToOne
 	private PaymentInfo paymentInfo;
@@ -24,19 +24,19 @@ public class Order extends DataModel {
 		super();
 	}
 	
-	public Order(User user, Basket basket) {
+	public Order(OldUser user, Basket basket) {
 		this.user = user;
 		this.basket = basket;
 	}
 
 	
-	public Order(PaymentInfo paymentInfo, User user, Basket basket) {
+	public Order(PaymentInfo paymentInfo, OldUser user, Basket basket) {
 		this(user, basket);
 		this.paymentInfo = paymentInfo;
 	}
 
 	
-	public Order(PaymentInfo paymentInfo, ContactDetails contactDetails, User user, Basket basket) {
+	public Order(PaymentInfo paymentInfo, ContactDetails contactDetails, OldUser user, Basket basket) {
 		this(paymentInfo, user, basket);
 		this.contactDetails = contactDetails;
 	}
@@ -51,11 +51,11 @@ public class Order extends DataModel {
 		this.paymentInfo = paymentInfo;
 	}
 
-	public User getUser() {
+	public OldUser getUser() {
 		return user;
 	}
 
-	public void setUser(User user) {
+	public void setUser(OldUser user) {
 		this.user = user;
 	}
 

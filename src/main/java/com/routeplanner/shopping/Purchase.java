@@ -12,7 +12,7 @@ import javax.persistence.Table;
 public class Purchase extends DataModel {
 	
 	@OneToOne
-	private User user;
+	private OldUser user;
 	
 	@Column(name="transaction")
 	private LocalDate transactionDate;  
@@ -24,7 +24,7 @@ public class Purchase extends DataModel {
 		
 	}
 		
-	public Purchase(User user, LocalDate transactionDate, Order order) {
+	public Purchase(OldUser user, LocalDate transactionDate, Order order) {
 		this.user = user;
 		this.transactionDate = transactionDate;
 		this.order = order;
@@ -38,11 +38,11 @@ public class Purchase extends DataModel {
 		this.transactionDate = transactionDate;
 	}
 	
-	public User getUser() {
+	public OldUser getUser() {
 		return user;
 	}
 
-	public void setUser(User user) {
+	public void setUser(OldUser user) {
 		this.user = user;
 	}
 

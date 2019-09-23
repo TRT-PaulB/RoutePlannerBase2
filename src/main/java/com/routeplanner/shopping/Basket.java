@@ -17,7 +17,7 @@ public class Basket extends DataModel {
 	private Set<Ticket> tickets;
 	
 	@OneToOne
-	private User user;	
+	private OldUser user;	
 	
 	@Transient
 	private String radioButtonSelectedValue;
@@ -29,12 +29,12 @@ public class Basket extends DataModel {
 
 	}
 	
-	public Basket(User user) {
+	public Basket(OldUser user) {
 		this.user = user;
 	}
 	
 
-	public Basket(User user, Set<Ticket> tickets) {
+	public Basket(OldUser user, Set<Ticket> tickets) {
 		this(user);
 		this.tickets = tickets;
 	}
@@ -56,11 +56,11 @@ public class Basket extends DataModel {
 	}
 	
 	
-	public User getUser() {
+	public OldUser getUser() {
 		return user;
 	}
 
-	public void setUser(User user) {
+	public void setUser(OldUser user) {
 		this.user = user;
 	}
 	
