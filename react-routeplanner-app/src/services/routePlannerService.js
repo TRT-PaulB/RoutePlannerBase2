@@ -1,47 +1,30 @@
 //import http from "./httpService";
-import { apiUrl } from "../config.json";
+//import { apiUrl } from "../config.json";
+//const routeQueryEndpoint = apiUrl + "/route";
 
-const routeQueryEndpoint = apiUrl + "/route";
 
-export const stations = [
-  // note the _id maps to key in teh select/option/key
-  { _id: "Farringdon", name: "Farringdon" },
-  { _id: "Oxford Circus", name: "Oxford Circus" },
-  { _id: "Mile End", name: "Mile End" }
-];
+// REMOVE
+  // async remove(id) {
+  //   await fetch(`/api/group/${id}`, {
+  //     method: 'DELETE',
+  //     headers: {
+  //       'Accept': 'application/json',
+  //       'Content-Type': 'application/json'
+  //     }
+  //   }).then(() => {
+  //     let updatedGroups = [...this.state.groups].filter(i => i.id !== id);
+  //     this.setState({groups: updatedGroups});
+  //   });
+  // }
 
-export function getStations() {
-  return stations.filter(g => g);
-}
-
-export const result = {
-  routeInfo: "\\nStart  Aldgate East\\nEnd    Blackfriars\\n"
-};
-
-// this is  GET REST request
-export function getRouteInfo(start, destination) {
-  // Supply some dummy data for now!!!!
-  return {
-    _id: "ouo7895t7fg",
-    currRouteStart: start,
-    currRouteDest: destination,
-    successfulLastSearch: true,
-    routeInfo:
-      "Start:  Aldgate East\nEnd:    Blackfriars\nFrom Aldgate East take the District to Blackfriars for 5 stops.\nChanges = 0\nTotal stops = 5"
-  };
-}
-
-// this is  POST REST request
-export function getRouteData(routeQuery) {
-  // return http.post(routeQueryEndpoint, {
-  //   currRouteStart: routeQuery.start,
-  //   currRouteDest: routeQuery.destination,
-  //   routeInfo: routeQuery.routeInfo
+  // POST / PUT [+ change window]
+  // await fetch('/api/group', {
+  //   method: (item.id) ? 'PUT' : 'POST',
+  //   headers: {
+  //     'Accept': 'application/json',
+  //     'Content-Type': 'application/json'
+  //   },
+  //   body: JSON.stringify(item),
   // });
+  // this.props.history.push('/groups');
 
-
-  //public RouteQuery(String currRouteStart, String currRouteDest, String routeInfo, boolean successfulLastSearch) {
-
-
-
-}

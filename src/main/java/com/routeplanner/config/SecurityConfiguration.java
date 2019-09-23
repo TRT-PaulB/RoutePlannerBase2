@@ -35,9 +35,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests()
 		.antMatchers("/admin*").hasRole("ADMIN")  // catch all admin urls (includes admin etwas)
 		.antMatchers("/user").hasAnyRole("ADMIN", "USER")
-		.antMatchers("/home", "/errors", "/").permitAll()
+		.antMatchers("/home", "/errors", "/route/*", "/stations", "/").permitAll()
 		.and().formLogin();
 	}
+	
+	
 	
 	
 	// PASSWORD ENCODER

@@ -49,9 +49,14 @@ class Form extends Component {
   };
 
   handleSubmit = e => {
+    console.log("handle submit88888888888");
     e.preventDefault();
 
+    console.log("handle submit");
     const errors = this.validateWithJoi();
+
+console.log(errors);
+
     this.setState({ errors: errors || {} });
 
     if (errors) return;
