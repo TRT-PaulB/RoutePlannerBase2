@@ -5,6 +5,35 @@ https://developer.okta.com/blog/2018/07/19/simple-crud-react-and-spring-boot
 BASIC SPRING SECURITY MYSQL TUTORIAL:
 https://www.youtube.com/watch?v=TNt3GHuayXs
 
+----------------------------------
+Wednesday
+
+- review model completely
+- dummy save of data from runner into system
+  --> basket
+  --> order
+  --> purchase
+- full flow
+- plug in backend: basket handling, contact details, purchase, sale confirmation
+- admin pages                   
+  
++ call utility warehouse
+
+----------------------------------
+Thursday
+
+- apply error handling in front end
+- tmp login / logout
+
+----------------------------------
+Friday
+
+- review security options
+- microservices links
+
+----------------------------------
+
+
 
 http://localhost:8080/
 http://localhost:8080/home

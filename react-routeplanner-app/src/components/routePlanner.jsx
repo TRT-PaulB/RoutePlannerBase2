@@ -55,20 +55,19 @@ class RoutePlanner extends Form {
 
     // SAVE TO BAS~ket HERE........... 
 
-    window.location = "/view_basket/" + start + "/" + destination + "";
+    //window.location = "/view_basket/" + start + "/" + destination + "";
+    window.location = "/view_basket";
   };
 
   render() {
     const { match, history } = this.props;
-    const { routeInfo, successfulLastSearch, routeQuery, stationList } = this.state;
+    const { successfulLastSearch, routeQuery, stationList } = this.state;
 
     const stations = stationList.map((s)=> { 
                return { _id: s, name: s }; 
            }); 
   
-    console.log("route info: " + routeQuery.currRouteStart);
-    console.log("route info: " + routeQuery.currRouteDest);
-    console.log("route info: " + routeQuery.routeInfo);
+    
     return (
       <React.Fragment>
         <form onSubmit={this.handleSubmit} className="main-content">

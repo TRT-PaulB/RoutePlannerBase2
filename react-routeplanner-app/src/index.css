@@ -29,9 +29,9 @@ code {
   width: auto !important;
 }
 
-.form-inline {
-  width: 80%;
-}
+/* .form-inline {
+   width: 80%; 
+} */
 
 .form-label-right {
   text-align: right;
@@ -44,7 +44,7 @@ code {
 }
 
 .semi-form-group {
-  width: 20%;
+  width: 50%;
 }
 
 .input-group {

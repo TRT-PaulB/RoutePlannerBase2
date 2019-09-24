@@ -14,16 +14,16 @@ const ProtectedRoute = ({ path, component: Component, render, ...rest }) => {
       exact
       render={props => {
         console.log(props); // note the history, location and match components (from Router)
-        if (!auth.getCurentUser())
-          // see login.jsx form component
-          return (
-            <Redirect
-              to={{
-                pathname: "/login",
-                state: { from: props.location }
-              }}
-            />
-          );
+        // if (!auth.getCurentUser())
+        //   // see login.jsx form component
+        //   return (
+        //     <Redirect
+        //       to={{
+        //         pathname: "/login",
+        //         state: { from: props.location }
+        //       }}
+        //     />
+        //   );
         return Component ? <Component {...props} /> : render(props);
       }}
     />

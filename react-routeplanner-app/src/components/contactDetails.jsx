@@ -27,195 +27,56 @@ class ContactDetails extends Form {
 
   schema = {
     _id: Joi.string(),
-    title: Joi.string(), //.required(),
-    fullname: Joi.string(), //.required(),
-    addressLine1: Joi.string(), //.required(),
-    addressLine2: Joi.string(), //.required(),
-    addressLine1: Joi.string(), //.required(),
-    city: Joi.string(), //.required(),
-    region: Joi.string(), //.required(),
-    country: Joi.string(), //.required(),
-    mobile: Joi.string(), //.required(),
-    homeTel: Joi.string(), //.required(),
-    email: Joi.string() //.required()
+    title: Joi.string().required(),
+    fullname: Joi.string().required(), 
+    addressLine1: Joi.string().required(), 
+    addressLine2: Joi.string(), 
+    addressLine3: Joi.string(), 
+    city: Joi.string(), 
+    region: Joi.string(), 
+    country: Joi.string(), 
+    mobile: Joi.number().required(), 
+    homeTel: Joi.number().required(), 
+    email: Joi.string().email({ minDomainAtoms: 2 })
   };
-
-  async componentDidMount() {}
+    
+  //async componentDidMount() {}
 
   doSubmit = () => {
-    console.log("submitted contact details form");
+    console.log("submitted contact details form - and proceed to payment details");
+    this.props.history.push("/payment_details");
   };
-
+  
   render() {
     return (
       <React.Fragment>
         <div className="main-content">
-          <h2>Enter Contact Details</h2>
-
+          
+        <h2>Enter Contact Details</h2>
+          
+        <form onSubmit={this.handleSubmit}>  
           <div className="dataBox broadForm">
-            <form onSubmit={this.handleSubmit} class="form-inline">
-              <div className="semi-form-group mb-2">
-                <input
-                  type="text"
-                  readonly
-                  className="form-control-plaintext form-label-right"
-                  id="titleLabel"
-                  value="Title"
-                />
-              </div>
-              <div class="semi-form-group mx-sm-3 mb-2">
-                {/* <input type="input" className="form-control" id="title2" /> */}
-                {this.renderSelect(
-                  this.state.title,
-                  "",
-                  false,
-                  this.state.titles,
-                  "500px"
-                )}
-              </div>
-              <div className="semi-form-group mb-2">
-                <input
-                  type="text"
-                  readonly
-                  className="form-control-plaintext form-label-right"
-                  id="fullnameLabel"
-                  value="Fullname"
-                />
-              </div>
-              <div class="semi-form-group mx-sm-3 mb-2">
-                <input type="text" className="form-control" id="fullname" />
-              </div>
-
-              <div className="semi-form-group mb-2">
-                <input
-                  type="text"
-                  readonly
-                  className="form-control-plaintext form-label-right"
-                  id="addressLine1Label"
-                  value="Address Line 1"
-                />
-              </div>
-              <div class="semi-form-group mx-sm-3 mb-2">
-                <input
-                  type="input"
-                  className="form-control"
-                  id="addressLine1"
-                />
-              </div>
-              <div className="semi-form-group mb-2">
-                <input
-                  type="text"
-                  readonly
-                  className="form-control-plaintext form-label-right"
-                  id="cityLabel"
-                  value="City"
-                />
-              </div>
-              <div class="semi-form-group mx-sm-3 mb-2">
-                <input type="input" className="form-control" id="city" />
-              </div>
-              <div className="semi-form-group mb-2">
-                <input
-                  type="text"
-                  readonly
-                  className="form-control-plaintext form-label-right"
-                  id="addressLine2label"
-                  value="Address Line 2"
-                />
-              </div>
-              <div class="semi-form-group mx-sm-3 mb-2">
-                <input
-                  type="input"
-                  className="form-control"
-                  id="addressLine2"
-                />
-              </div>
-              <div className="semi-form-group mb-1">
-                <input
-                  type="text"
-                  readonly
-                  className="form-control-plaintext form-label-right"
-                  id="regionLabel"
-                  value="Region"
-                />
-              </div>
-              <div class="semi-form-group mx-sm-3 mb-1">
-                <input type="input" className="form-control" id="region" />
-              </div>
-              <div className="semi-form-group mb-2">
-                <input
-                  type="text"
-                  readonly
-                  className="form-control-plaintext form-label-right"
-                  id="addressLine3label"
-                  value="Address Line 3"
-                />
-              </div>
-              <div class="semi-form-group mx-sm-3 mb-2">
-                <input
-                  type="input"
-                  className="form-control"
-                  id="addressLine3"
-                />
-              </div>
-              <div className="semi-form-group mb-1">
-                <input
-                  type="text"
-                  readonly
-                  className="form-control-plaintext form-label-right"
-                  id="countryLabel"
-                  value="Country"
-                />
-              </div>
-              <div class="semi-form-group mx-sm-3 mb-1">
-                <input type="input" className="form-control" id="country" />
-              </div>
-
-              <div className="semi-form-group mb-2">
-                <input
-                  type="text"
-                  readonly
-                  className="form-control-plaintext form-label-right"
-                  id="mobileLabel"
-                  value="Mobile"
-                />
-              </div>
-              <div class="semi-form-group mx-sm-3 mb-2">
-                <input type="input" className="form-control" id="mobile" />
-              </div>
-
-              <div className="semi-form-group mb-2">
-                <input
-                  type="text"
-                  readonly
-                  className="form-control-plaintext form-label-right"
-                  id="emailLabel"
-                  value="Email"
-                />
-              </div>
-              <div class="semi-form-group mx-sm-3 mb-2">
-                <input type="input" className="form-control" id="email" />
-              </div>
-
-              <div className="semi-form-group mb-2">
-                <input
-                  type="text"
-                  readonly
-                  className="form-control-plaintext form-label-right"
-                  id="homeTelLabel"
-                  value="Home Tel"
-                />
-              </div>
-              <div class="semi-form-group mx-sm-3 mb-2">
-                <input type="input" className="form-control" id="homeTel" />
-              </div>
-            </form>
+              <div className="row">
+                  <div className="col">
+                      {this.renderInput("title", "Title", true)}
+                      {this.renderInput("fullname", "Firstname", false)}
+                      {this.renderInput("addressLine1", "Address Line 1", false)}
+                      {this.renderInput("addressLine2", "Address Line 2", false)}
+                      {this.renderInput("addressLine3", "Address Line 3", true)}
+                      {this.renderInput("city", "City", false)}
+                      {this.renderInput("country", "Country", false)}
+                      {this.renderInput("region", "Region", false)}
+                      {this.renderInput("mobile", "Mobile", false)}
+                      {this.renderInput("homeTel", "Home Tel", false)}
+                      {this.renderInput("email", "Email", false)}
+                  </div>
+              </div>             
           </div>
-
           <div className="col">
-            {this.renderButton("Find Route", "btn btn-primary m-4")}
+            {this.renderButton("Proceed to Payment", "btn btn-primary m-4")}
           </div>
-        </div>
+        </form>
+       </div>
       </React.Fragment>
     );
   }
@@ -223,21 +84,13 @@ class ContactDetails extends Form {
 
 export default ContactDetails;
 
-// TRY THIS APROACH TO CSS
-// {this.renderSelect(
-//   title,
-//   "Title",
-//   false,
-//   this.state.titles,
-//   "300px"
-// )}
+// BETTER OPTIONS BELOW:
 
 // WAS
 // inline needs work:  https://getbootstrap.com/docs/4.3/components/forms/
 
 /* <form onSubmit={this.handleSubmit} className="main-content">
           <h2>Enter Contact Details</h2>
-
           <div className="main-content">
             <div className="row">
               <div className="broadForm">
@@ -267,14 +120,14 @@ export default ContactDetails;
         </form> */
 
 // NEW
-//         <form class="form-inline">
-//   <div class="form-group mb-2">
-//     <label for="staticEmail2" class="sr-only">Email</label>
-//     <input type="text" readonly class="form-control-plaintext" id="staticEmail2" value="email@example.com">
+//         <form className="form-inline">
+//   <div className="form-group mb-2">
+//     <label for="staticEmail2" className="sr-only">Email</label>
+//     <input type="text" readOnly className="form-control-plaintext" id="staticEmail2" value="email@example.com">
 //   </div>
-//   <div class="form-group mx-sm-3 mb-2">
-//     <label for="inputPassword2" class="sr-only">Password</label>
-//     <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+//   <div className="form-group mx-sm-3 mb-2">
+//     <label for="inputPassword2" className="sr-only">Password</label>
+//     <input type="password" className="form-control" id="inputPassword2" placeholder="Password">
 //   </div>
-//   <button type="submit" class="btn btn-primary mb-2">Confirm identity</button>
+//   <button type="submit" className="btn btn-primary mb-2">Confirm identity</button>
 // </form>

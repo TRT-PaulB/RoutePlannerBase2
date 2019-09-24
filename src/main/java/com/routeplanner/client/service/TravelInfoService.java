@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
-import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
@@ -20,7 +19,6 @@ import com.routeplanner.ex.InvalidNetworkException;
 import com.routeplanner.ex.InvalidStationException;
 import com.routeplanner.ex.NoJourneyFoundException;
 import com.routeplanner.load.RouteMapReader;
-import com.routeplanner.shopping.RouteQuery;
 
 @Service
 @Scope(value = ConfigurableBeanFactory.SCOPE_SINGLETON)

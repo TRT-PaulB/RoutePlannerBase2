@@ -1,6 +1,7 @@
 import http from "./httpService";
 import { apiUrl } from "../config.json";
 import jwtDecode from "jwt-decode";
+import { UserAgent } from "@sentry/browser/dist/integrations";
 
 const authEndpoint = apiUrl + "/auth";
 

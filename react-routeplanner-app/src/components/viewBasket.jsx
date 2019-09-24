@@ -32,12 +32,13 @@ class ViewBasket extends Form {
 
   handleProceedToCheckout = () => {
     console.log("proceeding to checkout....");
-    window.location = "/contact_details";
+    //window.location = "/contact_details";
+    this.props.history.push("/contact_details");
   };
 
   handleAddAnotherJourney = () => {
     console.log("handling another journey....");
-    window.location = "/route_planner";
+    window.location = "/not-found";
   };
 
   render() {

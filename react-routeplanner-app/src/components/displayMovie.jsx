@@ -35,7 +35,8 @@ class DisplayMovieForm extends Form {
       .required()
       .min(0)
       .max(10)
-      .label("Rate")
+      .label("Rate"),
+      
   };
 
   async componentDidMount() {
