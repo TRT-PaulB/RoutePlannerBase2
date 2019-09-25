@@ -6,29 +6,39 @@ BASIC SPRING SECURITY MYSQL TUTORIAL:
 https://www.youtube.com/watch?v=TNt3GHuayXs
 
 ----------------------------------
-Wednesday
+Wednesday 25th Sept
 
-- review model completely
+- redesign basket to purchase flow completely
+- refactor model
+- backends for flow against postman
 - dummy save of data from runner into system
   --> basket
   --> order
   --> purchase
-- full flow
-- plug in backend: basket handling, contact details, purchase, sale confirmation
-- admin pages                   
-  
+- design admin flow
++ 1.30pm meeting                  
 + call utility warehouse
 
 ----------------------------------
-Thursday
+Thursday 26th Sept
 
-- apply error handling in front end
-- tmp login / logout
+- add in basic front end for basket and making a purchase
+  --> basket handling, contact details, purchase, sale confirmation
+  --> apply mosh style error handling in front end
+----------------------------------
+Friday 27th Sept
+
+- admin pages
+- changes to PD doc:
+  - replace node.js with spring MVC, security and Thymeleaf project
+  - other: other security techniques, microservices, kubenetes etc
 
 ----------------------------------
-Friday
+Mon 30th Sept, Thurs-Fri 3rd/4th Oct
 
-- review security options
+- overview of react and rest unit tests
+- review security options and apply to RP
+- admin pages
 - microservices links
 
 ----------------------------------

@@ -554,3 +554,8 @@ Changes = 4
 Total stops = 17
 
 
+2019-09-24 17:11:48.650  WARN 17069 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=42m10s511ms).
+2019-09-24 17:11:49.813  INFO 17069 --- [Thread-2] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-09-24 17:11:49.815  INFO 17069 --- [Thread-2] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-09-24 17:11:49.818  INFO 17069 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-09-24 17:11:49.831  INFO 17069 --- [Thread-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
