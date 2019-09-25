@@ -13,14 +13,14 @@ public class Person extends DataModel {
 	private ContactDetails contactDetails;
 
 	@OneToMany
-	private Set<PaymentInfo> paymentInfos;
+	private Set<PaymentMethod> paymentInfos;
 		
 	public Person() {
 	
 		
 	}
 
-	public Person(ContactDetails contactDetails, Set<PaymentInfo> paymentInfoList) {
+	public Person(ContactDetails contactDetails, Set<PaymentMethod> paymentInfoList) {
 		this.contactDetails = contactDetails;
 		this.paymentInfos = paymentInfoList;
 	}
@@ -33,11 +33,11 @@ public class Person extends DataModel {
 		this.contactDetails = contactDetails;
 	}
 
-	public Set<PaymentInfo> getPaymentInfos() {
+	public Set<PaymentMethod> getPaymentInfos() {
 		return paymentInfos;
 	}
 
-	public void setPaymentInfos(Set<PaymentInfo> paymentInfos) {
+	public void setPaymentInfos(Set<PaymentMethod> paymentInfos) {
 		this.paymentInfos = paymentInfos;
 	}
 

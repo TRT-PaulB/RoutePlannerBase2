@@ -8,14 +8,16 @@ https://www.youtube.com/watch?v=TNt3GHuayXs
 ----------------------------------
 Wednesday 25th Sept
 
-- redesign basket to purchase flow completely
-- refactor model
-- backends for flow against postman
+- DONE redesign basket to purchase flow completely
+- DONE refactor model
+- put in webservice stubs
+- regression that it starts up ok (after db teardown)
+- poc in react with proper returns webservice 
+- poc handling errors in react
 - dummy save of data from runner into system
-  --> basket
-  --> order
-  --> purchase
-- design admin flow
+- create and test backends for flow against postman 
+- summary notes
+- design admin flow and define security policy for system
 + 1.30pm meeting                  
 + call utility warehouse
 
@@ -24,6 +26,7 @@ Thursday 26th Sept
 
 - add in basic front end for basket and making a purchase
   --> basket handling, contact details, purchase, sale confirmation
+  --> these must be transactional
   --> apply mosh style error handling in front end
 ----------------------------------
 Friday 27th Sept
@@ -31,7 +34,9 @@ Friday 27th Sept
 - admin pages
 - changes to PD doc:
   - replace node.js with spring MVC, security and Thymeleaf project
-  - other: other security techniques, microservices, kubenetes etc
+  - other: other security techniques, microservices, kubenetes,
+           update q+a, tech lib and xls, extend post java 8,
+           list all mini-projs and DTT lists 
 
 ----------------------------------
 Mon 30th Sept, Thurs-Fri 3rd/4th Oct

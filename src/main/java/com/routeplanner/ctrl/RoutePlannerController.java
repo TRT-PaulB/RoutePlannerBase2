@@ -1,6 +1,4 @@
 package com.routeplanner.ctrl;
-
-import java.util.Arrays;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -8,19 +6,18 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.routeplanner.client.service.ITravelInfoService;
 import com.routeplanner.dm.JourneySummary;
 import com.routeplanner.shopping.RouteQuery;
 
 
-
-
 @RestController
-public class BasicController {
+@RequestMapping("route")
+public class RoutePlannerController {
 	
-	private final static Logger logger = LoggerFactory.getLogger(BasicController.class);
+	private final static Logger logger = LoggerFactory.getLogger(RoutePlannerController.class);
 
 	@Autowired
 	private ITravelInfoService travelInfoService;
@@ -30,30 +27,30 @@ public class BasicController {
 		return ("<h1>Welcome All!</h1>");
 	}
 	
-	@GetMapping("/route/{start}/{destination}")
+	@GetMapping("/{start}/{destination}")
 	public RouteQuery getRouteQuery(@PathVariable String start, @PathVariable String destination) {
 		logger.info("making a route query: start = " + start + " --> dest = " + destination);
-		
-		// tmp solution to fit in with old services + add error handling?
-		if (travelInfoService == null) {
-			logger.info("AUTOWIR~ING FAILED");
-		}
-		
-		
-		
 		JourneySummary journey = travelInfoService.getJourneyDetails(start, destination);
 		return new RouteQuery(start, destination, journey.getRouteInfo());
 	}
 	
+	/*
+	 * https://developer.okta.com/blog/2018/07/19/simple-crud-react-and-spring-boot
+	 * Note: this is also the OCTA account!
+	 * 
+	@GetMapping("/group/{id}")
+    ResponseEntity<?> getGroup(@PathVariable Long id) {
+        Optional<Group> group = groupRepository.findById(id);
+        return group.map(response -> ResponseEntity.ok().body(response))
+                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    }
+	*/
 	
-	// tmp solution
 	@GetMapping("/stations")
 	public List<String> getStationNames() {
 		return travelInfoService.getStationList();
 	}
 	
-	
-	// TODO error is not working, manually or as a result of a direct error
 	@GetMapping("/errors")
 	public String error() {
 		return ("<h1>Error goes here!</h1>");
@@ -73,7 +70,5 @@ public class BasicController {
 	public String adminEtwas() {
 		return ("<h1>Welcome Admin users ETWAS!</h1>");
 	}
-	
-	
 
 }

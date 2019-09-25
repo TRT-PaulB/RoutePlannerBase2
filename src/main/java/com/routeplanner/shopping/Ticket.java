@@ -24,24 +24,21 @@ public class Ticket extends AbstractItem {
 	@Convert(converter = TicketTypeConverter.class)
 	private TicketType ticketType;
 		
-	@OneToOne
-	private RouteQuery routeQuery;
+	private String start;
 	
-	@OneToOne
-	private Rule rule;
-	
+	private String destination;
 	
 	public Ticket() {
 		
 	}
-
+	
 	public Ticket(boolean open, int numUnits, PassengerType passengerType, LocalDate travelDate, 
-			RouteQuery routeQuery, Rule rule) {
+			String start, String destination) {
 		super(numUnits);
 		this.passengerType = passengerType;
 		this.travelDate = travelDate;
-		this.routeQuery = routeQuery;
-		this.rule = rule;
+		this.start = start;
+		this.destination = destination;
 	}
 
 	public PassengerType getPassengerType() {
@@ -72,34 +69,27 @@ public class Ticket extends AbstractItem {
 		this.ticketType = ticketType;
 	}
 
-
-	public RouteQuery getRouteQuery() {
-		return routeQuery;
+	
+	public String getStart() {
+		return start;
 	}
 
-
-	public void setRouteQuery(RouteQuery routeQuery) {
-		this.routeQuery = routeQuery;
+	public void setStart(String start) {
+		this.start = start;
 	}
 
-
-	public Rule getRule() {
-		return rule;
+	public String getDestination() {
+		return destination;
 	}
 
-
-	public void setRule(Rule rule) {
-		this.rule = rule;
+	public void setDestination(String destination) {
+		this.destination = destination;
 	}
-
+	
 	@Override
 	public String toString() {
 		return "Ticket [passengerType=" + passengerType + ", travelDate=" + travelDate + ", ticketType=" + ticketType
-				+ ", routeQuery=" + routeQuery + ", rule=" + rule + ", id=" + id + ", getPassengerType()="
-				+ getPassengerType() + ", getTravelDate()=" + getTravelDate() + ", getTicketType()=" + getTicketType()
-				+ ", getRouteQuery()=" + getRouteQuery() + ", getRule()=" + getRule() 
-				+ ", getNumUnits()=" + getNumUnits() + ", toString()=" + super.toString() + ", getId()=" + getId()
-				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + "]";
+				+ ", start=" + start + ", destination=" + destination + "]";
 	}
 	
 }	

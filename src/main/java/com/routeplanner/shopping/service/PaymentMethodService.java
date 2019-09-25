@@ -7,28 +7,28 @@ import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import com.routeplanner.shopping.ContactDetails;
-import com.routeplanner.shopping.PaymentInfo;
-import com.routeplanner.shopping.repository.ContractDetailsRepository;
-import com.routeplanner.shopping.repository.PaymentInfoRepository;
+import com.routeplanner.shopping.PaymentMethod;
+import com.routeplanner.shopping.repository.ContactDetailsRepository;
+import com.routeplanner.shopping.repository.PaymentMethodRepository;
 
 
 @Transactional(isolation = Isolation.DEFAULT, propagation=Propagation.REQUIRED)
 @Service
-public class PaymentInfoService {
+public class PaymentMethodService {
 
-	private static final Logger logger = LoggerFactory.getLogger(PaymentInfoService.class);
+	private static final Logger logger = LoggerFactory.getLogger(PaymentMethodService.class);
 	
 	@Autowired
-	private PaymentInfoRepository paymentInfoRepository;
+	private PaymentMethodRepository paymentInfoRepository;
 	
 	@Autowired
-	private ContractDetailsRepository contactDetailsRepository;
+	private ContactDetailsRepository contactDetailsRepository;
 	
-	public PaymentInfoService() {
+	public PaymentMethodService() {
 		
 	}
 	
-	public void save(PaymentInfo paymentInfo) {
+	public void save(PaymentMethod paymentInfo) {
 		paymentInfoRepository.save(paymentInfo);
 		logger.debug("Payment info saved with id: " + paymentInfo.getId());
 	}

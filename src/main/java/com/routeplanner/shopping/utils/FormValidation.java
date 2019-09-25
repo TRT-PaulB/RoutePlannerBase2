@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 import org.springframework.ui.ModelMap;
 
 import com.routeplanner.shopping.ContactDetails;
-import com.routeplanner.shopping.PaymentInfo;
+import com.routeplanner.shopping.PaymentMethod;
 
 
 public class FormValidation {
@@ -49,7 +49,7 @@ public class FormValidation {
 	}
 	
 	
-	public static void addBespokePaymentInfoErrMsgs(PaymentInfo paymentInfo, ModelMap model) {
+	public static void addBespokePaymentInfoErrMsgs(PaymentMethod paymentInfo, ModelMap model) {
 		FormValidation.addBlankValidation(paymentInfo.getNameOnCard(), "nameOnCard", model, "rp.checkout.bad-field-name-on-card-no-value");
 		FormValidation.addBlankValidation(paymentInfo.getCardNumber(), "cardNumber", model, "rp.checkout.bad-field-card-number-no-value");
 		FormValidation.addBlankValidation(paymentInfo.getSecurityCode(), "securityCode", model, "rp.checkout.bad-field-security-code-no-value");

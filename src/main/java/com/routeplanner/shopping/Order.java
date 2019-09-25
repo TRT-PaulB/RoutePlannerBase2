@@ -1,4 +1,7 @@
 package com.routeplanner.shopping;
+import java.time.LocalDate;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -8,10 +11,10 @@ import javax.persistence.Table;
 public class Order extends DataModel {
 	
 	@OneToOne
-	private OldUser user;
+	private PaymentMethod paymentMethod;
 	
-	@OneToOne
-	private PaymentInfo paymentInfo;
+	@Column(name="transaction")
+	private LocalDate transactionDate;
 	
 	@OneToOne
 	private ContactDetails contactDetails;
@@ -23,41 +26,36 @@ public class Order extends DataModel {
 	public Order() {
 		super();
 	}
-	
-	public Order(OldUser user, Basket basket) {
-		this.user = user;
+
+
+	public Order(PaymentMethod paymentMethod, LocalDate transactionDate, ContactDetails contactDetails, Basket basket) {
+		super();
+		this.paymentMethod = paymentMethod;
+		this.transactionDate = transactionDate;
+		this.contactDetails = contactDetails;
 		this.basket = basket;
 	}
 
 	
-	public Order(PaymentInfo paymentInfo, OldUser user, Basket basket) {
-		this(user, basket);
-		this.paymentInfo = paymentInfo;
-	}
-
-	
-	public Order(PaymentInfo paymentInfo, ContactDetails contactDetails, OldUser user, Basket basket) {
-		this(paymentInfo, user, basket);
-		this.contactDetails = contactDetails;
-	}
-	
-
-	public PaymentInfo getPaymentInfo() {
-		return paymentInfo;
+	public PaymentMethod getPaymentMethod() {
+		return paymentMethod;
 	}
 
 
-	public void setPaymentInfo(PaymentInfo paymentInfo) {
-		this.paymentInfo = paymentInfo;
+	public void setPaymentMethod(PaymentMethod paymentMethod) {
+		this.paymentMethod = paymentMethod;
 	}
 
-	public OldUser getUser() {
-		return user;
+
+	public LocalDate getTransactionDate() {
+		return transactionDate;
 	}
 
-	public void setUser(OldUser user) {
-		this.user = user;
+
+	public void setTransactionDate(LocalDate transactionDate) {
+		this.transactionDate = transactionDate;
 	}
+
 
 	public Basket getBasket() {
 		return basket;
@@ -77,10 +75,8 @@ public class Order extends DataModel {
 
 	@Override
 	public String toString() {
-		return "Order [user=" + user + ", paymentInfo=" + paymentInfo + ", basket=" + basket + ", getPaymentInfo()="
-				+ getPaymentInfo() + ", getUser()=" + getUser() + ", getBasket()=" + getBasket() + ", getId()="
-				+ getId() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()="
-				+ super.toString() + "]";
+		return "Order [paymentMethod=" + paymentMethod + ", transactionDate=" + transactionDate + ", contactDetails="
+				+ contactDetails + ", basket=" + basket + "]";
 	}
 	
 }

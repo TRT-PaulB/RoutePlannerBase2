@@ -16,7 +16,7 @@ import com.routeplanner.shopping.utils.StringUtils;
 
 @Entity
 @Table(name="payment_info")
-public class PaymentInfo extends DataModel 
+public class PaymentMethod extends DataModel 
 {
 	private static String CARD_NUMBER_PREFIX = "-XXXX-XXXX-XXXX";
 	
@@ -47,12 +47,12 @@ public class PaymentInfo extends DataModel
 	private LocalDate validFrom;
 	
 	
-	public PaymentInfo()
+	public PaymentMethod()
 	{
 		
 	}
 	
-	public PaymentInfo(CardType cardType, String cardNumber, String securityCode,
+	public PaymentMethod(CardType cardType, String cardNumber, String securityCode,
 			LocalDate expiryDate, LocalDate validFrom, String nameOnCard) 
 	{
 		this.nameOnCard = nameOnCard;

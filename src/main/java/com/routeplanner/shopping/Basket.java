@@ -17,10 +17,7 @@ public class Basket extends DataModel {
 	private Set<Ticket> tickets;
 	
 	@OneToOne
-	private OldUser user;	
-	
-	@Transient
-	private String radioButtonSelectedValue;
+	private ContactDetails contactDetails;	
 	
 	private boolean open;
 	
@@ -29,16 +26,10 @@ public class Basket extends DataModel {
 
 	}
 	
-	public Basket(OldUser user) {
-		this.user = user;
+	public Basket(ContactDetails contactDetails) {
+		this.contactDetails = contactDetails;
 	}
 	
-
-	public Basket(OldUser user, Set<Ticket> tickets) {
-		this(user);
-		this.tickets = tickets;
-	}
-
 	public Set<Ticket> getTickets() {
 		return tickets;
 	}
@@ -56,21 +47,12 @@ public class Basket extends DataModel {
 	}
 	
 	
-	public OldUser getUser() {
-		return user;
+	public ContactDetails getContactDetails() {
+		return contactDetails;
 	}
 
-	public void setUser(OldUser user) {
-		this.user = user;
-	}
-	
-	
-	public String getRadioButtonSelectedValue() {
-		return radioButtonSelectedValue;
-	}
-
-	public void setRadioButtonSelectedValue(String radioButtonSelectedValue) {
-		this.radioButtonSelectedValue = radioButtonSelectedValue;
+	public void setContactDetails(ContactDetails contactDetails) {
+		this.contactDetails = contactDetails;
 	}
 
 	public boolean isOpen() {
@@ -90,16 +72,11 @@ public class Basket extends DataModel {
 			tickets.forEach(i->i.setOpen(false));
 		}
 	}
-	
 
 	@Override
 	public String toString() {
-		return "Basket [tickets=" + tickets + ", user=" + user + ", radioButtonSelectedValue="
-				+ radioButtonSelectedValue + ", open=" + open + ", id=" + id + ", getTickets()=" + getTickets()
-				+ ", getUser()=" + getUser() + ", getRadioButtonSelectedValue()=" + getRadioButtonSelectedValue()
-				+ ", isOpen()=" + isOpen() + ", getId()=" + getId() + ", getClass()=" + getClass() + ", hashCode()="
-				+ hashCode() + ", toString()=" + super.toString() + "]";
+		return "Basket [tickets=" + tickets + ", contactDetails=" + contactDetails + ", open=" + open + "]";
 	}
-
-}
+	
+}	
 

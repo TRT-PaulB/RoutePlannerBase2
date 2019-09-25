@@ -29,7 +29,7 @@ class RoutePlanner extends Form {
   };
 
   async componentDidMount() {
-    await fetch('/stations').then(response => response.json())
+    await fetch('/route/stations').then(response => response.json())
              .then(stationList => this.setState({stationList}) );
   }
 
