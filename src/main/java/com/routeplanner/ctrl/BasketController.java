@@ -21,8 +21,8 @@ import com.routeplanner.shopping.service.BasketService;
 @RequestMapping("route")
 public class BasketController {
 
-//	@Autowired
-//	BasketService basketService;
+	@Autowired
+	private BasketService basketService;
 	
 	private final static Logger logger = LoggerFactory.getLogger(BasketController.class);
 	

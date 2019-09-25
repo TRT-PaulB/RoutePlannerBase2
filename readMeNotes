@@ -15,31 +15,10 @@ Wednesday 25th Sept
 - DONE poc in react with proper returns webservice 
 - DONE regression that it starts up ok (after db teardown)
 
-- dummy save of data from runner into system
-- create and test backends for flow against postman
-- poc handling errors in react
 
-- summary notes
-+ DONE 1.30pm meeting                  
-+ call utility warehouse
 
-----------------------------------
-Thursday 26th Sept
 
-==> TEAM PROJECT 
-
-- add in basic front end for basket and making a purchase
-  --> basket handling, contact details, purchase, sale confirmation
-  --> these must be transactional
-  --> apply mosh style error handling in front end
-- design admin flow and define security policy for system
-
-----------------------------------
-Friday 27th Sept
-
-==> TEAM PROJECT
-
-- admin pages
+- update pd notes in the light of the team project 
 - changes to PD doc:
   - replace node.js with spring MVC, security and Thymeleaf project
   - other: other security techniques, microservices, kubenetes,
@@ -47,12 +26,43 @@ Friday 27th Sept
            list all mini-projs and DTT lists 
 
 ----------------------------------
+Thursday 26th Sept
+
+- create and test backends for flow against postman
+- test rewriting controllers as JSON handlers
+- dummy save of data from runner into system (test transactions)
+- poc handling errors as recommended in Controllers and React
+- poc dao and service, and controller tests (see Halifax)
+
++ call utility warehouse
+leave 5pm for squash
+
+----------------------------------
+Friday 27th Sept
+
+==> TEAM PROJECT
+- define very basic idea for gui structure
+- highlight front end shells and approach to get started
+
+----------------------------------
 Mon 30th Sept, Thurs-Fri 3rd/4th Oct
 
-- overview of react and rest unit tests
-- review security options and apply to RP
-- admin pages
-- microservices links
+==> TEAM PROJECT
+
+- security research / links
+- microservices links:
+  https://www.udemy.com/course/spring-boot-microservices-with-spring-cloud-beginner-to-guru/
+
+-----------------------------------
+RP JOBS:
+
+- add in basic front end for basket and making a purchase
+  --> basket handling, contact details, purchase, sale confirmation 
+  --> apply mosh style error handling in front end
+  --> review security options and apply to RP
+  --> overview of react and rest unit tests  
+- design admin flow and define security policy for system
+- develop admin and member areas (keep it simple)
 
 ----------------------------------
 

@@ -1,4 +1,5 @@
 package com.routeplanner.shopping;
+import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 
@@ -6,7 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 
 @Entity
@@ -14,7 +14,7 @@ import javax.persistence.Transient;
 public class Basket extends DataModel {
 
 	@OneToMany
-	private Set<Ticket> tickets;
+	private Set<Ticket> tickets = new HashSet<Ticket>();
 	
 	@OneToOne
 	private ContactDetails contactDetails;	
@@ -28,6 +28,7 @@ public class Basket extends DataModel {
 	
 	public Basket(ContactDetails contactDetails) {
 		this.contactDetails = contactDetails;
+		this.open = true;
 	}
 	
 	public Set<Ticket> getTickets() {

@@ -27,21 +27,12 @@ public class OrderController {
 	@Autowired
 	private OrderService orderService;
 	
-	
-
-	// SAVE PAYMENT METHOD
-	// paymethod, contactdetails and basket should already be saved with order
-	@PostMapping("/purchase")
+		@PostMapping("/purchase")
 	ResponseEntity<Order> placeOrder(@Valid @RequestBody Order order) throws URISyntaxException {
 		Order purchase = orderService.placeOrder(order);
-		
 		logger.info("Request to purchase order: {}", purchase);
-	    //basketService.save(basket);
-	    return ResponseEntity.created(new URI("/member/purchase/" + order.getId()))
-	                .body(order);
+	    return ResponseEntity.created(new URI("/member/purchase/" + purchase.getId()))
+	                .body(purchase);
 	}
-	
-
-
 
 }

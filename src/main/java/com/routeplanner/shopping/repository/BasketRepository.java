@@ -11,7 +11,7 @@ import com.routeplanner.shopping.Basket;
 @Repository
 public interface BasketRepository<T> extends JpaRepository<Basket, Integer> {
 	
-//	@Query("SELECT b FROM Basket b join b.user u WHERE u.id = :userId and b.open is true")
-//	Optional<Basket> findOpenBasketForUser(@Param("userId") int userId);
-
+	@Query("SELECT b FROM Basket b join b.contactDetails cd join cd.user u WHERE u.userName = :userName and b.open is true")
+	Optional<Basket> findOpenBasketForUser(@Param("userName") String userName);
+	
 }

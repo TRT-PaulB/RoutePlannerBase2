@@ -62,14 +62,15 @@ public class ContactDetails extends DataModel
 	private String officeTel;
 	
 	
-	public ContactDetails() {
-		
+	public ContactDetails(User user) {
+		this.user = user;
 	}
 	
 
 	public ContactDetails(String title, String fullname, String addressLine1, String addressLine2, String addressLine3,
 			String city, String regionOrState, String country, String email, String mobileTel, String homeTel,
-			String officeTel) {
+			String officeTel, User user) {
+		this(user);
 		this.title = title;
 		this.fullname = fullname;
 		this.addressLine1 = addressLine1;
@@ -202,6 +203,15 @@ public class ContactDetails extends DataModel
 
 	public void setFullname(String fullname) {
 		this.fullname = fullname;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 

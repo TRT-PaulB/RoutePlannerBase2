@@ -25,7 +25,7 @@ import com.routeplanner.shopping.service.RegistrationService;
 public class RegistrationController {
 	
 	@Autowired
-	RegistrationService registrationService;
+	private RegistrationService registrationService;
 	
 	private final static Logger logger = LoggerFactory.getLogger(RegistrationController.class);
 	
@@ -40,7 +40,7 @@ public class RegistrationController {
 	
 	@GetMapping("/contact/{username}")
     ResponseEntity<?> getContactDetails(@PathVariable String username) {
-        Optional<ContactDetails> contactDetails = null; // registrationService.findByUsername(username);
+        Optional<ContactDetails> contactDetails = registrationService.findByUsername(username);
         return contactDetails.map(response -> ResponseEntity.ok().body(contactDetails))
                 .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
 		}
