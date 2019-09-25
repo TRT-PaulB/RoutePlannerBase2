@@ -10,26 +10,34 @@ Wednesday 25th Sept
 
 - DONE redesign basket to purchase flow completely
 - DONE refactor model
-- put in webservice stubs
-- regression that it starts up ok (after db teardown)
-- poc in react with proper returns webservice 
-- poc handling errors in react
+- DONE put in webservice stubs
+- DONE team meetings
+- DONE poc in react with proper returns webservice 
+- DONE regression that it starts up ok (after db teardown)
+
 - dummy save of data from runner into system
-- create and test backends for flow against postman 
+- create and test backends for flow against postman
+- poc handling errors in react
+
 - summary notes
-- design admin flow and define security policy for system
-+ 1.30pm meeting                  
++ DONE 1.30pm meeting                  
 + call utility warehouse
 
 ----------------------------------
 Thursday 26th Sept
 
+==> TEAM PROJECT 
+
 - add in basic front end for basket and making a purchase
   --> basket handling, contact details, purchase, sale confirmation
   --> these must be transactional
   --> apply mosh style error handling in front end
+- design admin flow and define security policy for system
+
 ----------------------------------
 Friday 27th Sept
+
+==> TEAM PROJECT
 
 - admin pages
 - changes to PD doc:

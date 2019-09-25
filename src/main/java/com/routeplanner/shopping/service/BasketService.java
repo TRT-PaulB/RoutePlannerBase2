@@ -35,10 +35,11 @@ public class BasketService {
 	
 	public Basket findOpenBasketForUser(int userId) {
 		logger.debug("Searching for baskets for user with id: " + userId);
-		Optional<Basket> basket = basketRepository.findOpenBasketForUser(userId);
-		String basketFoundMsg = basket.isPresent() ? String.valueOf(basket.get().getId()) : "not found";
-		logger.debug("basket found with id: " + basketFoundMsg);
-		return basket.isPresent() ? basket.get() : null;
+		//Optional<Basket> basket = basketRepository.findOpenBasketForUser(userId);
+//		String basketFoundMsg = basket.isPresent() ? String.valueOf(basket.get().getId()) : "not found";
+//		logger.debug("basket found with id: " + basketFoundMsg);
+//		return basket.isPresent() ? basket.get() : null;
+		return null;
 	}
 		
 	public void saveTickets(Set<Ticket> tickets) {

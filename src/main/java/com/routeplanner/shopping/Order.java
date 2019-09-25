@@ -22,6 +22,8 @@ public class Order extends DataModel {
 	@OneToOne
 	private Basket basket;
 	
+	private boolean purchased;
+	
 	
 	public Order() {
 		super();

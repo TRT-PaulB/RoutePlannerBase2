@@ -35,11 +35,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests()
 		.antMatchers("/admin*").hasRole("ADMIN")  // catch all admin urls (includes admin etwas)
 		.antMatchers("/user").hasAnyRole("ADMIN", "USER")
-		.antMatchers("/home", "/errors", "/route/*", "/stations", "/").permitAll()
+		.antMatchers("/home", "/errors", "/route/*", "/stations", "/member/*", "/").permitAll()
 		.and().formLogin();
 	}
 	
-	
+	// TODO  change 'user' to 'member' level, then move member above general security
 	
 	
 	// PASSWORD ENCODER
