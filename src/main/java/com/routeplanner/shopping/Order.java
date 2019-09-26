@@ -17,9 +17,6 @@ public class Order extends DataModel {
 	private LocalDate transactionDate;
 	
 	@OneToOne
-	private ContactDetails contactDetails;
-	
-	@OneToOne
 	private Basket basket;
 	
 	private boolean purchased;
@@ -30,11 +27,10 @@ public class Order extends DataModel {
 	}
 
 
-	public Order(PaymentMethod paymentMethod, LocalDate transactionDate, ContactDetails contactDetails, Basket basket) {
+	public Order(PaymentMethod paymentMethod, LocalDate transactionDate, Basket basket) {
 		super();
 		this.paymentMethod = paymentMethod;
 		this.transactionDate = transactionDate;
-		this.contactDetails = contactDetails;
 		this.basket = basket;
 	}
 
@@ -66,19 +62,13 @@ public class Order extends DataModel {
 	public void setBasket(Basket basket) {
 		this.basket = basket;
 	}
+
 	
-	public ContactDetails getContactDetails() {
-		return contactDetails;
-	}
-
-	public void setContactDetails(ContactDetails contactDetails) {
-		this.contactDetails = contactDetails;
-	}
-
 	@Override
 	public String toString() {
-		return "Order [paymentMethod=" + paymentMethod + ", transactionDate=" + transactionDate + ", contactDetails="
-				+ contactDetails + ", basket=" + basket + "]";
+		String userData = basket != null && basket.getUser() != null ? basket.getUser().getUserName() : "[none]";
+		return "Order [paymentMethod=" + paymentMethod + ", transactionDate=" + transactionDate + ", userData="
+				+ userData + ", basket=" + basket + "]";
 	}
 	
 }

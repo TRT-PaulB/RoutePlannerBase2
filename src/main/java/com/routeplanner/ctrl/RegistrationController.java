@@ -1,10 +1,6 @@
 package com.routeplanner.ctrl;
-import java.net.URI;
-import java.net.URISyntaxException;
+import java.util.List;
 import java.util.Optional;
-
-import javax.validation.Valid;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +12,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.routeplanner.shopping.ContactDetails;
+import com.routeplanner.shopping.User;
+import com.routeplanner.shopping.repository.ContactDetailsRespository;
+import com.routeplanner.shopping.repository.UserRepository;
 import com.routeplanner.shopping.service.RegistrationService;
 
 @RestController
@@ -27,23 +25,45 @@ public class RegistrationController {
 	@Autowired
 	private RegistrationService registrationService;
 	
+	@Autowired
+	UserRepository userRepository;
+	
+	@Autowired
+	ContactDetailsRespository contractDetailsRespository;
+	
+	
 	private final static Logger logger = LoggerFactory.getLogger(RegistrationController.class);
 	
-	@PostMapping("/contact")
-	ResponseEntity<ContactDetails> saveContactDetails(@Valid @RequestBody ContactDetails contactDetails) throws URISyntaxException {
-	    logger.info("Request to create contact details: {}", contactDetails);
-        registrationService.save(contactDetails);
-	    return ResponseEntity.created(new URI("/route/contact/" + contactDetails.getId()))
-	                .body(contactDetails);
+	@PostMapping("/user")
+	public User saveUser(@RequestBody User user) {
+		return registrationService.saveUser(user);
 	}
 	
+	@GetMapping("/users")
+	public List<User> getUsers() {
+		return registrationService.getUsers();
+	}
 	
-	@GetMapping("/contact/{username}")
-    ResponseEntity<?> getContactDetails(@PathVariable String username) {
-        Optional<ContactDetails> contactDetails = registrationService.findByUsername(username);
-        return contactDetails.map(response -> ResponseEntity.ok().body(contactDetails))
-                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
-		}
+	@GetMapping("/user/{username}")
+	public ResponseEntity<User> getUser(@PathVariable String username) {
+		Optional<User> user = userRepository.findByUserName(username);
+		return user.map(response -> ResponseEntity.ok().body(response)).orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+	}
+	
+	@PostMapping("/user/add")
+    User postContactDetailsByUser(@RequestBody User user) {
+		logger.info("getting contact details: usernameuser toString() = " + user.toString());
+		User cdAfter = registrationService.save(user);
+		return cdAfter;
+	}
+	
+	// EXPERIMENT WITH CON~TACT DETAILS APPROACH....ContractDetailsRespository
+	@PostMapping("/contact-details/add")
+	ContactDetails postContactDetails(@RequestBody ContactDetails contactDetails) {
+		logger.info("getting contact details = " + contactDetails.toString());
+		ContactDetails cdAfter = contractDetailsRespository.save(contactDetails);
+		return cdAfter;
+	}
 	
 	
 }

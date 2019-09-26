@@ -14,31 +14,36 @@ Wednesday 25th Sept
 - DONE team meetings
 - DONE poc in react with proper returns webservice 
 - DONE regression that it starts up ok (after db teardown)
-
-
-
-
-- update pd notes in the light of the team project 
+- DONE update pd notes in the light of the team project 
 - changes to PD doc:
-  - replace node.js with spring MVC, security and Thymeleaf project
-  - other: other security techniques, microservices, kubenetes,
+  - DONE replace node.js with spring MVC, security and Thymeleaf project
+  - DONE other: other security techniques, microservices, kubenetes,
            update q+a, tech lib and xls, extend post java 8,
            list all mini-projs and DTT lists 
 
 ----------------------------------
 Thursday 26th Sept
 
-- create and test backends for flow against postman
-- test rewriting controllers as JSON handlers
-- dummy save of data from runner into system (test transactions)
-- poc handling errors as recommended in Controllers and React
-- poc dao and service, and controller tests (see Halifax)
+- IN PROGRESS major refactor of model required
+  - combine user with contact details
+  - map Basket v User as multi-directional + PaymentMethod + User
+- IN PROGRESS create and test backends for flow against postman
+
+
+- IMPORTANT list for Ben + multiple TRT verification 
+
+
 
 + call utility warehouse
 leave 5pm for squash
 
 ----------------------------------
 Friday 27th Sept
+
+- IN PROGRESS very simple framework for poc dao and service, and controller tests (see Halifax)
+  - DONE service
+  - dao
+  - controller tests
 
 ==> TEAM PROJECT
 - define very basic idea for gui structure
@@ -56,6 +61,8 @@ Mon 30th Sept, Thurs-Fri 3rd/4th Oct
 -----------------------------------
 RP JOBS:
 
+- test rewriting controllers as JSON handlers
+- poc handling errors as recommended in Controllers and React
 - add in basic front end for basket and making a purchase
   --> basket handling, contact details, purchase, sale confirmation 
   --> apply mosh style error handling in front end
@@ -83,7 +90,7 @@ react-routeplanner-app
 - db: new_routeplanner_shopping
  - create table user (id bigint, active boolean, password varchar(50), roles varchar(50), user_name varchar(50) );
  - insert into user values (1, 1, 'pass', 'ROLE_USER', 'user'); 
- - insert into user values (2, 1, 'pass', 'ROLE_ADMIN', 'admin');
+  insert into user values (2, 1, 'pass', 'ROLE_ADMIN', 'admin');
  
 ------------------------------------------------------------
 
@@ -135,11 +142,54 @@ HttpSession sess = request.getSession();
      --> User
 
  ========================================================================
-////////////////
-
-//Insert
-			//logger.info("Inserting -> {}", userRepository.save(new User("John", "A1234657")));
-//	logger.info("Student id 10001 -> {}", stuRepository.findById(10001L));
-//	logger.info("All users 1 -> {}", stuRepository.findAll());
-	//Update
-			//logger.info("Update 10001 -> {}", stuRepository.save(newStudent));
+IDEAS FOR CONTROLLERS:
+ 
+ //	@PostMapping("/contact")
+//	ResponseEntity<ContactDetails> saveContactDetails(@Valid @RequestBody ContactDetails contactDetails) throws URISyntaxException {
+//	    logger.info("Request to create contact details: {}", contactDetails);
+//        registrationService.save(contactDetails);
+//	    return ResponseEntity.created(new URI("/route/contact/" + contactDetails.getId()))
+//	                .body(contactDetails);
+//	}
+//	
+	
+//	@GetMapping("/contact/{username}")
+//    ResponseEntity<?> getContactDetails(@PathVariable String username) {
+//        Optional<ContactDetails> contactDetails = registrationService.findByUsername(username);
+//        return contactDetails.map(response -> ResponseEntity.ok().body(contactDetails))
+//                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+//		}
+//	
+ 
+ /*
+	 * https://developer.okta.com/blog/2018/07/19/simple-crud-react-and-spring-boot
+	 * Note: this is also the OCTA account!
+	 * 
+	@GetMapping("/group/{id}")
+    ResponseEntity<?> getGroup(@PathVariable Long id) {
+        Optional<Group> group = groupRepository.findById(id);
+        return group.map(response -> ResponseEntity.ok().body(response))
+                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+    }
+	*/
+ 
+ 
+ 
+ 
+ ========================================================================
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

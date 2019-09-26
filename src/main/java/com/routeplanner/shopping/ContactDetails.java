@@ -1,6 +1,7 @@
 package com.routeplanner.shopping;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
@@ -12,7 +13,9 @@ import javax.validation.constraints.Size;
 @Table(name="contact_details")
 public class ContactDetails extends DataModel 
 {
+	
 	@OneToOne
+	@JoinColumn(name="user_id")
 	private User user;
 	
 	private String title;
@@ -37,8 +40,8 @@ public class ContactDetails extends DataModel
 	private String city;
 	
 	@NotNull
-	@Column(name="region_or_state", length = 50)
-	private String regionOrState;
+	@Column(name="region", length = 50)
+	private String region;
 	
 	@NotNull
 	@Column(length = 40)
@@ -62,27 +65,37 @@ public class ContactDetails extends DataModel
 	private String officeTel;
 	
 	
-	public ContactDetails(User user) {
-		this.user = user;
+	public ContactDetails() {
+		
 	}
 	
 
 	public ContactDetails(String title, String fullname, String addressLine1, String addressLine2, String addressLine3,
 			String city, String regionOrState, String country, String email, String mobileTel, String homeTel,
 			String officeTel, User user) {
-		this(user);
 		this.title = title;
 		this.fullname = fullname;
 		this.addressLine1 = addressLine1;
 		this.addressLine2 = addressLine2;
 		this.addressLine3 = addressLine3;
 		this.city = city;
-		this.regionOrState = regionOrState;
+		this.region = region;
 		this.country = country;
 		this.email = email;
 		this.mobileTel = mobileTel;
 		this.homeTel = homeTel;
 		this.officeTel = officeTel;
+		this.user = user;
+	}
+	
+
+	public User getUser() {
+		return user;
+	}
+
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 
@@ -136,13 +149,13 @@ public class ContactDetails extends DataModel
 	}
 
 
-	public String getRegionOrState() {
-		return regionOrState;
+	public String getRegion() {
+		return region;
 	}
 
 
-	public void setRegionOrState(String regionOrState) {
-		this.regionOrState = regionOrState;
+	public void setRegionOrState(String region) {
+		this.region = region;
 	}
 
 
@@ -205,28 +218,16 @@ public class ContactDetails extends DataModel
 		this.fullname = fullname;
 	}
 
-	public User getUser() {
-		return user;
-	}
-
-
-	public void setUser(User user) {
-		this.user = user;
-	}
-
 
 	@Override
 	public String toString() {
-		return "ContactDetails [title=" + title + ", fullname=" + fullname + ", addressLine1=" + addressLine1
-				+ ", addressLine2=" + addressLine2 + ", addressLine3=" + addressLine3 + ", city=" + city
-				+ ", regionOrState=" + regionOrState + ", country=" + country + ", email=" + email + ", mobileTel="
-				+ mobileTel + ", homeTel=" + homeTel + ", officeTel=" + officeTel + ", id=" + id + ", getTitle()="
-				+ getTitle() + ", getAddressLine1()=" + getAddressLine1() + ", getAddressLine2()=" + getAddressLine2()
-				+ ", getAddressLine3()=" + getAddressLine3() + ", getCity()=" + getCity() + ", getRegionOrState()="
-				+ getRegionOrState() + ", getCountry()=" + getCountry() + ", getEmail()=" + getEmail()
-				+ ", getMobileTel()=" + getMobileTel() + ", getHomeTel()=" + getHomeTel() + ", getOfficeTel()="
-				+ getOfficeTel() + ", getFullname()=" + getFullname() + ", getId()=" + getId() + ", getClass()="
-				+ getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+		return "ContactDetails [user=" + user + ", title=" + title + ", fullname=" + fullname + ", addressLine1="
+				+ addressLine1 + ", addressLine2=" + addressLine2 + ", addressLine3=" + addressLine3 + ", city=" + city
+				+ ", region=" + region + ", country=" + country + ", email=" + email + ", mobileTel=" + mobileTel
+				+ ", homeTel=" + homeTel + ", officeTel=" + officeTel + "]";
 	}
+
+
+	
 	
 }

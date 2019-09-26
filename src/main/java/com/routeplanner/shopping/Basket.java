@@ -4,6 +4,7 @@ import java.util.Optional;
 import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -17,7 +18,8 @@ public class Basket extends DataModel {
 	private Set<Ticket> tickets = new HashSet<Ticket>();
 	
 	@OneToOne
-	private ContactDetails contactDetails;	
+	//@JoinColumn(name = "contact_details_id")
+	private User user;	
 	
 	private boolean open;
 	
@@ -26,8 +28,8 @@ public class Basket extends DataModel {
 
 	}
 	
-	public Basket(ContactDetails contactDetails) {
-		this.contactDetails = contactDetails;
+	public Basket(User user) {
+		this.user = user;
 		this.open = true;
 	}
 	
@@ -47,13 +49,13 @@ public class Basket extends DataModel {
 		}
 	}
 	
-	
-	public ContactDetails getContactDetails() {
-		return contactDetails;
+
+	public User getUser() {
+		return user;
 	}
 
-	public void setContactDetails(ContactDetails contactDetails) {
-		this.contactDetails = contactDetails;
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 	public boolean isOpen() {
@@ -76,7 +78,7 @@ public class Basket extends DataModel {
 
 	@Override
 	public String toString() {
-		return "Basket [tickets=" + tickets + ", contactDetails=" + contactDetails + ", open=" + open + "]";
+		return "Basket [tickets=" + tickets + ", user=" + user + ", open=" + open + "]";
 	}
 	
 }	

@@ -5,7 +5,6 @@ import java.util.regex.Pattern;
 
 import org.springframework.ui.ModelMap;
 
-import com.routeplanner.shopping.ContactDetails;
 import com.routeplanner.shopping.PaymentMethod;
 
 
@@ -37,36 +36,36 @@ public class FormValidation {
 	
 	// DATES:  yyyy-MM-dd                
 		
-	public static void addBespokeContactDetailsErrMsgs(ContactDetails registrationDetails, ModelMap model) {
-		FormValidation.addBlankValidation(registrationDetails.getFullname(), "fullname", model, "rp.contact.details.bad-field-fullname-no-value");
-		FormValidation.addBlankValidation(registrationDetails.getAddressLine1(), "addressLine1", model, "rp.contact.details.bad-field-address-line-1-no-value");
-		FormValidation.addBlankValidation(registrationDetails.getCity(), "city", model, "rp.contact.details.bad-field-city-no-value");
-		FormValidation.addBlankValidation(registrationDetails.getRegionOrState(), "regionOrState", model, "rp.contact.details.bad-field-region-no-value");
-		FormValidation.addBlankValidation(registrationDetails.getCountry(), "country", model, "rp.contact.details.bad-field-country-no-value");
-		FormValidation.addBlankValidation(registrationDetails.getEmail(), "email", model, "rp.contact.details.bad-field-email-no-value");
-		validateTelFields(registrationDetails, model);
-		FormValidation.validateEmailFieldPattern("email", registrationDetails.getEmail(), "rp.contact.details.bad-field-invalid-email", model);
-	}
+//	public static void addBespokeContactDetailsErrMsgs(ContactDetails registrationDetails, ModelMap model) {
+//		FormValidation.addBlankValidation(registrationDetails.getFullname(), "fullname", model, "rp.contact.details.bad-field-fullname-no-value");
+//		FormValidation.addBlankValidation(registrationDetails.getAddressLine1(), "addressLine1", model, "rp.contact.details.bad-field-address-line-1-no-value");
+//		FormValidation.addBlankValidation(registrationDetails.getCity(), "city", model, "rp.contact.details.bad-field-city-no-value");
+//		FormValidation.addBlankValidation(registrationDetails.getRegion(), "regionOrState", model, "rp.contact.details.bad-field-region-no-value");
+//		FormValidation.addBlankValidation(registrationDetails.getCountry(), "country", model, "rp.contact.details.bad-field-country-no-value");
+//		FormValidation.addBlankValidation(registrationDetails.getEmail(), "email", model, "rp.contact.details.bad-field-email-no-value");
+//		validateTelFields(registrationDetails, model);
+//		FormValidation.validateEmailFieldPattern("email", registrationDetails.getEmail(), "rp.contact.details.bad-field-invalid-email", model);
+//	}
+//	
+//	
+//	public static void addBespokePaymentInfoErrMsgs(PaymentMethod paymentInfo, ModelMap model) {
+//		FormValidation.addBlankValidation(paymentInfo.getNameOnCard(), "nameOnCard", model, "rp.checkout.bad-field-name-on-card-no-value");
+//		FormValidation.addBlankValidation(paymentInfo.getCardNumber(), "cardNumber", model, "rp.checkout.bad-field-card-number-no-value");
+//		FormValidation.addBlankValidation(paymentInfo.getSecurityCode(), "securityCode", model, "rp.checkout.bad-field-security-code-no-value");
+//		FormValidation.addBlankValidation(paymentInfo.getExpiryDate(), "expiryDate", model, "rp.checkout.bad-field-expiry-date-no-value");
+//		FormValidation.addStringFldLengthValidation("cardNumber", paymentInfo.getCardNumber(), 
+//				"rp.checkout.card-field-wrong-length", CREDIT_CARD_NUMBER_LENGTH, model);
+//		FormValidation.addStringFldLengthValidation("securityCode", paymentInfo.getSecurityCode(), 
+//				"rp.checkout.security-field-wrong-length", CREDIT_CARD_SECURITY_CODE_LENGTH, model);
+//	}
 	
 	
-	public static void addBespokePaymentInfoErrMsgs(PaymentMethod paymentInfo, ModelMap model) {
-		FormValidation.addBlankValidation(paymentInfo.getNameOnCard(), "nameOnCard", model, "rp.checkout.bad-field-name-on-card-no-value");
-		FormValidation.addBlankValidation(paymentInfo.getCardNumber(), "cardNumber", model, "rp.checkout.bad-field-card-number-no-value");
-		FormValidation.addBlankValidation(paymentInfo.getSecurityCode(), "securityCode", model, "rp.checkout.bad-field-security-code-no-value");
-		FormValidation.addBlankValidation(paymentInfo.getExpiryDate(), "expiryDate", model, "rp.checkout.bad-field-expiry-date-no-value");
-		FormValidation.addStringFldLengthValidation("cardNumber", paymentInfo.getCardNumber(), 
-				"rp.checkout.card-field-wrong-length", CREDIT_CARD_NUMBER_LENGTH, model);
-		FormValidation.addStringFldLengthValidation("securityCode", paymentInfo.getSecurityCode(), 
-				"rp.checkout.security-field-wrong-length", CREDIT_CARD_SECURITY_CODE_LENGTH, model);
-	}
-	
-	
-	private static void validateTelFields(ContactDetails contactDetails, ModelMap model) {
-		FormValidation.addValidation("mobileTel", contactDetails.getMobileTel(), 
-				"rp.contact.details.bad-field-mobile-tel-not-all-digits", model, FormValidation.DIGITS_ONLY_REGEX);
-		FormValidation.addValidation("homeTel", contactDetails.getHomeTel(), 
-				"rp.contact.details.bad-field-home-tel-not-all-digits", model, FormValidation.DIGITS_ONLY_REGEX);
-	}
+//	private static void validateTelFields(ContactDetails contactDetails, ModelMap model) {
+//		FormValidation.addValidation("mobileTel", contactDetails.getMobileTel(), 
+//				"rp.contact.details.bad-field-mobile-tel-not-all-digits", model, FormValidation.DIGITS_ONLY_REGEX);
+//		FormValidation.addValidation("homeTel", contactDetails.getHomeTel(), 
+//				"rp.contact.details.bad-field-home-tel-not-all-digits", model, FormValidation.DIGITS_ONLY_REGEX);
+//	}
 	
 	
 	

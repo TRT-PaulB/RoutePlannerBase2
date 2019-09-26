@@ -38,7 +38,6 @@
 /Users/paulbickell/Documents/JavaWorkspace3/MainApp/src/main/java/com/routeplanner/engine/RoutePlanner.java
 /Users/paulbickell/Documents/JavaWorkspace3/MainApp/src/main/java/com/routeplanner/dm/Route.java
 /Users/paulbickell/Documents/JavaWorkspace3/MainApp/src/main/java/com/routeplanner/shopping/repository/PaymentMethodRepository.java
-/Users/paulbickell/Documents/JavaWorkspace3/MainApp/src/main/java/com/routeplanner/shopping/repository/ContactDetailsRepository.java
 /Users/paulbickell/Documents/JavaWorkspace3/MainApp/src/main/java/com/routeplanner/engine/DijkstraRouteEnquiry.java
 /Users/paulbickell/Documents/JavaWorkspace3/MainApp/src/main/java/com/routeplanner/shopping/utils/FormValidation.java
 /Users/paulbickell/Documents/JavaWorkspace3/MainApp/src/main/java/com/routeplanner/shopping/repository/RegistrationDetailsRepository.java

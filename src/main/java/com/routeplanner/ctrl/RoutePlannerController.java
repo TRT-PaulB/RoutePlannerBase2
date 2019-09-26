@@ -34,17 +34,7 @@ public class RoutePlannerController {
 		return new RouteQuery(start, destination, journey.getRouteInfo());
 	}
 	
-	/*
-	 * https://developer.okta.com/blog/2018/07/19/simple-crud-react-and-spring-boot
-	 * Note: this is also the OCTA account!
-	 * 
-	@GetMapping("/group/{id}")
-    ResponseEntity<?> getGroup(@PathVariable Long id) {
-        Optional<Group> group = groupRepository.findById(id);
-        return group.map(response -> ResponseEntity.ok().body(response))
-                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
-    }
-	*/
+	
 	
 	@GetMapping("/stations")
 	public List<String> getStationNames() {
