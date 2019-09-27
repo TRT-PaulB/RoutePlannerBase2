@@ -92,6 +92,10 @@ react-routeplanner-app
  - insert into user values (1, 1, 'pass', 'ROLE_USER', 'user'); 
   insert into user values (2, 1, 'pass', 'ROLE_ADMIN', 'admin');
  
+ 
+ select cd.* from contact_details cd
+ inner join user u on cd.user_id = u.id
+ 
 ------------------------------------------------------------
 
 logs:

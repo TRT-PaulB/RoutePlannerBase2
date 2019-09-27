@@ -8,7 +8,12 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.routeplanner.shopping.ContactDetails;
 import com.routeplanner.shopping.User;
+import com.routeplanner.shopping.repository.ContactDetailsRespository;
 import com.routeplanner.shopping.repository.UserRepository;
 
 @Transactional(isolation = Isolation.DEFAULT, propagation=Propagation.REQUIRED) 
@@ -19,6 +24,9 @@ public class RegistrationService {
 	
 	@Autowired
 	private UserRepository userRepository;
+	
+	@Autowired
+	private ContactDetailsRespository contractDetailsRespository;
 	
 	
 	public User save(User user) {
@@ -38,5 +46,21 @@ public class RegistrationService {
         User userOut = userRepository.save(user);
         return userOut;
 	}
+	
+	public ContactDetails saveContactDetails(ContactDetails contactDetails) {
+		logger.info("getting contact details = " + contactDetails.toString());
+		if (contactDetails.getId() == null) {
+			return contractDetailsRespository.save(contactDetails);
+		} else {
+			contractDetailsRespository.setUserInfoById(contactDetails.getFullname(), contactDetails.getUser().getId(), contactDetails.getId(),
+					contactDetails.getTitle(), contactDetails.getAddressLine1(), contactDetails.getAddressLine2(), contactDetails.getAddressLine3(),
+					contactDetails.getCity(), contactDetails.getRegion(), contactDetails.getCountry(), contactDetails.getEmail(), contactDetails.getMobileTel(),
+					contactDetails.getHomeTel(), contactDetails.getOfficeTel());
+			return contactDetails;
+		}
+	}
+
+	
+	
 	
 }

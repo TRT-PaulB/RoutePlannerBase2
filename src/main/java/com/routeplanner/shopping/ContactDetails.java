@@ -13,7 +13,6 @@ import javax.validation.constraints.Size;
 @Table(name="contact_details")
 public class ContactDetails extends DataModel 
 {
-	
 	@OneToOne
 	@JoinColumn(name="user_id")
 	private User user;

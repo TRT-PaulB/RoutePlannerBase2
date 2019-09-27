@@ -1,6 +1,7 @@
 package com.routeplanner.ctrl;
 import java.util.List;
 import java.util.Optional;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,10 +13,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import com.routeplanner.shopping.ContactDetails;
 import com.routeplanner.shopping.User;
 import com.routeplanner.shopping.repository.ContactDetailsRespository;
-import com.routeplanner.shopping.repository.UserRepository;
 import com.routeplanner.shopping.service.RegistrationService;
 
 @RestController
@@ -26,7 +27,7 @@ public class RegistrationController {
 	private RegistrationService registrationService;
 	
 	@Autowired
-	UserRepository userRepository;
+	RegistrationService regService;
 	
 	@Autowired
 	ContactDetailsRespository contractDetailsRespository;
@@ -46,14 +47,14 @@ public class RegistrationController {
 	
 	@GetMapping("/user/{username}")
 	public ResponseEntity<User> getUser(@PathVariable String username) {
-		Optional<User> user = userRepository.findByUserName(username);
+		Optional<User> user = regService.findUser(username);
 		return user.map(response -> ResponseEntity.ok().body(response)).orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
 	}
 	
 	@PostMapping("/contact-details/add")
 	ContactDetails postContactDetails(@RequestBody ContactDetails contactDetails) {
 		logger.info("getting contact details = " + contactDetails.toString());
-		ContactDetails cdAfter = contractDetailsRespository.save(contactDetails);
+		ContactDetails cdAfter = regService.saveContactDetails(contactDetails);
 		return cdAfter;
 	}
 	
