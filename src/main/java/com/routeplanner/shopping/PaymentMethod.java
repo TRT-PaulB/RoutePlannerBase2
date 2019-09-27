@@ -4,6 +4,8 @@ import java.time.LocalDate;
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -15,10 +17,14 @@ import com.routeplanner.shopping.converters.CardTypeConverter;
 import com.routeplanner.shopping.utils.StringUtils;
 
 @Entity
-@Table(name="payment_info")
+@Table(name="payment_method")
 public class PaymentMethod extends DataModel 
 {
 	private static String CARD_NUMBER_PREFIX = "-XXXX-XXXX-XXXX";
+	
+	@OneToOne
+	@JoinColumn(name="user_id")
+	private User user;
 	
 	@NotNull
 	@Column(name="card_name", length = 50)
@@ -53,7 +59,7 @@ public class PaymentMethod extends DataModel
 	}
 	
 	public PaymentMethod(CardType cardType, String cardNumber, String securityCode,
-			LocalDate expiryDate, LocalDate validFrom, String nameOnCard) 
+			LocalDate expiryDate, LocalDate validFrom, String nameOnCard, User user) 
 	{
 		this.nameOnCard = nameOnCard;
 		this.cardType = cardType;
@@ -61,6 +67,7 @@ public class PaymentMethod extends DataModel
 		this.securityCode = securityCode;
 		this.expiryDate = expiryDate;
 		this.validFrom = validFrom;
+		this.user = user;
 	}
 
 	public CardType getCardType() {
@@ -79,7 +86,6 @@ public class PaymentMethod extends DataModel
 	{
 		this.cardNumber = cardNumber;
 	}
-
 
 	public String getSecurityCode() {
 		return securityCode;
@@ -114,7 +120,14 @@ public class PaymentMethod extends DataModel
 		this.nameOnCard = nameOnCard;
 	}
 	
-	
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
 	/**
 	 * Refreshes the payment card details, apart from the credit card number.
 	 * The credit card number is represented as XXXX characters, but just displaying 
@@ -124,17 +137,12 @@ public class PaymentMethod extends DataModel
 		nameOnCard = StringUtils.isNotBlank(nameOnCard) && nameOnCard.length() > 4 
 				? nameOnCard.substring(0, 3) + CARD_NUMBER_PREFIX : null; 
 	}
-	
 
 	@Override
 	public String toString() {
-		return "PaymentInfo [nameOnCard=" + nameOnCard + ", cardType=" + cardType + ", cardNumber=" + cardNumber
-				+ ", securityCode=" + securityCode + ", expiry_date=" + expiryDate + ", valid_from=" + validFrom
-				+ ", getCardType()=" + getCardType() + ", getCardNumber()=" + getCardNumber() + ", getSecurityCode()="
-				+ getSecurityCode() + ", getExpiry_date()=" + getExpiryDate() + ", getValid_from()=" + getValidFrom()
-				+ ", getNameOnCard()=" + getNameOnCard() + ", getId()=" + getId() + ", getClass()=" + getClass()
-				+ ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+		return "PaymentMethod [user=" + user + ", nameOnCard=" + nameOnCard + ", cardType=" + cardType + ", cardNumber="
+				+ cardNumber + ", securityCode=" + securityCode + ", expiryDate=" + expiryDate + ", validFrom="
+				+ validFrom + "]";
 	}
-	
-	
+		
 }

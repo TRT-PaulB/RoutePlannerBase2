@@ -26,7 +26,7 @@ public class BasketController {
 	
 	private final static Logger logger = LoggerFactory.getLogger(BasketController.class);
 	
-	//@GetMapping("/basket/{username}")
+	@GetMapping("/basket/{username}")
     ResponseEntity<?> getCurrentBasket(@PathVariable String username) {
 //        Optional<Group> group = groupRepository.findById(id);
 //        return group.map(response -> ResponseEntity.ok().body(response))
@@ -46,7 +46,7 @@ public class BasketController {
 
 	
 	
-	//@PostMapping("/basket")
+	@PostMapping("/basket")
 	ResponseEntity<Basket> saveBasket(@Valid @RequestBody Basket basket) throws URISyntaxException {
 	    logger.info("Request to create basket: {}", basket);
 	    // basketService.save(basket);

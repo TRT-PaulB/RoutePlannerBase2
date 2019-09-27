@@ -45,16 +45,16 @@ public class BasketService {
 				ContactDetails userContact = new ContactDetails(user.get());
 				userContact = registrationService.saveContactDetails(userContact);
 				Basket newBasket = new Basket(userContact);
-				basketRepository.save(newBasket);
+				return basketRepository.save(newBasket);
 			} else {
 				throw new Throwable("user is invalid so basket could not be identified");
 			}
-			
-			
 		}
 		
 		return basket.get();
 	}
+	
+	
 	
 	
 	

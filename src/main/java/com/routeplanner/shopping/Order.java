@@ -3,6 +3,7 @@ import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -11,12 +12,14 @@ import javax.persistence.Table;
 public class Order extends DataModel {
 	
 	@OneToOne
+	@JoinColumn(name="payment_method_id")
 	private PaymentMethod paymentMethod;
 	
 	@Column(name="transaction")
 	private LocalDate transactionDate;
 	
 	@OneToOne
+	@JoinColumn(name="basket_id")
 	private Basket basket;
 	
 	private boolean purchased;
@@ -25,7 +28,6 @@ public class Order extends DataModel {
 	public Order() {
 		super();
 	}
-
 
 	public Order(PaymentMethod paymentMethod, LocalDate transactionDate, Basket basket) {
 		super();

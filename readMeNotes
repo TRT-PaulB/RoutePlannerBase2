@@ -6,43 +6,26 @@ BASIC SPRING SECURITY MYSQL TUTORIAL:
 https://www.youtube.com/watch?v=TNt3GHuayXs
 
 ----------------------------------
-Wednesday 25th Sept
+FRIDAY
 
-- DONE redesign basket to purchase flow completely
-- DONE refactor model
-- DONE put in webservice stubs
-- DONE team meetings
-- DONE poc in react with proper returns webservice 
-- DONE regression that it starts up ok (after db teardown)
-- DONE update pd notes in the light of the team project 
-- changes to PD doc:
-  - DONE replace node.js with spring MVC, security and Thymeleaf project
-  - DONE other: other security techniques, microservices, kubenetes,
-           update q+a, tech lib and xls, extend post java 8,
-           list all mini-projs and DTT lists 
+- DONE get working baseline for contact details
+- DONE IMPORTANT list for Ben + multiple TRT verification 
 
-----------------------------------
-Thursday 26th Sept
-
-- IN PROGRESS major refactor of model required
-  - combine user with contact details
-  - map Basket v User as multi-directional + PaymentMethod + User
-- IN PROGRESS create and test backends for flow against postman
-
-
-- IMPORTANT list for Ben + multiple TRT verification 
-
-
+- stubs for all controllers and services
+- unit test stubs 
+  
+- add in all repository methods
+- integration test poc
+- controller tests poc
+- implement transactions
 
 + call utility warehouse
-leave 5pm for squash
 
 ----------------------------------
 Friday 27th Sept
 
 - IN PROGRESS very simple framework for poc dao and service, and controller tests (see Halifax)
   - DONE service
-  - dao
   - controller tests
 
 ==> TEAM PROJECT
@@ -72,8 +55,6 @@ RP JOBS:
 - develop admin and member areas (keep it simple)
 
 ----------------------------------
-
-
 
 http://localhost:8080/
 http://localhost:8080/home

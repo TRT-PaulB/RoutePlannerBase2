@@ -1,6 +1,6 @@
 package com.routeplanner.ctrl;
+import java.util.ArrayList;
 import java.util.List;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.routeplanner.client.service.ITravelInfoService;
 import com.routeplanner.dm.JourneySummary;
 import com.routeplanner.shopping.RouteQuery;
+import com.routeplanner.shopping.service.RoutePlannerService;
 
 
 @RestController
@@ -21,6 +22,9 @@ public class RoutePlannerController {
 
 	@Autowired
 	private ITravelInfoService travelInfoService;
+	
+	@Autowired
+	private RoutePlannerService routePlannerService;
 	
 	@GetMapping("/")
 	public String home() {
@@ -33,8 +37,6 @@ public class RoutePlannerController {
 		JourneySummary journey = travelInfoService.getJourneyDetails(start, destination);
 		return new RouteQuery(start, destination, journey.getRouteInfo());
 	}
-	
-	
 	
 	@GetMapping("/stations")
 	public List<String> getStationNames() {
@@ -59,6 +61,15 @@ public class RoutePlannerController {
 	@GetMapping("/admin/etwas")
 	public String adminEtwas() {
 		return ("<h1>Welcome Admin users ETWAS!</h1>");
+	}
+	
+	@GetMapping("/query/{userId}")
+	public List<RouteQuery> getRouteQueriesForUser(@PathVariable Integer userId) {
+		try {
+			return routePlannerService.getRoutesForUser(userId);
+		} catch(Throwable t) {
+			return new ArrayList<RouteQuery>();
+		}
 	}
 
 }

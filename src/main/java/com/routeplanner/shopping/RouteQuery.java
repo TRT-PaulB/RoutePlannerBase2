@@ -1,12 +1,28 @@
 package com.routeplanner.shopping;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+import javax.persistence.Transient;
 
+@Entity
+@Table(name="route_query")
 public class RouteQuery extends DataModel 
 {
+	@Column(name="start")
 	private String currRouteStart;
 	
+	@Column(name="destination")
 	private String currRouteDest;
 	
+	@Transient
 	private String routeInfo;
+	
+	@OneToOne
+	@JoinColumn(name="user_id")
+	private User user;
+	
 	
 	public RouteQuery() {
 		

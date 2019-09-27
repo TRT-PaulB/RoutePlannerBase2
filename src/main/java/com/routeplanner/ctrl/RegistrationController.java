@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -27,10 +28,10 @@ public class RegistrationController {
 	private RegistrationService registrationService;
 	
 	@Autowired
-	RegistrationService regService;
+	private RegistrationService regService;
 	
 	@Autowired
-	ContactDetailsRespository contractDetailsRespository;
+	private ContactDetailsRespository contractDetailsRespository;
 	
 	
 	private final static Logger logger = LoggerFactory.getLogger(RegistrationController.class);
@@ -53,9 +54,17 @@ public class RegistrationController {
 	
 	@PostMapping("/contact-details/add")
 	ContactDetails postContactDetails(@RequestBody ContactDetails contactDetails) {
-		logger.info("getting contact details = " + contactDetails.toString());
+		logger.info("posting contact details = " + contactDetails.toString());
 		ContactDetails cdAfter = regService.saveContactDetails(contactDetails);
 		return cdAfter;
+	}
+	
+	@PutMapping("/contact-details/update/{contactDetailsId}")
+	ContactDetails updateContactDetails(@RequestBody ContactDetails contactDetails, @PathVariable Integer contactDetailsId) {
+//		logger.info("updating contact details = " + contactDetails.toString());
+//		ContactDetails cdAfter = regService.saveContactDetails(contactDetails);
+//		return cdAfter;
+		return null;
 	}
 	
 	
