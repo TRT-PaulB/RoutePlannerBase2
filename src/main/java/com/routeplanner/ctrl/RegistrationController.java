@@ -50,14 +50,6 @@ public class RegistrationController {
 		return user.map(response -> ResponseEntity.ok().body(response)).orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
 	}
 	
-	@PostMapping("/user/add")
-    User postContactDetailsByUser(@RequestBody User user) {
-		logger.info("getting contact details: usernameuser toString() = " + user.toString());
-		User cdAfter = registrationService.save(user);
-		return cdAfter;
-	}
-	
-	// EXPERIMENT WITH CON~TACT DETAILS APPROACH....ContractDetailsRespository
 	@PostMapping("/contact-details/add")
 	ContactDetails postContactDetails(@RequestBody ContactDetails contactDetails) {
 		logger.info("getting contact details = " + contactDetails.toString());

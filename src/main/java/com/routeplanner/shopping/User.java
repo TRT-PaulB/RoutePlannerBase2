@@ -27,48 +27,6 @@ public class User {
 	private boolean active;
 	private String roles;
 	
-//	private String title;
-//	
-//	@NotNull
-//    @Size(min=2, max=30)
-//	private String fullname;
-//	
-//	@Size(min=2, max=30)
-//	@Column(name="address_line_1", length = 80)
-//	private String addressLine1;
-//	
-//	@Column(name="address_line_2", length = 80)
-//	private String addressLine2;
-//	
-//	@Column(name="address_line_3", length = 80)
-//	private String addressLine3;
-//	
-//	@Column(length = 40)
-//	private String city;
-//	
-//	@Column(name="region", length = 50)
-//	private String region;
-//	
-//	@Column(length = 40)
-//	private String country;
-//	
-//	@Email
-//	@Column(length = 60)
-//	private String email;
-//	
-//	@Column(name="mobile_phone", length = 30)
-//	@Pattern(regexp = "^[0-9]*$")
-//	private String mobileTel;
-//	
-//	@Column(name="home_phone", length = 30)
-//	@Pattern(regexp = "^[0-9]*$")
-//	private String homeTel;
-//	
-//	@Column(name="office_phone", length = 30)
-//	@Pattern(regexp = "^[0-9]*$")
-//	private String officeTel;
-
-	
 	public User() {
 		
 	}
@@ -103,80 +61,5 @@ public class User {
 	public void setRoles(String roles) {
 		this.roles = roles;
 	}
-//	public String getTitle() {
-//		return title;
-//	}
-//	public void setTitle(String title) {
-//		this.title = title;
-//	}
-//	public String getFullname() {
-//		return fullname;
-//	}
-//	public void setFullname(String fullname) {
-//		this.fullname = fullname;
-//	}
-//	public String getAddressLine1() {
-//		return addressLine1;
-//	}
-//	public void setAddressLine1(String addressLine1) {
-//		this.addressLine1 = addressLine1;
-//	}
-//	public String getAddressLine2() {
-//		return addressLine2;
-//	}
-//	public void setAddressLine2(String addressLine2) {
-//		this.addressLine2 = addressLine2;
-//	}
-//	public String getAddressLine3() {
-//		return addressLine3;
-//	}
-//	public void setAddressLine3(String addressLine3) {
-//		this.addressLine3 = addressLine3;
-//	}
-//	public String getCity() {
-//		return city;
-//	}
-//	public void setCity(String city) {
-//		this.city = city;
-//	}
-//	public String getRegion() {
-//		return region;
-//	}
-//	public void setRegion(String region) {
-//		this.region = region;
-//	}
-//	public String getCountry() {
-//		return country;
-//	}
-//	public void setCountry(String country) {
-//		this.country = country;
-//	}
-//	public String getEmail() {
-//		return email;
-//	}
-//	public void setEmail(String email) {
-//		this.email = email;
-//	}
-//	public String getMobileTel() {
-//		return mobileTel;
-//	}
-//	public void setMobileTel(String mobileTel) {
-//		this.mobileTel = mobileTel;
-//	}
-//	public String getHomeTel() {
-//		return homeTel;
-//	}
-//	public void setHomeTel(String homeTel) {
-//		this.homeTel = homeTel;
-//	}
-//	public String getOfficeTel() {
-//		return officeTel;
-//	}
-//	public void setOfficeTel(String officeTel) {
-//		this.officeTel = officeTel;
-//	}
-	
-	
-	
 	
 }
