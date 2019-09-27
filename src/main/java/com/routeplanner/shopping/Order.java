@@ -63,12 +63,11 @@ public class Order extends DataModel {
 		this.basket = basket;
 	}
 
-	
+
 	@Override
 	public String toString() {
-		String userData = basket != null && basket.getUser() != null ? basket.getUser().getUserName() : "[none]";
-		return "Order [paymentMethod=" + paymentMethod + ", transactionDate=" + transactionDate + ", userData="
-				+ userData + ", basket=" + basket + "]";
+		return "Order [paymentMethod=" + paymentMethod + ", transactionDate=" + transactionDate + ", basket=" + basket
+				+ ", purchased=" + purchased + "]";
 	}
 	
 }

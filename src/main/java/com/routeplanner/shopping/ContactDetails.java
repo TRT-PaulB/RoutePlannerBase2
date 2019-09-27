@@ -68,6 +68,9 @@ public class ContactDetails extends DataModel
 		
 	}
 	
+	public ContactDetails(User user) {
+		this.user = user;
+	}
 
 	public ContactDetails(String title, String fullname, String addressLine1, String addressLine2, String addressLine3,
 			String city, String regionOrState, String country, String email, String mobileTel, String homeTel,

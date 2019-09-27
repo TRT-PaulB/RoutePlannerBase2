@@ -59,8 +59,5 @@ public class RegistrationService {
 			return contactDetails;
 		}
 	}
-
-	
-	
 	
 }
