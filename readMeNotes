@@ -6,53 +6,34 @@ BASIC SPRING SECURITY MYSQL TUTORIAL:
 https://www.youtube.com/watch?v=TNt3GHuayXs
 
 ----------------------------------
-FRIDAY
-
-- DONE get working baseline for contact details
-- DONE IMPORTANT list for Ben + multiple TRT verification 
-
-- stubs for all controllers and services
-- unit test stubs 
+RESEARCH
   
-- add in all repository methods
-- integration test poc
-- controller tests poc
-- implement transactions
-
-+ call utility warehouse
-
-----------------------------------
-Friday 27th Sept
-
-- IN PROGRESS very simple framework for poc dao and service, and controller tests (see Halifax)
-  - DONE service
-  - controller tests
-
-==> TEAM PROJECT
-- define very basic idea for gui structure
-- highlight front end shells and approach to get started
-
-----------------------------------
-Mon 30th Sept, Thurs-Fri 3rd/4th Oct
-
-==> TEAM PROJECT
-
 - security research / links
 - microservices links:
   https://www.udemy.com/course/spring-boot-microservices-with-spring-cloud-beginner-to-guru/
 
+----------------------------------
+Mon 30th Sept, Thurs-Fri 3rd/4th Oct
+==> Tues + Wed in Oxford
+==> TEAM PROJECT
+==> RP
++ TEL Utilities Warehouse
+
 -----------------------------------
 RP JOBS:
 
+- backend methods tested with postman
+- implement transactions and test in service tests
 - test rewriting controllers as JSON handlers
+- integration and controller test POC
 - poc handling errors as recommended in Controllers and React
 - add in basic front end for basket and making a purchase
   --> basket handling, contact details, purchase, sale confirmation 
   --> apply mosh style error handling in front end
-  --> review security options and apply to RP
-  --> overview of react and rest unit tests  
+  --> overview of react unit tests  
 - design admin flow and define security policy for system
 - develop admin and member areas (keep it simple)
+- apply security
 
 ----------------------------------
 
