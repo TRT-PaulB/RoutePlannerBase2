@@ -1,11 +1,17 @@
 package com.routeplanner.ctrl;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.routeplanner.client.service.ITravelInfoService;
@@ -32,11 +38,25 @@ public class RoutePlannerController {
 	}
 	
 	@GetMapping("/{start}/{destination}")
-	public RouteQuery getRouteQuery(@PathVariable String start, @PathVariable String destination) {
+	public ResponseEntity<RouteQuery> getRouteQuery(@PathVariable String start, @PathVariable String destination) throws URISyntaxException {
 		logger.info("making a route query: start = " + start + " --> dest = " + destination);
 		JourneySummary journey = travelInfoService.getJourneyDetails(start, destination);
-		return new RouteQuery(start, destination, journey.getRouteInfo());
+		try {
+			RouteQuery route = new RouteQuery(start, destination, journey.getRouteInfo());
+			return ResponseEntity.ok().body(route);
+		} catch(Throwable t) {
+			// in case of an issue not handled in TravelInfoService
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		}
 	}
+	
+	@PostMapping("/add")
+	public ResponseEntity<RouteQuery> saveRoute(@RequestBody RouteQuery routeQuery) throws URISyntaxException {
+		logger.info("Request to persist route: {}", routeQuery);
+		RouteQuery result = routePlannerService.saveRoute(routeQuery);
+		return ResponseEntity.created(new URI("/route/add" + result.getId()))
+                .body(result);
+	}	
 	
 	@GetMapping("/stations")
 	public List<String> getStationNames() {
