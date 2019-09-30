@@ -1,9 +1,8 @@
 package com.routeplanner.shopping;
 
-import java.util.Locale;
-import java.util.ResourceBundle;
+import java.io.Serializable;
 
-public enum PassengerType {
+public enum PassengerType implements Serializable {
 	
 	BOG_STANDARD(1, "rp.passenger.type.bog-standard", "rp.passenger.type.code.bog-standard"),
 	STANDARD_PLUS(2, "rp.passenger.type.standard-plus", "rp.passenger.type.code.standard-plus"),
@@ -49,6 +48,10 @@ public enum PassengerType {
     }
 	
 }
+
+
+
+
 
 
 

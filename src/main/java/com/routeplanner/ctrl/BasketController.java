@@ -18,7 +18,7 @@ import com.routeplanner.shopping.Basket;
 import com.routeplanner.shopping.service.BasketService;
 
 @RestController
-@RequestMapping("route")
+@RequestMapping("basket")
 public class BasketController {
 
 //	@Autowired
@@ -46,7 +46,7 @@ public class BasketController {
 
 	
 	
-	@PostMapping("/basket")
+	@PostMapping("/add")
 	ResponseEntity<Basket> saveBasket(@Valid @RequestBody Basket basket) throws URISyntaxException {
 	    logger.info("Request to create basket: {}", basket);
 	    // basketService.save(basket);

@@ -25,7 +25,6 @@ public class TicketService {
 	}
 
 	public Ticket save(Ticket ticket) {
-		logger.debug("Ticket saved with id: " + ticket.getId());
 		return ticketRepository.save(ticket);
 	}
 
