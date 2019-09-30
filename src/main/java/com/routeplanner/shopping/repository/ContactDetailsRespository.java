@@ -1,4 +1,6 @@
 package com.routeplanner.shopping.repository;
+import java.util.Optional;
+
 import javax.persistence.Column;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
@@ -8,7 +10,9 @@ import javax.validation.constraints.Size;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
+import com.routeplanner.shopping.Basket;
 import com.routeplanner.shopping.ContactDetails;
 
 public interface ContactDetailsRespository extends JpaRepository<ContactDetails, Integer> {
@@ -30,6 +34,9 @@ public interface ContactDetailsRespository extends JpaRepository<ContactDetails,
 	void setUserInfoById(String userName, Integer userId, Integer contactDetailsId, String title, String address1, String address2, String address3,
 			String city, String region, String country, String email, String mobileTel, String homeTel, String officeTel);
 	
+	
+	@Query("SELECT cd from ContactDetails cd join cd.user u WHERE u.id = :id")
+	Optional<ContactDetails> findContactDetailsForUser(@Param("id") Integer id);
 	
 }
 

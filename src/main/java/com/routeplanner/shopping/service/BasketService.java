@@ -32,21 +32,23 @@ public class BasketService {
 	}
 	
 	
-	
-	public Basket getCurrentBasket(String username) throws Throwable {
+	public Basket getCurrentBasket(Integer userId) throws Throwable {
 		
-		Optional<Basket> basket = basketRepository.findOpenBasketForUser(username);
+		Optional<Basket> basket = basketRepository.findOpenBasketByUserId(userId);
 		
 		if (!basket.isPresent()) {
-			// create a new basket
-			Optional<User> user = registrationService.findUser(username);
+			logger.info("no open basket is present - so create a contact details record and basket for this user");
+			Optional<User> user = registrationService.findUserById(userId);
 			
-			if (user.isPresent()) {
-				ContactDetails userContact = new ContactDetails(user.get());
-				userContact = registrationService.saveContactDetails(userContact);
-				Basket newBasket = new Basket(userContact);
-				return basketRepository.save(newBasket);
+			Optional<ContactDetails> contactDetails = registrationService.findContactDetailsByUserId(userId);
+			
+			if (contactDetails.isPresent()) {
+				Basket newBasket = new Basket(contactDetails.get());
+				newBasket = basketRepository.save(newBasket);
+				logger.info("created a new basket:  = " + newBasket.toString());
+				return newBasket;
 			} else {
+				logger.info("problem creating new basket - no contact details available for this user");
 				throw new Throwable("user is invalid so basket could not be identified");
 			}
 		}

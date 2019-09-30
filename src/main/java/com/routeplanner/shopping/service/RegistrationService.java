@@ -41,6 +41,10 @@ public class RegistrationService {
 		return userRepository.findById(id);
 	}
 	
+	public Optional<ContactDetails> findContactDetailsByUserId(Integer userId) {
+		return contractDetailsRespository.findContactDetailsForUser(userId);
+	}
+	
 	public List<User> getUsers() {
 		return userRepository.findAll();
 	}

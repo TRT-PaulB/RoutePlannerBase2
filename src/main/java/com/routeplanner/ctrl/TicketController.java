@@ -1,5 +1,8 @@
 package com.routeplanner.ctrl;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import com.routeplanner.shopping.Ticket;
 import com.routeplanner.shopping.service.TicketService;
 
@@ -37,10 +41,11 @@ public class TicketController {
     }
 	
 	@PostMapping("/admin/add")
-	Ticket addNewTicket(@RequestBody Ticket ticket) {
+	ResponseEntity<Ticket> addNewTicket(@RequestBody Ticket ticket) throws URISyntaxException {
 		Ticket result = ticketService.save(ticket);
 		logger.debug("Ticket saved with id: " + result.getId());
-		return result;
+		return ResponseEntity.created(new URI("/ticket/admin/add" + result.getId()))
+                .body(result);
 	}
 	
 }

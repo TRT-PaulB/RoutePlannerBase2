@@ -3,7 +3,9 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Optional;
+
 import javax.validation.Valid;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +18,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import com.routeplanner.shopping.ContactDetails;
 import com.routeplanner.shopping.User;
 import com.routeplanner.shopping.service.RegistrationService;
@@ -46,6 +49,12 @@ public class RegistrationController {
 	public ResponseEntity<User> getUser(@PathVariable String username) {
 		Optional<User> user = registrationService.findUser(username);
 		return user.map(response -> ResponseEntity.ok().body(response)).orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+	}
+	
+	@GetMapping("/contact/{userId}")
+	public ResponseEntity<ContactDetails> getUser(@PathVariable Integer userId) {
+		Optional<ContactDetails> contactDetails = registrationService.findContactDetailsByUserId(userId);
+		return contactDetails.map(response -> ResponseEntity.ok().body(response)).orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
 	}
 	
 	@GetMapping("/user/id/{id}")

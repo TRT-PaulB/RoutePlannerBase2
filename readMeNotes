@@ -21,13 +21,16 @@ Mon 30th Sept, Thurs-Fri 3rd/4th Oct
 -----------------------------------
 RP JOBS:
 
-- backend methods tested with postman
+- backend methods tested with postman  (resume from basket controller)
 - implement transactions and test in service tests
   [exception handling needs to be in the controllers]
 - test rewriting controllers as JSON handlers
 
 
-- integration and controller test POC
+- service, integration and controller test POC
+==> research java microservices
+==> react bank docs and full gui structure
+
 - poc handling errors as recommended in Controllers and React
 - add in basic front end for basket and making a purchase
   --> basket handling, contact details, purchase, sale confirmation 
