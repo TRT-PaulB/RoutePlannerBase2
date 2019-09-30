@@ -2,6 +2,8 @@ package com.routeplanner.ctrl;
 import java.util.List;
 import java.util.Optional;
 
+import javax.validation.Valid;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,26 +19,18 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.routeplanner.shopping.ContactDetails;
 import com.routeplanner.shopping.User;
-import com.routeplanner.shopping.repository.ContactDetailsRespository;
 import com.routeplanner.shopping.service.RegistrationService;
 
 @RestController
-@RequestMapping("route")
+@RequestMapping("reg")
 public class RegistrationController {
 	
 	@Autowired
 	private RegistrationService registrationService;
 	
-	@Autowired
-	private RegistrationService regService;
-	
-	@Autowired
-	private ContactDetailsRespository contractDetailsRespository;
-	
-	
 	private final static Logger logger = LoggerFactory.getLogger(RegistrationController.class);
 	
-	@PostMapping("/user")
+	@PostMapping("/user/add")
 	public User saveUser(@RequestBody User user) {
 		return registrationService.saveUser(user);
 	}
@@ -48,24 +42,24 @@ public class RegistrationController {
 	
 	@GetMapping("/user/{username}")
 	public ResponseEntity<User> getUser(@PathVariable String username) {
-		Optional<User> user = regService.findUser(username);
+		Optional<User> user = registrationService.findUser(username);
 		return user.map(response -> ResponseEntity.ok().body(response)).orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
 	}
 	
-	@PostMapping("/contact-details/add")
+	 
+	@PostMapping("/contact-details/persist")
 	ContactDetails postContactDetails(@RequestBody ContactDetails contactDetails) {
 		logger.info("posting contact details = " + contactDetails.toString());
-		ContactDetails cdAfter = regService.saveContactDetails(contactDetails);
+		logger.info("contact details id = " + contactDetails.getId());
+		ContactDetails cdAfter = registrationService.saveContactDetails(contactDetails);
 		return cdAfter;
 	}
 	
-	@PutMapping("/contact-details/update/{contactDetailsId}")
-	ContactDetails updateContactDetails(@RequestBody ContactDetails contactDetails, @PathVariable Integer contactDetailsId) {
-//		logger.info("updating contact details = " + contactDetails.toString());
-//		ContactDetails cdAfter = regService.saveContactDetails(contactDetails);
-//		return cdAfter;
-		return null;
-	}
-	
+	@PutMapping("/contact-details/{id}")
+    ResponseEntity<ContactDetails> updateGroup(@Valid @RequestBody ContactDetails contactDetails) {
+        logger.info("Request to update contact details: {}", contactDetails);
+        ContactDetails result = registrationService.updateContactDetails(contactDetails);
+        return ResponseEntity.ok().body(result);
+    }
 	
 }

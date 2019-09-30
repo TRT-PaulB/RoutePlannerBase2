@@ -47,17 +47,33 @@ public class RegistrationService {
         return userOut;
 	}
 	
+//	public ContactDetails saveContactDetailsOLD(ContactDetails contactDetails) {
+//		logger.info("getting contact details = " + contactDetails.toString());
+//		if (contactDetails.getId() == null) {
+//			return contractDetailsRespository.save(contactDetails);
+//		} else {
+//			contractDetailsRespository.setUserInfoById(contactDetails.getFullname(), contactDetails.getUser().getId(), contactDetails.getId(),
+//					contactDetails.getTitle(), contactDetails.getAddressLine1(), contactDetails.getAddressLine2(), contactDetails.getAddressLine3(),
+//					contactDetails.getCity(), contactDetails.getRegion(), contactDetails.getCountry(), contactDetails.getEmail(), contactDetails.getMobileTel(),
+//					contactDetails.getHomeTel(), contactDetails.getOfficeTel());
+//			return contactDetails;
+//		}
+//	}
+	
 	public ContactDetails saveContactDetails(ContactDetails contactDetails) {
 		logger.info("getting contact details = " + contactDetails.toString());
-		if (contactDetails.getId() == null) {
-			return contractDetailsRespository.save(contactDetails);
-		} else {
-			contractDetailsRespository.setUserInfoById(contactDetails.getFullname(), contactDetails.getUser().getId(), contactDetails.getId(),
-					contactDetails.getTitle(), contactDetails.getAddressLine1(), contactDetails.getAddressLine2(), contactDetails.getAddressLine3(),
-					contactDetails.getCity(), contactDetails.getRegion(), contactDetails.getCountry(), contactDetails.getEmail(), contactDetails.getMobileTel(),
-					contactDetails.getHomeTel(), contactDetails.getOfficeTel());
-			return contactDetails;
-		}
+		return contractDetailsRespository.save(contactDetails);
 	}
+	
+	
+	public ContactDetails updateContactDetails(ContactDetails contactDetails) {
+
+		contractDetailsRespository.setUserInfoById(contactDetails.getFullname(), contactDetails.getUser().getId(), contactDetails.getId(),
+				contactDetails.getTitle(), contactDetails.getAddressLine1(), contactDetails.getAddressLine2(), contactDetails.getAddressLine3(),
+				contactDetails.getCity(), contactDetails.getRegion(), contactDetails.getCountry(), contactDetails.getEmail(), contactDetails.getMobileTel(),
+				contactDetails.getHomeTel(), contactDetails.getOfficeTel());
+		return contactDetails;
+	}
+	
 	
 }

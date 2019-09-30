@@ -17,14 +17,15 @@ Mon 30th Sept, Thurs-Fri 3rd/4th Oct
 ==> Tues + Wed in Oxford
 ==> TEAM PROJECT
 ==> RP
-+ TEL Utilities Warehouse
 
 -----------------------------------
 RP JOBS:
 
 - backend methods tested with postman
 - implement transactions and test in service tests
+  [exception handling needs to be in the controllers]
 - test rewriting controllers as JSON handlers
+
 - integration and controller test POC
 - poc handling errors as recommended in Controllers and React
 - add in basic front end for basket and making a purchase
@@ -51,8 +52,14 @@ react-routeplanner-app
 
 - db: new_routeplanner_shopping
  - create table user (id bigint, active boolean, password varchar(50), roles varchar(50), user_name varchar(50) );
- - insert into user values (1, 1, 'pass', 'ROLE_USER', 'user'); 
-  insert into user values (2, 1, 'pass', 'ROLE_ADMIN', 'admin');
+ 
+ 
+ insert into user values (1, 1, 'pass', 'ROLE_USER', 'user'); 
+ insert into user values (2, 1, 'pass', 'ROLE_ADMIN', 'admin');
+ 
+  insert into route_query values(1, 'Farringdon', 'Oxford Circus', 1);
+ 
+ http://localhost:8080/route/query/1
  
  
  select cd.* from contact_details cd
