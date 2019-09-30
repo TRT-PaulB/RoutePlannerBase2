@@ -63,7 +63,14 @@ public class RouteQuery extends DataModel
 	public void setRouteInfo(String routeInfo) {
 		this.routeInfo = routeInfo;
 	}
+	
+	public User getUser() {
+		return user;
+	}
 
+	public void setUser(User user) {
+		this.user = user;
+	}
 
 	@Override
 	public String toString() {
