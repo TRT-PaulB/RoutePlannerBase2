@@ -107,7 +107,13 @@ SQL TO CHECK FOR TICKETS IN A USER'S BASKET
 17, 'ad1', 'add2', 'add3', 'GHlasgow', 'countryV', 'dsf@sdf.com', 'fullnamneP', '987875', '765654', '435345', 'region', 'title', 1);
 
 
+ select b.id basketId, t.*
+ from Basket B
+ inner join basket_tickets bt on bt.basket_id = b.id
+ inner join ticket t on bt.tickets_id = t.id
+ where b.id = 18
  
+ insert into payment_method values(1, '1234132423412344', 2, '2022-10-04', 'Mr X Bloggs', '456', null, 1);
  
  ========================================== 
  
@@ -125,75 +131,13 @@ Apply registration page
 Add admin pages + permissions
 
 ========================================================================
+Thurs 3rd October pm
+- complete OrderController
+- 2pm meeting prof dev
+- start reading AEDP17 + other doc from Chris
+- print links for security reading
 
-HttpSession sess = request.getSession();
-    	sess.setAttribute("stationList", travelInfoService.getStationList());
-    	sess.setAttribute("ticketTypeList", TicketType.values());
-    	sess.setAttribute("passengerTypeList", PassengerType.values());
-    	sess.setAttribute("cardTypeList", CardType.values());
-    	sess.setAttribute("titleList", getTitleLiterals());
-    	sess.setAttribute("currUser", user);
-      	
-    	
-    	private String[] getTitleLiterals() {
-    	return new String[] {"rp.person.title.mr", 
-    			"rp.person.title.mrs", 
-    			"rp.person.title.miss"};
-    }
-    
-    	
-    	
- Shopping
- --> basket
-     --> ticketList
-     --> open
-     --> user
- --> order
-     --> PaymentInfo
-     --> ContactDetails
-     --> Basket
-     --> User
- --> purchase
-     --> Order
-     --> TransactionDate
-     --> User
-
- ========================================================================
-IDEAS FOR CONTROLLERS:
- 
- //	@PostMapping("/contact")
-//	ResponseEntity<ContactDetails> saveContactDetails(@Valid @RequestBody ContactDetails contactDetails) throws URISyntaxException {
-//	    logger.info("Request to create contact details: {}", contactDetails);
-//        registrationService.save(contactDetails);
-//	    return ResponseEntity.created(new URI("/route/contact/" + contactDetails.getId()))
-//	                .body(contactDetails);
-//	}
-//	
-	
-//	@GetMapping("/contact/{username}")
-//    ResponseEntity<?> getContactDetails(@PathVariable String username) {
-//        Optional<ContactDetails> contactDetails = registrationService.findByUsername(username);
-//        return contactDetails.map(response -> ResponseEntity.ok().body(contactDetails))
-//                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
-//		}
-//	
- 
- /*
-	 * https://developer.okta.com/blog/2018/07/19/simple-crud-react-and-spring-boot
-	 * Note: this is also the OCTA account!
-	 * 
-	@GetMapping("/group/{id}")
-    ResponseEntity<?> getGroup(@PathVariable Long id) {
-        Optional<Group> group = groupRepository.findById(id);
-        return group.map(response -> ResponseEntity.ok().body(response))
-                .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
-    }
-	*/
- 
- 
- 
- 
- ========================================================================
+========================================================================
  
  
   

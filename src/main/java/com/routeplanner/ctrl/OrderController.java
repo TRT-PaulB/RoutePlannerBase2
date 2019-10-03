@@ -2,6 +2,7 @@ package com.routeplanner.ctrl;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
+import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -11,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,7 +24,7 @@ import com.routeplanner.shopping.service.OrderService;
 import com.routeplanner.shopping.service.PaymentMethodService;
 
 @RestController
-@RequestMapping("member")
+@RequestMapping("order")
 public class OrderController {
 	
 	private final static Logger logger = LoggerFactory.getLogger(OrderController.class);
@@ -34,7 +36,10 @@ public class OrderController {
 	private PaymentMethodService paymentMethodService;
 	
 	
-	@PostMapping("/purchase")
+	// IN PROGRESS
+	
+	
+	//@PostMapping("/purchase")
 	ResponseEntity<Order> placeOrder(@Valid @RequestBody Order order) throws URISyntaxException {
 		try {
 			Order purchase = orderService.placeOrder(order);
@@ -46,13 +51,19 @@ public class OrderController {
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
 	}
+	
+	//@GetMapping("/member/order/{userId}")
+	public List<Order> getOrders(@PathVariable Integer userId) {
+		return orderService.getOrdersForUser(userId);
+	}
 
-	@GetMapping("/users")
-	List<PaymentMethod> getPaymentMethods(Integer userId) {
-		return paymentMethodService.getAllPaymentMethodsByUser(userId);
+	//@GetMapping("/member/pm/{userId}")
+	ResponseEntity<List<PaymentMethod>> getPaymentMethods(Integer userId) {
+		 Optional<List<PaymentMethod>> optPayMeths = paymentMethodService.getAllPaymentMethodsByUser(userId);
+		 return optPayMeths.map(response -> ResponseEntity.ok().body(response)).orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
 	}
 		
-	@PostMapping("/contact-details/add")
+	//@PostMapping("/member/pm/add")
 	PaymentMethod postPaymentMethod(@RequestBody PaymentMethod paymentMethod) {
 		logger.info("posting payment method = " + paymentMethod.toString());
 		paymentMethodService.save(paymentMethod);

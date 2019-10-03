@@ -63,14 +63,15 @@ public class BasketService {
 	}
 	
 
-	public void saveNewBasket(Basket basket) {
+	public Basket saveBasket(Basket basket) {
 		if (basket.getTickets() != null && basket.getTickets().size() > 0) {
 			List<Ticket> addedTickets = ticketService.saveAll(basket.getTickets());
 			basket.setTickets(addedTickets.stream().collect(Collectors.toSet()));
 		}
 
-		basketRepository.save(basket);
+		Basket dbBasket = basketRepository.save(basket);
 		logger.debug("Basket saved with id: " + basket.getId());
+		return dbBasket;
 	}
 	
 	

@@ -51,8 +51,8 @@ public class OrderService {
 	}
 
 	
-	public List<Order> getOrdersForUser(String username) {
-		return orderRepository.findPurchasesForUser(username);
+	public List<Order> getOrdersForUser(Integer userId) {
+		return orderRepository.findPurchasesForUser(userId);
 	}
 
 }

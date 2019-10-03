@@ -7,8 +7,8 @@ import com.routeplanner.shopping.Order;
 
 public interface OrderRepository extends JpaRepository<Order, Integer> {
 	
-	@Query("SELECT ord FROM Order ord join ord.basket b join b.contactDetails cd join cd.user u WHERE u.userName = :userName and ord.purchased is true")
-	List<Order> findPurchasesForUser(@Param("userName") String userName);
+	@Query("SELECT ord FROM Order ord join ord.basket b join b.contactDetails cd join cd.user u WHERE u.id = :userId and ord.purchased is true")
+	List<Order> findPurchasesForUser(@Param("userName") Integer userId);
 	
 	
 }

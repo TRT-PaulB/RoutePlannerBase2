@@ -1,5 +1,6 @@
 package com.routeplanner.shopping.service;
 import java.util.List;
+import java.util.Optional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -8,7 +9,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.GetMapping;
 
 import com.routeplanner.shopping.PaymentMethod;
 import com.routeplanner.shopping.repository.PaymentMethodRepository;
@@ -28,7 +28,7 @@ public class PaymentMethodService {
 		
 	}
 	
-	public List<PaymentMethod> getAllPaymentMethodsByUser(Integer userId) {
+	public Optional<List<PaymentMethod>> getAllPaymentMethodsByUser(Integer userId) {
 		return paymentInfoRepository.findPaymentMethodForUser(userId);
 	}
 	
