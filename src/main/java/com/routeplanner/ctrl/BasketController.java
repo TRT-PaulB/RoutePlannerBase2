@@ -31,8 +31,6 @@ public class BasketController {
 	private BasketService basketService;
 	
 
-	
-	// TODO left off here - need to test both avenues in the service here.......
 	@GetMapping("/current/{userId}")
     ResponseEntity<?> getCurrentBasket(@PathVariable Integer userId) throws URISyntaxException {
 		try {
@@ -49,7 +47,7 @@ public class BasketController {
 	@PostMapping("/add")
 	ResponseEntity<Basket> saveBasket(@Valid @RequestBody Basket basket) throws URISyntaxException {
 	    logger.info("Request to create basket: {}", basket);
-	    //basketService.save(basket);
+	    basketService.saveNewBasket(basket);
 	    return ResponseEntity.created(new URI("/route/basket/" + basket.getId()))
 	                .body(basket);
 	}

@@ -70,15 +70,17 @@ public class BasketService {
 //	}
 	
 	
-//public void save(Basket basket) {
-//		
-//		if (basket.getTickets() != null) {
-//			saveTickets(basket.getTickets());
-//		}
-//		
-//		basketRepository.save(basket);
-//		logger.debug("Basket saved with id: " + basket.getId());
-//	}
+	public void saveNewBasket(Basket basket) {
+		if (basket.getTickets() != null && basket.getTickets().size() > 0) {
+		// saveTickets(basket.getTickets());
+			
+			
+			
+	}
+
+		basketRepository.save(basket);
+		logger.debug("Basket saved with id: " + basket.getId());
+	}
 	
 	
 }

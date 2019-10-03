@@ -68,6 +68,47 @@ react-routeplanner-app
  
  insert into ticket values(1, 3, 1, 'dest1', 4, 'start1', 2, '2019-10-04' );
  
+ insert into basket_tickets values (18, 1);
+  insert into basket_tickets values (18, 3);
+   insert into basket_tickets values (18, 7);
+    insert into basket_tickets values (18, 13);
+
+SQL TO CHECK THAT AN EMPTY USER'S BASKET HAS BEEN CREATED
+select 
+    b.id basketId, 
+    b.open basketOpen,
+    u.roles,
+    u.user_name,
+    cd.city,
+    cd.id contactDetailsId
+ from Basket B
+ inner join contact_details cd on cd.id = b.contact_details_id
+ inner join user u on u.id = cd.user_id
+ where u.id = 1
+
+SQL TO CHECK FOR TICKETS IN A USER'S BASKET
+ select 
+    b.id basketId, 
+    b.open basketOpen,
+    u.roles,
+    u.user_name,
+    cd.city,
+    t.num_units numTickets,
+    t.start,
+    t.destination dest
+ from Basket B
+ inner join basket_tickets bt on bt.basket_id = b.id
+ inner join ticket t on bt.tickets_id = t.id
+ inner join contact_details cd on cd.id = b.contact_details_id
+ inner join user u on u.id = cd.user_id
+ where u.id = 2
+ 
+ insert into contact_details values (
+17, 'ad1', 'add2', 'add3', 'GHlasgow', 'countryV', 'dsf@sdf.com', 'fullnamneP', '987875', '765654', '435345', 'region', 'title', 1);
+
+
+ 
+ 
  ========================================== 
  
 logs:
@@ -155,9 +196,11 @@ IDEAS FOR CONTROLLERS:
  ========================================================================
  
  
+  
  
  
  
+  
  
  
  
