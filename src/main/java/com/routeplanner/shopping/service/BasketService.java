@@ -1,5 +1,7 @@
 package com.routeplanner.shopping.service;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.routeplanner.shopping.Basket;
 import com.routeplanner.shopping.ContactDetails;
+import com.routeplanner.shopping.Ticket;
 import com.routeplanner.shopping.User;
 import com.routeplanner.shopping.repository.BasketRepository;
 
@@ -23,6 +26,9 @@ public class BasketService {
 	
 	@Autowired
 	private RegistrationService registrationService;
+	
+	@Autowired
+	private TicketService ticketService;
 	
 	@Autowired
 	private BasketRepository<Basket> basketRepository;
@@ -56,27 +62,12 @@ public class BasketService {
 		return basket.get();
 	}
 	
-	
-	
-	
-	
-	
-	// TICKETS....
-//	public void saveTickets(Set<Ticket> tickets) {
-//		if (tickets != null && tickets.size() > 0) {
-//			logger.debug("Persisting a batch of " + tickets.size() + " tickets");
-//			basketRepository.saveAll((ArrayList)tickets.stream().collect(Collectors.toList()));
-//		}
-//	}
-	
-	
+
 	public void saveNewBasket(Basket basket) {
 		if (basket.getTickets() != null && basket.getTickets().size() > 0) {
-		// saveTickets(basket.getTickets());
-			
-			
-			
-	}
+			List<Ticket> addedTickets = ticketService.saveAll(basket.getTickets());
+			basket.setTickets(addedTickets.stream().collect(Collectors.toSet()));
+		}
 
 		basketRepository.save(basket);
 		logger.debug("Basket saved with id: " + basket.getId());
