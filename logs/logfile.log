@@ -1,151 +1,33 @@
-2019-10-03 09:23:44.014  INFO 4676 --- [main] com.routeplanner.MainAppApplication      : Starting MainAppApplication on CIC00290.local with PID 4676 (/Users/paulbickell/Documents/JavaWorkspace3/MainApp/target/classes started by paulbickell in /Users/paulbickell/Documents/JavaWorkspace3/MainApp)
-2019-10-03 09:23:44.019  INFO 4676 --- [main] com.routeplanner.MainAppApplication      : No active profile set, falling back to default profiles: default
-2019-10-03 09:23:44.450  INFO 4676 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-10-03 09:23:44.520  INFO 4676 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61ms. Found 7 repository interfaces.
-2019-10-03 09:23:44.999  INFO 4676 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cec34a72] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-10-03 09:23:45.257  INFO 4676 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-10-03 09:23:45.284  INFO 4676 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-10-03 09:23:45.285  INFO 4676 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-10-03 09:23:45.363  INFO 4676 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-10-03 09:23:45.363  INFO 4676 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1302 ms
-2019-10-03 09:23:45.528  INFO 4676 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-10-03 09:23:45.910  INFO 4676 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-10-03 09:23:45.970  INFO 4676 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2019-10-04 09:05:01.179  INFO 4608 --- [main] com.routeplanner.MainAppApplication      : Starting MainAppApplication on CIC00290.local with PID 4608 (/Users/paulbickell/Documents/JavaWorkspace3/MainApp/target/classes started by paulbickell in /Users/paulbickell/Documents/JavaWorkspace3/MainApp)
+2019-10-04 09:05:01.188  INFO 4608 --- [main] com.routeplanner.MainAppApplication      : No active profile set, falling back to default profiles: default
+2019-10-04 09:05:01.636  INFO 4608 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-04 09:05:01.725  INFO 4608 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 78ms. Found 7 repository interfaces.
+2019-10-04 09:05:02.167  INFO 4608 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$254fa316] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-04 09:05:02.415  INFO 4608 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-04 09:05:02.444  INFO 4608 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-04 09:05:02.444  INFO 4608 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-04 09:05:02.521  INFO 4608 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-04 09:05:02.521  INFO 4608 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1290 ms
+2019-10-04 09:05:02.703  INFO 4608 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-04 09:05:03.066  INFO 4608 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-04 09:05:03.127  INFO 4608 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-10-03 09:23:46.048  INFO 4676 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
-2019-10-03 09:23:46.050  INFO 4676 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2019-10-03 09:23:46.219  INFO 4676 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2019-10-03 09:23:46.364  INFO 4676 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2019-10-03 09:23:47.327  INFO 4676 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-10-03 09:23:47.683  INFO 4676 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2019-10-03 09:23:48.124  INFO 4676 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-03 09:23:48.176  WARN 4676 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-10-03 09:23:48.406  INFO 4676 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2019-10-03 09:23:48.409  INFO 4676 --- [main] com.routeplanner.MainAppApplication      : Started MainAppApplication in 9.792 seconds (JVM running for 15.13)
-2019-10-03 09:24:14.972  INFO 4676 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-10-03 09:24:14.973  INFO 4676 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-10-03 09:24:14.981  INFO 4676 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
-2019-10-03 09:24:15.071  INFO 4676 --- [http-nio-8080-exec-2] c.r.ctrl.RoutePlannerController          : Request to persist route: RouteQuery [currRouteStart=Oxford Circus, currRouteDest=East Putney, routeInfo=null]
-2019-10-03 09:28:22.074  INFO 4676 --- [http-nio-8080-exec-8] c.r.shopping.service.BasketService       : no open basket is present - so create a contact details record and basket for this user
-2019-10-03 09:28:22.116  INFO 4676 --- [http-nio-8080-exec-8] c.r.shopping.service.BasketService       : created a new basket:  = Basket [tickets=[], contactDetails=ContactDetails [user=com.routeplanner.shopping.User@5b3b3b86, title=titlenew, fullname=tttttttnew, addressLine1=addressLine1uu, addressLine2=addressLine2, addressLine3=addressLine3, city=city, region=region, country=country, email=email@sdf.com, mobileTel=999, homeTel=5555, officeTel=5555], open=true]
-2019-10-03 09:28:22.123  INFO 4676 --- [http-nio-8080-exec-8] com.routeplanner.ctrl.BasketController   : basket created = 18
-2019-10-03 09:52:29.573  INFO 4676 --- [http-nio-8080-exec-1] com.routeplanner.ctrl.BasketController   : basket created = 18
-2019-10-03 09:52:56.650  INFO 4676 --- [http-nio-8080-exec-2] c.r.shopping.service.BasketService       : no open basket is present - so create a contact details record and basket for this user
-2019-10-03 09:52:56.655  INFO 4676 --- [http-nio-8080-exec-2] c.r.shopping.service.BasketService       : problem creating new basket - no contact details available for this user
-2019-10-03 09:52:56.656  INFO 4676 --- [http-nio-8080-exec-2] com.routeplanner.ctrl.BasketController   : no basket available for user with id: 11
-2019-10-03 09:53:31.588  INFO 4676 --- [http-nio-8080-exec-3] com.routeplanner.ctrl.BasketController   : basket created = 18
-2019-10-03 10:00:32.696  INFO 4676 --- [http-nio-8080-exec-6] c.r.shopping.service.BasketService       : no open basket is present - so create a contact details record and basket for this user
-2019-10-03 10:00:32.704  INFO 4676 --- [http-nio-8080-exec-6] c.r.shopping.service.BasketService       : created a new basket:  = Basket [tickets=[], contactDetails=ContactDetails [user=com.routeplanner.shopping.User@585578c9, title=title, fullname=fullnamneP, addressLine1=ad1, addressLine2=add2, addressLine3=add3, city=GHlasgow, region=region, country=countryV, email=dsf@sdf.com, mobileTel=765654, homeTel=987875, officeTel=435345], open=true]
-2019-10-03 10:00:32.706  INFO 4676 --- [http-nio-8080-exec-6] com.routeplanner.ctrl.BasketController   : basket created = 19
-2019-10-03 10:03:47.854  INFO 4676 --- [http-nio-8080-exec-9] com.routeplanner.ctrl.BasketController   : basket created = 19
-2019-10-03 10:06:01.731  INFO 4676 --- [http-nio-8080-exec-2] com.routeplanner.ctrl.BasketController   : basket created = 18
-2019-10-03 10:13:50.952  WARN 4676 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
-2019-10-03 10:13:59.406  WARN 4676 --- [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'application/javascript;charset=UTF-8' not supported]
-2019-10-03 10:14:18.894  INFO 4676 --- [http-nio-8080-exec-7] com.routeplanner.ctrl.BasketController   : Request to create basket: Basket [tickets=[], contactDetails=ContactDetails [user=null, title=null, fullname=null, addressLine1=null, addressLine2=null, addressLine3=null, city=null, region=null, country=null, email=null, mobileTel=null, homeTel=null, officeTel=null], open=true]
-2019-10-03 10:15:16.093  INFO 4676 --- [http-nio-8080-exec-8] com.routeplanner.ctrl.BasketController   : Request to create basket: Basket [tickets=[], contactDetails=ContactDetails [user=null, title=null, fullname=null, addressLine1=null, addressLine2=null, addressLine3=null, city=null, region=null, country=null, email=null, mobileTel=null, homeTel=null, officeTel=null], open=true]
-2019-10-03 10:17:54.701  INFO 4676 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-03 10:17:54.702  INFO 4676 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-10-03 10:17:54.706  INFO 4676 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2019-10-03 10:17:54.716  INFO 4676 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2019-10-03 10:18:06.860  INFO 7628 --- [main] com.routeplanner.MainAppApplication      : Starting MainAppApplication on CIC00290.local with PID 7628 (/Users/paulbickell/Documents/JavaWorkspace3/MainApp/target/classes started by paulbickell in /Users/paulbickell/Documents/JavaWorkspace3/MainApp)
-2019-10-03 10:18:06.862  INFO 7628 --- [main] com.routeplanner.MainAppApplication      : No active profile set, falling back to default profiles: default
-2019-10-03 10:18:07.243  INFO 7628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-10-03 10:18:07.308  INFO 7628 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57ms. Found 7 repository interfaces.
-2019-10-03 10:18:07.743  INFO 7628 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f56f1f62] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-10-03 10:18:07.998  INFO 7628 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-10-03 10:18:08.028  INFO 7628 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-10-03 10:18:08.028  INFO 7628 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-10-03 10:18:08.105  INFO 7628 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-10-03 10:18:08.105  INFO 7628 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1200 ms
-2019-10-03 10:18:08.269  INFO 7628 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-10-03 10:18:08.634  INFO 7628 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-10-03 10:18:08.695  INFO 7628 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2019-10-03 10:18:08.771  INFO 7628 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
-2019-10-03 10:18:08.773  INFO 7628 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2019-10-03 10:18:08.978  INFO 7628 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2019-10-03 10:18:09.140  INFO 7628 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2019-10-03 10:18:10.115  INFO 7628 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-10-03 10:18:10.469  INFO 7628 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2019-10-03 10:18:10.949  INFO 7628 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-03 10:18:10.997  WARN 7628 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-10-03 10:18:11.213  INFO 7628 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2019-10-03 10:18:11.215  INFO 7628 --- [main] com.routeplanner.MainAppApplication      : Started MainAppApplication in 9.713 seconds (JVM running for 14.603)
-2019-10-03 10:18:23.475  INFO 7628 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-10-03 10:18:23.476  INFO 7628 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-10-03 10:18:23.494  INFO 7628 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
-2019-10-03 10:18:23.665  INFO 7628 --- [http-nio-8080-exec-2] com.routeplanner.ctrl.BasketController   : Request to create basket: Basket [tickets=[], contactDetails=ContactDetails [user=null, title=null, fullname=null, addressLine1=null, addressLine2=null, addressLine3=null, city=null, region=null, country=null, email=null, mobileTel=null, homeTel=null, officeTel=null], open=true]
-2019-10-03 10:18:44.071  INFO 7628 --- [http-nio-8080-exec-3] com.routeplanner.ctrl.BasketController   : Request to create basket: Basket [tickets=[], contactDetails=ContactDetails [user=null, title=null, fullname=null, addressLine1=null, addressLine2=null, addressLine3=null, city=null, region=null, country=null, email=null, mobileTel=null, homeTel=null, officeTel=null], open=true]
-2019-10-03 10:28:42.133  INFO 7628 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-03 10:28:42.136  INFO 7628 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-10-03 10:28:42.138  INFO 7628 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2019-10-03 10:28:42.149  INFO 7628 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2019-10-03 12:10:44.171  INFO 9667 --- [main] com.routeplanner.MainAppApplication      : Starting MainAppApplication on CIC00290.local with PID 9667 (/Users/paulbickell/Documents/JavaWorkspace3/MainApp/target/classes started by paulbickell in /Users/paulbickell/Documents/JavaWorkspace3/MainApp)
-2019-10-03 12:10:44.173  INFO 9667 --- [main] com.routeplanner.MainAppApplication      : No active profile set, falling back to default profiles: default
-2019-10-03 12:10:44.633  INFO 9667 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-10-03 12:10:44.730  INFO 9667 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81ms. Found 7 repository interfaces.
-2019-10-03 12:10:45.182  INFO 9667 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$3a776033] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-10-03 12:10:45.441  INFO 9667 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-10-03 12:10:45.470  INFO 9667 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-10-03 12:10:45.470  INFO 9667 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-10-03 12:10:45.552  INFO 9667 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-10-03 12:10:45.552  INFO 9667 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1335 ms
-2019-10-03 12:10:45.782  INFO 9667 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-10-03 12:10:46.155  INFO 9667 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-10-03 12:10:46.217  INFO 9667 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2019-10-03 12:10:46.300  INFO 9667 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
-2019-10-03 12:10:46.301  INFO 9667 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2019-10-03 12:10:46.488  INFO 9667 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2019-10-03 12:10:46.649  INFO 9667 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2019-10-03 12:10:47.594  INFO 9667 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-10-03 12:10:47.934  INFO 9667 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2019-10-03 12:10:48.400  INFO 9667 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-10-03 12:10:48.456  WARN 9667 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-10-03 12:10:48.735  INFO 9667 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2019-10-03 12:10:48.737  INFO 9667 --- [main] com.routeplanner.MainAppApplication      : Started MainAppApplication in 9.964 seconds (JVM running for 15.134)
-2019-10-03 12:10:51.108  INFO 9667 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-10-03 12:10:51.108  INFO 9667 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-10-03 12:10:51.117  INFO 9667 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
-2019-10-03 12:10:51.234  INFO 9667 --- [http-nio-8080-exec-2] com.routeplanner.ctrl.BasketController   : Request to update basket: Basket [tickets=[Ticket [passengerType=STANDARD_PLUS, travelDate=2019-11-30, ticketType=OFF_PEAK, start=444testStart23488, destination=444testDest23488], Ticket [passengerType=OVER_75, travelDate=2019-09-30, ticketType=OFF_PEAK, start=testStart23488, destination=testDest23488], Ticket [passengerType=STUDENT_POOR, travelDate=2019-10-04, ticketType=OFF_PEAK, start=start1, destination=dest1], Ticket [passengerType=OVER_75, travelDate=2020-09-30, ticketType=OFF_PEAK, start=newTickStart23488, destination=newTickDest23488], Ticket [passengerType=OVER_75, travelDate=2019-09-30, ticketType=OFF_PEAK, start=444testStart23488, destination=444testDest23488]], contactDetails=ContactDetails [user=com.routeplanner.shopping.User@48276358, title=titlenew, fullname=tttttttnew, addressLine1=addressLine1uu, addressLine2=addressLine2, addressLine3=addressLine3, city=city, region=region, country=country, email=email@sdf.com, mobileTel=999, homeTel=5555, officeTel=5555], open=true]
-2019-10-03 12:17:45.255  INFO 9667 --- [http-nio-8080-exec-6] com.routeplanner.ctrl.TicketController   : Request to delete ticket id: 1
-2019-10-03 12:32:17.739  INFO 9667 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-10-03 12:32:17.742  INFO 9667 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-10-03 12:32:17.744  INFO 9667 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2019-10-03 12:32:17.755  INFO 9667 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2019-10-03 12:32:29.726  INFO 10851 --- [main] com.routeplanner.MainAppApplication      : Starting MainAppApplication on CIC00290.local with PID 10851 (/Users/paulbickell/Documents/JavaWorkspace3/MainApp/target/classes started by paulbickell in /Users/paulbickell/Documents/JavaWorkspace3/MainApp)
-2019-10-03 12:32:29.728  INFO 10851 --- [main] com.routeplanner.MainAppApplication      : No active profile set, falling back to default profiles: default
-2019-10-03 12:32:30.092  INFO 10851 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-10-03 12:32:30.149  INFO 10851 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49ms. Found 7 repository interfaces.
-2019-10-03 12:32:30.566  INFO 10851 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7e04f626] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-10-03 12:32:30.818  INFO 10851 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-10-03 12:32:30.846  INFO 10851 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-10-03 12:32:30.847  INFO 10851 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-10-03 12:32:30.926  INFO 10851 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-10-03 12:32:30.926  INFO 10851 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1160 ms
-2019-10-03 12:32:31.088  INFO 10851 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-10-03 12:32:31.431  INFO 10851 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-10-03 12:32:31.490  INFO 10851 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2019-10-03 12:32:31.585  INFO 10851 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
-2019-10-03 12:32:31.586  INFO 10851 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2019-10-03 12:32:31.753  INFO 10851 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2019-10-03 12:32:31.919  INFO 10851 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2019-10-03 12:32:32.980  INFO 10851 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-10-03 12:32:33.373  INFO 10851 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2019-10-03 12:32:33.609  WARN 10851 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController': Unsatisfied dependency expressed through field 'orderService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderService': Unsatisfied dependency expressed through field 'orderRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orderRepository': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.routeplanner.shopping.repository.OrderRepository.findPurchasesForUser(java.lang.Integer) but parameter 'Optional[userName]' not found in annotated query 'SELECT ord FROM Order ord join ord.basket b join b.contactDetails cd join cd.user u WHERE u.id = :userId and ord.purchased is true'!
-2019-10-03 12:32:33.610  INFO 10851 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-10-03 12:32:33.612  INFO 10851 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2019-10-03 12:32:33.624  INFO 10851 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2019-10-03 12:32:33.626  INFO 10851 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2019-10-03 12:32:33.637  INFO 10851 --- [main] ConditionEvaluationReportLoggingListener : 
+2019-10-04 09:05:03.203  INFO 4608 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
+2019-10-04 09:05:03.204  INFO 4608 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-10-04 09:05:03.364  INFO 4608 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-04 09:05:03.499  INFO 4608 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-10-04 09:05:04.460  INFO 4608 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-04 09:05:04.798  INFO 4608 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-10-04 09:05:05.002  WARN 4608 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController': Unsatisfied dependency expressed through field 'orderService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderService': Unsatisfied dependency expressed through field 'orderRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orderRepository': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.routeplanner.shopping.repository.OrderRepository.findPurchasesForUser(java.lang.Integer) but parameter 'Optional[userName]' not found in annotated query 'SELECT ord FROM Order ord join ord.basket b join b.contactDetails cd join cd.user u WHERE u.id = :userId and ord.purchased is true'!
+2019-10-04 09:05:05.003  INFO 4608 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-10-04 09:05:05.005  INFO 4608 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-10-04 09:05:05.016  INFO 4608 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-10-04 09:05:05.017  INFO 4608 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-10-04 09:05:05.026  INFO 4608 --- [main] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2019-10-03 12:32:33.643 ERROR 10851 --- [main] o.s.boot.SpringApplication               : Application run failed
+2019-10-04 09:05:05.031 ERROR 4608 --- [main] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController': Unsatisfied dependency expressed through field 'orderService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderService': Unsatisfied dependency expressed through field 'orderRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orderRepository': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.routeplanner.shopping.repository.OrderRepository.findPurchasesForUser(java.lang.Integer) but parameter 'Optional[userName]' not found in annotated query 'SELECT ord FROM Order ord join ord.basket b join b.contactDetails cd join cd.user u WHERE u.id = :userId and ord.purchased is true'!
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
@@ -232,36 +114,36 @@ Caused by: java.lang.IllegalStateException: Using named parameters for method pu
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774)
 	... 48 common frames omitted
 
-2019-10-03 12:45:50.067  INFO 11584 --- [main] com.routeplanner.MainAppApplication      : Starting MainAppApplication on CIC00290.local with PID 11584 (/Users/paulbickell/Documents/JavaWorkspace3/MainApp/target/classes started by paulbickell in /Users/paulbickell/Documents/JavaWorkspace3/MainApp)
-2019-10-03 12:45:50.070  INFO 11584 --- [main] com.routeplanner.MainAppApplication      : No active profile set, falling back to default profiles: default
-2019-10-03 12:45:50.439  INFO 11584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-10-03 12:45:50.495  INFO 11584 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 49ms. Found 7 repository interfaces.
-2019-10-03 12:45:50.907  INFO 11584 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$34047616] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-10-03 12:45:51.154  INFO 11584 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-10-03 12:45:51.183  INFO 11584 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-10-03 12:45:51.183  INFO 11584 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-10-03 12:45:51.266  INFO 11584 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-10-03 12:45:51.266  INFO 11584 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1159 ms
-2019-10-03 12:45:51.433  INFO 11584 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-10-03 12:45:51.770  INFO 11584 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-10-03 12:45:51.826  INFO 11584 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2019-10-04 09:05:52.908  INFO 4680 --- [main] com.routeplanner.MainAppApplication      : Starting MainAppApplication on CIC00290.local with PID 4680 (/Users/paulbickell/Documents/JavaWorkspace3/MainApp/target/classes started by paulbickell in /Users/paulbickell/Documents/JavaWorkspace3/MainApp)
+2019-10-04 09:05:52.910  INFO 4680 --- [main] com.routeplanner.MainAppApplication      : No active profile set, falling back to default profiles: default
+2019-10-04 09:05:53.251  INFO 4680 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-04 09:05:53.307  INFO 4680 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50ms. Found 7 repository interfaces.
+2019-10-04 09:05:53.721  INFO 4680 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5b154c69] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-04 09:05:53.948  INFO 4680 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-04 09:05:53.976  INFO 4680 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-04 09:05:53.976  INFO 4680 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-04 09:05:54.045  INFO 4680 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-04 09:05:54.045  INFO 4680 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1101 ms
+2019-10-04 09:05:54.187  INFO 4680 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-04 09:05:54.498  INFO 4680 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-04 09:05:54.550  INFO 4680 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-10-03 12:45:51.913  INFO 11584 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
-2019-10-03 12:45:51.914  INFO 11584 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2019-10-03 12:45:52.071  INFO 11584 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2019-10-03 12:45:52.208  INFO 11584 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2019-10-03 12:45:53.159  INFO 11584 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-10-03 12:45:53.511  INFO 11584 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2019-10-03 12:45:53.726  WARN 11584 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController': Unsatisfied dependency expressed through field 'orderService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderService': Unsatisfied dependency expressed through field 'orderRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orderRepository': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.routeplanner.shopping.repository.OrderRepository.findPurchasesForUser(java.lang.Integer) but parameter 'Optional[userName]' not found in annotated query 'SELECT ord FROM Order ord join ord.basket b join b.contactDetails cd join cd.user u WHERE u.id = :userId and ord.purchased is true'!
-2019-10-03 12:45:53.727  INFO 11584 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-10-03 12:45:53.729  INFO 11584 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2019-10-03 12:45:53.740  INFO 11584 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2019-10-03 12:45:53.742  INFO 11584 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2019-10-03 12:45:53.753  INFO 11584 --- [main] ConditionEvaluationReportLoggingListener : 
+2019-10-04 09:05:54.610  INFO 4680 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
+2019-10-04 09:05:54.612  INFO 4680 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-10-04 09:05:54.757  INFO 4680 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-04 09:05:54.902  INFO 4680 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-10-04 09:05:55.750  INFO 4680 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-04 09:05:56.060  INFO 4680 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-10-04 09:05:56.244  WARN 4680 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController': Unsatisfied dependency expressed through field 'orderService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderService': Unsatisfied dependency expressed through field 'orderRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orderRepository': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.routeplanner.shopping.repository.OrderRepository.findPurchasesForUser(java.lang.Integer) but parameter 'Optional[userName]' not found in annotated query 'SELECT ord FROM Order ord join ord.basket b join b.contactDetails cd join cd.user u WHERE u.id = :userId and ord.purchased is true'!
+2019-10-04 09:05:56.245  INFO 4680 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-10-04 09:05:56.247  INFO 4680 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-10-04 09:05:56.257  INFO 4680 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-10-04 09:05:56.259  INFO 4680 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-10-04 09:05:56.270  INFO 4680 --- [main] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2019-10-03 12:45:53.757 ERROR 11584 --- [main] o.s.boot.SpringApplication               : Application run failed
+2019-10-04 09:05:56.273 ERROR 4680 --- [main] o.s.boot.SpringApplication               : Application run failed
 
 org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderController': Unsatisfied dependency expressed through field 'orderService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderService': Unsatisfied dependency expressed through field 'orderRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orderRepository': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.routeplanner.shopping.repository.OrderRepository.findPurchasesForUser(java.lang.Integer) but parameter 'Optional[userName]' not found in annotated query 'SELECT ord FROM Order ord join ord.basket b join b.contactDetails cd join cd.user u WHERE u.id = :userId and ord.purchased is true'!
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
@@ -348,3 +230,303 @@ Caused by: java.lang.IllegalStateException: Using named parameters for method pu
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774)
 	... 48 common frames omitted
 
+2019-10-04 09:06:46.545  INFO 4738 --- [main] com.routeplanner.MainAppApplication      : Starting MainAppApplication on CIC00290.local with PID 4738 (/Users/paulbickell/Documents/JavaWorkspace3/MainApp/target/classes started by paulbickell in /Users/paulbickell/Documents/JavaWorkspace3/MainApp)
+2019-10-04 09:06:46.547  INFO 4738 --- [main] com.routeplanner.MainAppApplication      : No active profile set, falling back to default profiles: default
+2019-10-04 09:06:46.887  INFO 4738 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-04 09:06:46.974  INFO 4738 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80ms. Found 7 repository interfaces.
+2019-10-04 09:06:47.383  INFO 4738 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e323669a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-04 09:06:47.598  INFO 4738 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-04 09:06:47.622  INFO 4738 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-04 09:06:47.622  INFO 4738 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-04 09:06:47.691  INFO 4738 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-04 09:06:47.692  INFO 4738 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1114 ms
+2019-10-04 09:06:47.839  INFO 4738 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-04 09:06:48.137  INFO 4738 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-04 09:06:48.200  INFO 4738 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-04 09:06:48.257  INFO 4738 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
+2019-10-04 09:06:48.258  INFO 4738 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-10-04 09:06:48.387  INFO 4738 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-04 09:06:48.502  INFO 4738 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-10-04 09:06:49.352  INFO 4738 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-04 09:06:49.654  INFO 4738 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-10-04 09:06:49.893  WARN 4738 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderService': Unsatisfied dependency expressed through field 'orderRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orderRepository': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.routeplanner.shopping.repository.OrderRepository.findPurchasesForUser(java.lang.Integer) but parameter 'Optional[userName]' not found in annotated query 'SELECT ord FROM Order ord join ord.basket b join b.contactDetails cd join cd.user u WHERE u.id = :userId and ord.purchased is true'!
+2019-10-04 09:06:49.894  INFO 4738 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-10-04 09:06:49.896  INFO 4738 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-10-04 09:06:49.907  INFO 4738 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-10-04 09:06:49.909  INFO 4738 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2019-10-04 09:06:49.918  INFO 4738 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-10-04 09:06:49.921 ERROR 4738 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'orderService': Unsatisfied dependency expressed through field 'orderRepository'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orderRepository': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.routeplanner.shopping.repository.OrderRepository.findPurchasesForUser(java.lang.Integer) but parameter 'Optional[userName]' not found in annotated query 'SELECT ord FROM Order ord join ord.basket b join b.contactDetails cd join cd.user u WHERE u.id = :userId and ord.purchased is true'!
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:596)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1411)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:744)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:391)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1204)
+	at com.routeplanner.MainAppApplication.main(MainAppApplication.java:15)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.maven.AbstractRunMojo$LaunchRunner.run(AbstractRunMojo.java:543)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'orderRepository': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.routeplanner.shopping.repository.OrderRepository.findPurchasesForUser(java.lang.Integer) but parameter 'Optional[userName]' not found in annotated query 'SELECT ord FROM Order ord join ord.basket b join b.contactDetails cd join cd.user u WHERE u.id = :userId and ord.purchased is true'!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1778)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:277)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1171)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
+	... 25 common frames omitted
+Caused by: java.lang.IllegalStateException: Using named parameters for method public abstract java.util.List com.routeplanner.shopping.repository.OrderRepository.findPurchasesForUser(java.lang.Integer) but parameter 'Optional[userName]' not found in annotated query 'SELECT ord FROM Order ord join ord.basket b join b.contactDetails cd join cd.user u WHERE u.id = :userId and ord.purchased is true'!
+	at org.springframework.data.jpa.repository.query.JpaQueryMethod.assertParameterNamesInAnnotatedQuery(JpaQueryMethod.java:125)
+	at org.springframework.data.jpa.repository.query.JpaQueryMethod.<init>(JpaQueryMethod.java:104)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:79)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lookupQuery(RepositoryFactorySupport.java:566)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$mapMethodsToQuery$1(RepositoryFactorySupport.java:559)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Collections$UnmodifiableCollection$1.forEachRemaining(Collections.java:1052)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.mapMethodsToQuery(RepositoryFactorySupport.java:561)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$new$0(RepositoryFactorySupport.java:551)
+	at java.base/java.util.Optional.map(Optional.java:265)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.<init>(RepositoryFactorySupport.java:551)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:324)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:297)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:211)
+	at org.springframework.data.util.Lazy.get(Lazy.java:94)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:300)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:121)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1837)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1774)
+	... 35 common frames omitted
+
+2019-10-04 09:08:30.177  INFO 4843 --- [main] com.routeplanner.MainAppApplication      : Starting MainAppApplication on CIC00290.local with PID 4843 (/Users/paulbickell/Documents/JavaWorkspace3/MainApp/target/classes started by paulbickell in /Users/paulbickell/Documents/JavaWorkspace3/MainApp)
+2019-10-04 09:08:30.179  INFO 4843 --- [main] com.routeplanner.MainAppApplication      : No active profile set, falling back to default profiles: default
+2019-10-04 09:08:30.540  INFO 4843 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-04 09:08:30.625  INFO 4843 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79ms. Found 7 repository interfaces.
+2019-10-04 09:08:31.020  INFO 4843 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b32d36ba] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-04 09:08:31.240  INFO 4843 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-04 09:08:31.262  INFO 4843 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-04 09:08:31.263  INFO 4843 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-04 09:08:31.330  INFO 4843 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-04 09:08:31.330  INFO 4843 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1116 ms
+2019-10-04 09:08:31.472  INFO 4843 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-04 09:08:31.779  INFO 4843 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-04 09:08:31.831  INFO 4843 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-04 09:08:31.889  INFO 4843 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
+2019-10-04 09:08:31.890  INFO 4843 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-10-04 09:08:32.038  INFO 4843 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-04 09:08:32.172  INFO 4843 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-10-04 09:08:33.034  INFO 4843 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-04 09:08:33.338  INFO 4843 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-10-04 09:08:33.754  INFO 4843 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-04 09:08:33.803  WARN 4843 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-04 09:08:34.000  INFO 4843 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-04 09:08:34.002  INFO 4843 --- [main] com.routeplanner.MainAppApplication      : Started MainAppApplication in 9.147 seconds (JVM running for 13.533)
+2019-10-04 09:08:47.153  INFO 4843 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-04 09:08:47.156  INFO 4843 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-10-04 09:08:47.158  INFO 4843 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-10-04 09:08:47.169  INFO 4843 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-10-04 09:09:21.215  INFO 4897 --- [main] com.routeplanner.MainAppApplication      : Starting MainAppApplication on CIC00290.local with PID 4897 (/Users/paulbickell/Documents/JavaWorkspace3/MainApp/target/classes started by paulbickell in /Users/paulbickell/Documents/JavaWorkspace3/MainApp)
+2019-10-04 09:09:21.218  INFO 4897 --- [main] com.routeplanner.MainAppApplication      : No active profile set, falling back to default profiles: default
+2019-10-04 09:09:21.577  INFO 4897 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-04 09:09:21.661  INFO 4897 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77ms. Found 7 repository interfaces.
+2019-10-04 09:09:22.060  INFO 4897 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$fd61b694] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-04 09:09:22.285  INFO 4897 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-04 09:09:22.311  INFO 4897 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-04 09:09:22.311  INFO 4897 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-04 09:09:22.379  INFO 4897 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-04 09:09:22.379  INFO 4897 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1129 ms
+2019-10-04 09:09:22.522  INFO 4897 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-04 09:09:22.840  INFO 4897 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-04 09:09:22.892  INFO 4897 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-04 09:09:22.944  INFO 4897 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
+2019-10-04 09:09:22.946  INFO 4897 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-10-04 09:09:23.096  INFO 4897 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-04 09:09:23.238  INFO 4897 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-10-04 09:09:24.173  INFO 4897 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-04 09:09:24.493  INFO 4897 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-10-04 09:09:24.909  INFO 4897 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-04 09:09:24.958  WARN 4897 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-04 09:09:25.150  INFO 4897 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-04 09:09:25.153  INFO 4897 --- [main] com.routeplanner.MainAppApplication      : Started MainAppApplication in 9.273 seconds (JVM running for 13.751)
+2019-10-04 09:10:15.869  INFO 4897 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-04 09:10:15.870  INFO 4897 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-04 09:10:15.879  INFO 4897 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2019-10-04 09:18:31.139  INFO 4897 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-04 09:18:31.141  INFO 4897 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-10-04 09:18:31.144  INFO 4897 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-10-04 09:18:31.155  INFO 4897 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-10-04 09:18:42.924  INFO 5417 --- [main] com.routeplanner.MainAppApplication      : Starting MainAppApplication on CIC00290.local with PID 5417 (/Users/paulbickell/Documents/JavaWorkspace3/MainApp/target/classes started by paulbickell in /Users/paulbickell/Documents/JavaWorkspace3/MainApp)
+2019-10-04 09:18:42.926  INFO 5417 --- [main] com.routeplanner.MainAppApplication      : No active profile set, falling back to default profiles: default
+2019-10-04 09:18:43.309  INFO 5417 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-04 09:18:43.397  INFO 5417 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74ms. Found 7 repository interfaces.
+2019-10-04 09:18:43.809  INFO 5417 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1209caf5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-04 09:18:44.049  INFO 5417 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-04 09:18:44.077  INFO 5417 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-04 09:18:44.078  INFO 5417 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-04 09:18:44.156  INFO 5417 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-04 09:18:44.156  INFO 5417 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1195 ms
+2019-10-04 09:18:44.314  INFO 5417 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-04 09:18:44.667  INFO 5417 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-04 09:18:44.722  INFO 5417 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-04 09:18:44.783  INFO 5417 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
+2019-10-04 09:18:44.784  INFO 5417 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-10-04 09:18:44.935  INFO 5417 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-04 09:18:45.065  INFO 5417 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-10-04 09:18:46.040  INFO 5417 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-04 09:18:46.399  INFO 5417 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-10-04 09:18:46.879  INFO 5417 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-04 09:18:46.931  WARN 5417 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-04 09:18:47.141  INFO 5417 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-04 09:18:47.143  INFO 5417 --- [main] com.routeplanner.MainAppApplication      : Started MainAppApplication in 9.551 seconds (JVM running for 14.257)
+2019-10-04 09:18:47.620  INFO 5417 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-04 09:18:47.621  INFO 5417 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-04 09:18:47.629  INFO 5417 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-10-04 09:18:47.666  INFO 5417 --- [http-nio-8080-exec-1] com.routeplanner.ctrl.OrderController    : Searching payment methods for user: null
+2019-10-04 09:18:47.706  INFO 5417 --- [http-nio-8080-exec-1] c.r.s.service.PaymentMethodService       : No PMs available
+2019-10-04 09:20:25.530  INFO 5417 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-04 09:20:25.532  INFO 5417 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-10-04 09:20:25.534  INFO 5417 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-10-04 09:20:25.546  INFO 5417 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-10-04 09:20:37.137  INFO 5531 --- [main] com.routeplanner.MainAppApplication      : Starting MainAppApplication on CIC00290.local with PID 5531 (/Users/paulbickell/Documents/JavaWorkspace3/MainApp/target/classes started by paulbickell in /Users/paulbickell/Documents/JavaWorkspace3/MainApp)
+2019-10-04 09:20:37.140  INFO 5531 --- [main] com.routeplanner.MainAppApplication      : No active profile set, falling back to default profiles: default
+2019-10-04 09:20:37.513  INFO 5531 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-04 09:20:37.588  INFO 5531 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 62ms. Found 7 repository interfaces.
+2019-10-04 09:20:37.971  INFO 5531 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9ac1562] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-04 09:20:38.202  INFO 5531 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-04 09:20:38.228  INFO 5531 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-04 09:20:38.229  INFO 5531 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-04 09:20:38.307  INFO 5531 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-04 09:20:38.307  INFO 5531 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1129 ms
+2019-10-04 09:20:38.453  INFO 5531 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-04 09:20:38.792  INFO 5531 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-04 09:20:38.848  INFO 5531 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-04 09:20:38.911  INFO 5531 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
+2019-10-04 09:20:38.912  INFO 5531 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-10-04 09:20:39.061  INFO 5531 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-04 09:20:39.198  INFO 5531 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-10-04 09:20:40.181  INFO 5531 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-04 09:20:40.534  INFO 5531 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-10-04 09:20:41.073  INFO 5531 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-04 09:20:41.130  WARN 5531 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-04 09:20:41.348  INFO 5531 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-04 09:20:41.350  INFO 5531 --- [main] com.routeplanner.MainAppApplication      : Started MainAppApplication in 9.554 seconds (JVM running for 14.216)
+2019-10-04 09:20:42.596  INFO 5531 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-04 09:20:42.597  INFO 5531 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-04 09:20:42.605  INFO 5531 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2019-10-04 09:20:42.638  INFO 5531 --- [http-nio-8080-exec-1] com.routeplanner.ctrl.OrderController    : Searching payment methods for user: 1
+2019-10-04 09:20:42.690  INFO 5531 --- [http-nio-8080-exec-1] c.r.s.service.PaymentMethodService       : optPayMeths present 
+2019-10-04 09:20:42.695  INFO 5531 --- [http-nio-8080-exec-1] com.routeplanner.ctrl.OrderController    : 
+2019-10-04 09:24:39.944  WARN 5531 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2019-10-04 09:25:32.135  WARN 5531 --- [http-nio-8080-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2019-10-04 09:26:16.968  WARN 5531 --- [http-nio-8080-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2019-10-04 09:47:19.739  INFO 5531 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-04 09:47:19.741  INFO 5531 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-10-04 09:47:19.743  INFO 5531 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-10-04 09:47:19.756  INFO 5531 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-10-04 09:47:30.811  INFO 7048 --- [main] com.routeplanner.MainAppApplication      : Starting MainAppApplication on CIC00290.local with PID 7048 (/Users/paulbickell/Documents/JavaWorkspace3/MainApp/target/classes started by paulbickell in /Users/paulbickell/Documents/JavaWorkspace3/MainApp)
+2019-10-04 09:47:30.813  INFO 7048 --- [main] com.routeplanner.MainAppApplication      : No active profile set, falling back to default profiles: default
+2019-10-04 09:47:31.178  INFO 7048 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-04 09:47:31.262  INFO 7048 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 78ms. Found 7 repository interfaces.
+2019-10-04 09:47:31.693  INFO 7048 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8eef6021] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-04 09:47:31.931  INFO 7048 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-04 09:47:31.957  INFO 7048 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-04 09:47:31.957  INFO 7048 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-04 09:47:32.031  INFO 7048 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-04 09:47:32.031  INFO 7048 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1185 ms
+2019-10-04 09:47:32.185  INFO 7048 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-04 09:47:32.510  INFO 7048 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-04 09:47:32.564  INFO 7048 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-04 09:47:32.625  INFO 7048 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
+2019-10-04 09:47:32.626  INFO 7048 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-10-04 09:47:32.774  INFO 7048 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-04 09:47:32.904  INFO 7048 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-10-04 09:47:33.823  INFO 7048 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-04 09:47:34.146  INFO 7048 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-10-04 09:47:34.559  INFO 7048 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-04 09:47:34.611  WARN 7048 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-04 09:47:34.822  INFO 7048 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-04 09:47:34.823  INFO 7048 --- [main] com.routeplanner.MainAppApplication      : Started MainAppApplication in 9.339 seconds (JVM running for 13.784)
+2019-10-04 09:47:39.665  INFO 7048 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-04 09:47:39.665  INFO 7048 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-04 09:47:39.677  INFO 7048 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2019-10-04 09:53:38.778  WARN 7048 --- [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2019-10-04 09:55:13.353  INFO 7048 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-04 09:55:13.355  INFO 7048 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-10-04 09:55:13.358  INFO 7048 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-10-04 09:55:13.370  INFO 7048 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-10-04 09:55:24.677  INFO 7479 --- [main] com.routeplanner.MainAppApplication      : Starting MainAppApplication on CIC00290.local with PID 7479 (/Users/paulbickell/Documents/JavaWorkspace3/MainApp/target/classes started by paulbickell in /Users/paulbickell/Documents/JavaWorkspace3/MainApp)
+2019-10-04 09:55:24.679  INFO 7479 --- [main] com.routeplanner.MainAppApplication      : No active profile set, falling back to default profiles: default
+2019-10-04 09:55:25.086  INFO 7479 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-10-04 09:55:25.191  INFO 7479 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98ms. Found 7 repository interfaces.
+2019-10-04 09:55:25.572  INFO 7479 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$be04fd8d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-10-04 09:55:25.792  INFO 7479 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-10-04 09:55:25.816  INFO 7479 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-10-04 09:55:25.817  INFO 7479 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-10-04 09:55:25.883  INFO 7479 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-10-04 09:55:25.883  INFO 7479 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1168 ms
+2019-10-04 09:55:26.025  INFO 7479 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-10-04 09:55:26.334  INFO 7479 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-10-04 09:55:26.383  INFO 7479 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-04 09:55:26.439  INFO 7479 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
+2019-10-04 09:55:26.441  INFO 7479 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-10-04 09:55:26.582  INFO 7479 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-04 09:55:26.706  INFO 7479 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-10-04 09:55:27.600  INFO 7479 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-10-04 09:55:27.966  INFO 7479 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-10-04 09:55:28.408  INFO 7479 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-10-04 09:55:28.457  WARN 7479 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-10-04 09:55:28.680  INFO 7479 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-10-04 09:55:28.682  INFO 7479 --- [main] com.routeplanner.MainAppApplication      : Started MainAppApplication in 9.333 seconds (JVM running for 14.114)
+2019-10-04 09:55:29.129  INFO 7479 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-04 09:55:29.130  INFO 7479 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-10-04 09:55:29.140  INFO 7479 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2019-10-04 09:55:29.343  INFO 7479 --- [http-nio-8080-exec-2] com.routeplanner.ctrl.OrderController    : Request to purchase order: Order [paymentMethod=PaymentMethod [user=null, nameOnCard=null, cardType=null, cardNumber=null, securityCode=null, expiryDate=null, validFrom=null], transactionDate=2019-10-04, basket=Basket [tickets=[], contactDetails=null, open=false], purchased=false]
+2019-10-04 09:57:13.645  INFO 7479 --- [http-nio-8080-exec-5] com.routeplanner.ctrl.OrderController    : Request to purchase order: Order [paymentMethod=PaymentMethod [user=null, nameOnCard=null, cardType=null, cardNumber=null, securityCode=null, expiryDate=null, validFrom=null], transactionDate=2019-10-04, basket=Basket [tickets=[], contactDetails=null, open=false], purchased=false]
+2019-10-04 10:04:02.395  INFO 7479 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-10-04 10:04:02.398  INFO 7479 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-10-04 10:04:02.400  INFO 7479 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-10-04 10:04:02.409  INFO 7479 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

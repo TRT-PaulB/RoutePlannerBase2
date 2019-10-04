@@ -29,12 +29,14 @@ public class PaymentMethodService {
 	}
 	
 	public Optional<List<PaymentMethod>> getAllPaymentMethodsByUser(Integer userId) {
-		return paymentInfoRepository.findPaymentMethodForUser(userId);
+		Optional<List<PaymentMethod>> optPayMeths = paymentInfoRepository.findPaymentMethodForUser(userId);
+		return optPayMeths;
 	}
 	
-	public void save(PaymentMethod paymentInfo) {
-		paymentInfoRepository.save(paymentInfo);
-		logger.debug("Payment info saved with id: " + paymentInfo.getId());
+	public PaymentMethod save(PaymentMethod paymentInfo) {
+		PaymentMethod dbPayMethod = paymentInfoRepository.save(paymentInfo);
+		logger.debug("Payment info saved with id: " + dbPayMethod.getId());
+		return dbPayMethod;
 	}
 	
 }

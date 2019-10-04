@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.routeplanner.shopping.ContactDetails;
 import com.routeplanner.shopping.Order;
 import com.routeplanner.shopping.PaymentMethod;
 import com.routeplanner.shopping.service.OrderService;
@@ -35,40 +36,41 @@ public class OrderController {
 	@Autowired
 	private PaymentMethodService paymentMethodService;
 	
-	
-	// IN PROGRESS
-	
-	
-	//@PostMapping("/purchase")
-	ResponseEntity<Order> placeOrder(@Valid @RequestBody Order order) throws URISyntaxException {
+
+	@PostMapping("/member/purchase")
+	ResponseEntity<Order> placeOrder(@RequestBody Order order) throws URISyntaxException {
 		try {
 			Order purchase = orderService.placeOrder(order);
 			logger.info("Request to purchase order: {}", purchase);
 		    return ResponseEntity.created(new URI("/member/purchase/" + purchase.getId()))
 		                .body(purchase);
 		} catch(Throwable t) {
-			logger.info("Error placing order: " + t.getMessage());
+			Integer basketId = order.getBasket() != null ? order.getBasket().getId() : null; 
+			logger.info("Error placing order for basket: " + basketId + ". Error:\n " + t.getMessage());
 			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		}
 	}
-	
-	//@GetMapping("/member/order/{userId}")
+
+		
+	@GetMapping("/member/{userId}")
 	public List<Order> getOrders(@PathVariable Integer userId) {
 		return orderService.getOrdersForUser(userId);
 	}
 
-	//@GetMapping("/member/pm/{userId}")
-	ResponseEntity<List<PaymentMethod>> getPaymentMethods(Integer userId) {
+	@GetMapping("/member/pm/{userId}")
+	ResponseEntity<List<PaymentMethod>> getPaymentMethods(@PathVariable Integer userId) {
+		 logger.info("Searching payment methods for user: " + userId);
 		 Optional<List<PaymentMethod>> optPayMeths = paymentMethodService.getAllPaymentMethodsByUser(userId);
 		 return optPayMeths.map(response -> ResponseEntity.ok().body(response)).orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
 	}
 		
-	//@PostMapping("/member/pm/add")
-	PaymentMethod postPaymentMethod(@RequestBody PaymentMethod paymentMethod) {
-		logger.info("posting payment method = " + paymentMethod.toString());
-		paymentMethodService.save(paymentMethod);
-		return paymentMethod;
+	@PostMapping("/member/pm/add")
+	ResponseEntity<PaymentMethod> postPaymentMethod(@RequestBody PaymentMethod paymentMethod) throws URISyntaxException {
+		logger.info("posting payment method: " + paymentMethod.toString());
+		PaymentMethod result = paymentMethodService.save(paymentMethod);
+		return ResponseEntity.created(new URI("/order/member/pm/add" + result.getId()))
+	            .body(result);
 	}  		
-		
 
 }
+
