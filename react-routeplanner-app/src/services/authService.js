@@ -1,49 +1,47 @@
-import http from "./httpService";
-import { apiUrl } from "../config.json";
-import jwtDecode from "jwt-decode";
-import { UserAgent } from "@sentry/browser/dist/integrations";
-
-const authEndpoint = apiUrl + "/auth";
+const hardCodedJWTDummy = "hardcoded_mockJWT";
 
 const tokenKey = "token";
 
-// avoids bidriectional dependencies
-// note this is invoked
-http.setJwt(getJwt());
+export async function login(username, password) {
+    // hard coded here!!!     
+    if (username === "admin" && password === "password") {
+        const jwt = hardCodedJWTDummy; // plug in impl here eventually.....
+        localStorage.setItem(tokenKey, jwt); 
+        // fabricate this...!
+        if (jwt === hardCodedJWTDummy) { // dummy....
+            return {data: { username: "admin", password: "password"}};
+        }
+    }
 
-export async function login(email, password) {
-  const { data: jwt } = await http.post(authEndpoint, {
-    email: email,
-    password: password
-  });
+    console.log("resetting form as login has failed...");
+    username = "";
+    password = "";
 
-  console.log(jwt);
-  localStorage.setItem(tokenKey, jwt);
-}
-
-export async function loginWithJwt(jwt) {
-  localStorage.setItem(tokenKey, jwt);
+    return null;
 }
 
 export function logout() {
   localStorage.removeItem(tokenKey);
 }
 
-export function getCurentUser() {
-  try {
-    const jwt = localStorage.getItem(tokenKey);
-    const user = jwtDecode(jwt);
-    return user;
-    //this.setState({ user });
-  } catch (e) {
-    // do nothing here......just means it is an authorization error
-    // return null means there is no current user
-    return null;
-  }
-}
-
 export function getJwt() {
   return localStorage.getItem(tokenKey);
+}
+
+export function getCurentUser() {
+    try {
+        const jwt = localStorage.getItem(tokenKey);
+        if (jwt === hardCodedJWTDummy) {  // // dummy....
+            return {data: { username: "admin", password: "password"}};
+        }
+    } catch (e) {
+        // return null means there is no current user
+        return null;
+    }
+}
+
+export async function loginWithJwt(jwt) {
+    localStorage.setItem(tokenKey, jwt);  
 }
 
 export default {

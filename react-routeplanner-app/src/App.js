@@ -22,8 +22,8 @@ class App extends Component {
   state = {};
 
   componentDidMount() {
-    //const user = auth.getCurentUser();
-    // this.setState({ user });
+    const user = auth.getCurentUser();
+    this.setState({ user });  
   }
 
   render() {
@@ -31,8 +31,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <ToastContainer />
-        {/* <NavBar user={this.state.user} /> */}
-        <NavBar  />
+        <NavBar user={user} />
         <div className="content">
           <Switch>
             <Route path="/login" exact component={LoginForm} />
@@ -66,7 +65,7 @@ class App extends Component {
               path="/sale_confirmation"
               component={SaleConfirmation}
             />
-            <Redirect from="/" exact to="/route_planner" />
+            <Redirect from="/" exact to="/login" />
             <Route path="/not-found" component={NotFound} />
             <Redirect to="/not-found" />
           </Switch>

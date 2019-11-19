@@ -1,0 +1,223 @@
+
+---------------------------
+APP.js
+
+import React, { Component } from "react";
+import { Route, Switch, Redirect } from "react-router-dom";
+import NavBar from "./common/navbar";
+import LoginForm from "./components/login";
+import SearchMetadata from "./components/search-metadata";
+import Logout from "./components/logout";
+import NotFound from "./components/notFound";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "./App.css";
+import auth from "./services/authService";
+
+class App extends Component {
+  state = {};
+
+  componentDidMount() {
+    const user = auth.getCurentUser();
+    this.setState({ user });  
+  }
+
+  render() {
+    const { user } = this.state;
+
+console.log("at least this should be working in APP....");
+
+    return (
+      <React.Fragment>
+        <ToastContainer />
+        <NavBar user={user} />
+        <div className="content">
+          <Switch>
+            <Route path="/login" exact component={LoginForm} />
+            <Route path="/logout" exact component={Logout} />
+            <Route path="/search-metadata" exact component={SearchMetadata} />
+            <Redirect from="/" exact to="/login" />
+            <Route path="/not-found" component={NotFound} />
+            <Redirect to="/not-found" />
+          </Switch>
+        </div>
+
+      </React.Fragment>
+    );
+  }
+}
+---------------------------
+
+Login.jsx
+
+import React from "react";
+import Joi from "joi";
+import Form from "../common/form";
+import auth from "../services/authService";
+
+class LoginForm extends Form {
+  state = {
+    data: { username: "", password: "" },
+    errors: {}
+  };
+
+  schema = {
+    username: Joi.string()
+      .required(),
+    password: Joi.string()
+      .required()
+  };
+
+  doSubmit = e => {
+      const { state } = this.props.location;
+      const { username, password } = this.state.data;
+      const user = auth.login(username, password);
+
+      if (user === undefined) {
+        const errors = { ...this.state.errors };
+        errors.username = "Check your credentials and try again"; 
+        this.setState({ errors });
+      } else {
+        window.location = state ? state.from.pathname : "/search-metadata";  
+      }
+  };
+
+  doReset = (event) => {
+    this.setState({ data: {username: "", password: ""}});
+  };
+
+  render() {
+    return (
+      <React.Fragment>
+          <div className="main-content">
+            <form onSubmit={this.handleSubmit} >
+              <div className="page-title">
+                <h1>Search Product Metadata</h1>
+              </div>
+              <div className="external-data-box">
+                <div className="sub-title">
+                    <h4>Login</h4>
+                </div>
+                {this.renderInput("username", "Username", true, "700px")}
+                {this.renderInput("password", "Password", true, "700px", "password")}
+                <div className="btn-group">
+                    {this.renderButton("Login", "btn btn-primary m-2")}
+                    <button id="reset-btn" type="button" className="btn btn-warning m-2" onClick={this.doReset}>Reset</button>
+                </div>
+              </div>
+            </form>  
+          </div>  
+      </React.Fragment>
+    );
+  }
+}
+
+export default LoginForm;
+
+---------------------------
+logout.jsx
+
+import { Component } from "react";
+import auth from "../services/authService";
+
+class Logout extends Component {
+  componentDidMount() {
+    auth.logout();
+    window.location = "/";
+  }
+
+  render() {
+    return null;
+  }
+}
+
+export default Logout;
+
+---------------------------\
+navbar
+
+import React from "react";
+import { NavLink, Link } from "react-router-dom";
+
+const NavBar = ({ user }) => {
+  
+  return (
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <Link className="navbar-brand" to="/">
+        Product Adaptor  
+      </Link>
+      <button
+        className="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span className="navbar-toggler-icon" />
+      </button>
+      <div className="collapse navbar-collapse" id="navbarNavaltMarkup">
+        <div className="navbar-nav" id="navbarNav">
+          {user && (
+            <React.Fragment>
+              <NavLink className="nav-item nav-link" to="/search-metadata">
+                Query Products
+              </NavLink>
+              <NavLink className="nav-item nav-link" to="/logout">
+                Logout
+              </NavLink>
+            </React.Fragment>
+          )}
+          {!user && (
+            <React.Fragment>
+              <NavLink className="nav-item nav-link" to="/login">
+                Login
+              </NavLink>
+            </React.Fragment>
+          )}
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default NavBar;
+
+--------------------
+queryservice.js
+
+export function getMetadataLinks(srchParam) {   // "XXN-MXX1"
+  return "links to the metadata of matching products";
+}
+
+export function getProductMetadata(resourceLnk) {
+  return "generating the link to a specific product source";
+}
+
+--------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

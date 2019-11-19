@@ -21,7 +21,6 @@ class Form extends Component {
 
     const errors = {};
     for (let item of result.error.details) {
-      console.log("MSG = ", item.message);
       errors[item.path] = item.message; // creates an errors map / array of different paths (ie. property names)
     }
 
@@ -50,14 +49,8 @@ class Form extends Component {
   };
 
   handleSubmit = e => {
-    console.log("handle submit88888888888");
     e.preventDefault();
-
-    console.log("handle submit");
     const errors = this.validateWithJoi();
-
-console.log(errors);
-
     this.setState({ errors: errors || {} });
 
     if (errors) return;

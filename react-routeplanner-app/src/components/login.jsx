@@ -19,9 +19,41 @@ class LoginForm extends Form {
       .label("Password")
   };
 
+  doSubmit = e => {
+    const { state } = this.props.location;
+    const { username, password } = this.state.data;
+    const user = auth.login(username, password);
+
+    if (user === undefined) {
+      const errors = { ...this.state.errors };
+      errors.username = "Check your credentials and try again"; 
+      this.setState({ errors });
+    } else {
+      window.location = state ? state.from.pathname : "/search-metadata";  
+    }
+};
+
+
+
   doSubmit = async () => {
+    console.log("do submit has been invoked from super");
+    //debugger;
+    
+
     try {
       const { username, password } = this.state.data;
+      const { state } = this.props.location;
+
+      // TOD) fix dummy here... 
+      //const user = await auth.login(username, password);
+      const user = undefined;
+      if (user === undefined) {
+        const errors = { ...this.state.errors };
+        errors.username = "Check your credentials and try again"; 
+        this.setState({ errors });
+      } else {
+        window.location = state ? state.from.pathname : "/route_planner";  
+      }
 
       // print out the JSON WEB TOKEN from response.data
       // const { data: jwt } = await login(username, password);
@@ -35,11 +67,11 @@ class LoginForm extends Form {
       //             then without the application reload the login will appear logged out
 
       // notice the await keyword here...
-      await auth.login(username, password);
+      //await auth.login(username, password);
 
       // see the redirected state could be set in protectedRoute.jsx
-      const { state } = this.props.location;
-      window.location = state ? state.from.pathname : "/";
+      
+      window.location = state ? state.from.pathname : "/route_planner";
     } catch (e) {
       if (e.response && e.response.status === 400) {
         //  && e.response.status === 400
@@ -51,6 +83,28 @@ class LoginForm extends Form {
     }
   };
 
+
+  doSubmit = e => {
+    const { state } = this.props.location;
+    const { username, password } = this.state.data;
+    const user = auth.login(username, password);
+
+    if (user === undefined) {
+      const errors = { ...this.state.errors };
+      errors.username = "Check your credentials and try again"; 
+      this.setState({ errors });
+    } else {
+      window.location = state ? state.from.pathname : "/search-metadata";  
+    }
+};
+
+  doReset = (event) => {
+    this.setState({ data: {username: "", password: ""}});
+  };
+
+
+
+
   render() {
     if (auth.getCurentUser()) return <Redirect to="/" />;
 
@@ -61,6 +115,7 @@ class LoginForm extends Form {
           {this.renderInput("username", "Username", true)}
           {this.renderInput("password", "Password", false, "password")}
           {this.renderButton("Login")}
+          <button id="reset-btn" type="button" className="btn btn-warning m-2" onClick={this.doReset}>Reset</button>
         </form>
       </React.Fragment>
     );
