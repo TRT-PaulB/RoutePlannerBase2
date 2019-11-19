@@ -37,3 +37,16 @@ Changes = 1
 Total stops = 8
 
 
+2019-11-19 11:06:23.636  WARN 3141 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=33m59s491ms).
+2019-11-19 11:18:59.814  INFO 3141 --- [http-nio-8080-exec-6] c.r.ctrl.RoutePlannerController          : making a route query: start = All Saints --> dest = Bond Street
+2019-11-19 11:18:59.817  INFO 3141 --- [http-nio-8080-exec-6] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-11-19 11:18:59.822  INFO 3141 --- [http-nio-8080-exec-6] c.r.client.service.TravelInfoService     : Journey Display:  
+Start  All Saints
+End    Bond Street
+From All Saints take the Docklands Light Railway to Bank for 5 stops.
+From Bank take the Waterloo and City to Waterloo for 1 stop.
+From Waterloo take the Jubilee to Bond Street for 3 stops.
+Changes = 2
+Total stops = 9
+
+

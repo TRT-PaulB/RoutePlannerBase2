@@ -38,7 +38,7 @@ class ViewBasket extends Form {
 
   handleAddAnotherJourney = () => {
     console.log("handling another journey....");
-    window.location = "/not-found";
+    window.location = "/";
   };
 
   render() {

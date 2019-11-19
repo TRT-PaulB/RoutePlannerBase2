@@ -3,7 +3,7 @@
 ******* ROUTEPLANNER 2019 - React, Java, MySQL ****************
 ***************************************************************
 ***************************************************************
-HOW TO RUN RFOUTEPLANNER APP
+HOW TO RUN ROUTEPLANNER APP
 
 --> JavaWorkspace3/MainApp
     ./mvnw spring-boot:run
@@ -24,45 +24,91 @@ SET ROUTEPLANNER UP STANDALONE
 ----------------------------------
 ROUTE PLANNER JOBS BY DEC 12th, 2019
 
-1) Find Route Screen
-
+- clean out react part and remove unused copied files
+- look at applying some dummy login mechanism
+  and handle in navbar
+- Find Route Screen
    --> start and finish combos should have a promt
-       which JOI understands is a blank value
- 
-2) View Basket
-
-   --> add ticket form and plug into backend
-   
-   --> 
-      
-   --> 
-
-
-
-
-NOW
-- add in basic front end for basket and making a purchase
-  --> basket handling, contact details, purchase, sale confirmation 
-  --> apply mosh style error handling in front end
-  --> overview of react unit tests  
-- develop admin and member areas (keep it simple)
-
+       which JOI understands is a blank value 
+   --> save to route query
+- View Basket
+   --> add ticket form and submit backend save method
+       ensure page loads basket contents
+   --> list tickets in basket:
+       ie start, dest, date purchase, date travel, checkbox
+   --> apply deletion of checked boxes
+       & apply to backend
+   --> apply react paging    
+- Contact Details
+   --> improve presentation to use full screen
+   --> save to database and ensure contact_details and
+       user are saved correctly
+- Payment Details Screen
+  --> list payment methods
+  --> restrict to a total of 3 payment methods
+  --> add in remove payment type functionality  
+  --> select 1 and process payment, otherwise blank out submit 
+      button
+      --> save payment
+      --> redirect to sale confirmation screen
+- sale confirmation
+  --> table displaying details of the sale
+  --> button to find another route
+- add purchase history screen
+  --> button to find another route
+  --> display history with paging
+- registration screen
+  --> form and save to db  
+- distinguish between user types (ignore non-conformers):
+  --> Admin - everything
+      --> hide 'Register' on navbar
+  --> Member - no admin stuff
+      --> hide 'Admin' on navbar 
+      --> hide 'Register' on navbar     
+  --> User
+- admin pages  [at least implement skeletons]
+  --> Manager
+  --> Add / View Ticket types system wide
+  --> search a user and view their payment types 
+  --> search a user and view their purchase history 
+- login page
+  --> remove history from chrome on mac!
+  --> post login, if this is a first time pass,
+      forward to change pass screen:
+      [at least implement skeleton]
+      --> change pass screen
+          --> form and save to user table  
+          --> button to progress to find another route
+- implement transactions at service level 
 - ensure quality of controller code
   [exception handling needs to be in the controllers]
 - service, integration and controller tests (3 types) 
   for shopping part
-- implement transactions at service level
-- javadocs
-- beautify interface with images as appropriate
+- javadocs for shopping package
+- beautify interface 
+  eg. with 
+  --> images as appropriate
+  --> css
+- smarten legacy backend code superficially
 
+----------------------------------
+----------------------------------
+ROUTEPLANNER EXTENSIONS - post Dec 12th, 2019
 
-
-LATER
+--> functionality left over from above list
+--> apply mosh style error handling in front end
+--> react internationalization
 --> Add security: authentication and authorization
---> Convert to microservices
-
-
-
+    - frontend (based on dummy rp and Mosh)
+    - backend 
+--> react unit tests
+--> apply to mongodb database instead of MySQL
+--> convert to microservices
+    --> data loader
+    --> route calculation engine
+    --> central webapp for screen flow 
+--> apply poc for introduction to docker, kubenetes, 
+    jenkins
 
 ----------------------------------
 ----------------------------------
