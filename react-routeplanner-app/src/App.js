@@ -21,13 +21,14 @@ import "./App.css";
 class App extends Component {
   state = {};
 
-  componentDidMount() {
-    const user = auth.getCurentUser();
-    this.setState({ user });  
-  }
+  // componentDidMount() {
+  //   const user = undefined; // auth.getCurentUser();
+  //   this.setState({ user });  
+  // }
 
   render() {
-    const { user } = this.state;
+    //const { user } = this.state;
+    const user = undefined;
     return (
       <React.Fragment>
         <ToastContainer />
@@ -38,11 +39,6 @@ class App extends Component {
             <Route path="/logout" exact component={Logout} />
             <Route path="/register" exact component={RegisterForm} />
             <Route path="/route_planner" exact component={RoutePlanner} />
-            {/* <Route
-              path="/view_basket/:start/:destination?"
-              exact
-              component={ViewBasket}
-            /> */}
             <Route
               path="/view_basket"
               exact
@@ -65,7 +61,7 @@ class App extends Component {
               path="/sale_confirmation"
               component={SaleConfirmation}
             />
-            <Redirect from="/" exact to="/login" />
+            <Redirect from="/" exact to="/route_planner" />
             <Route path="/not-found" component={NotFound} />
             <Redirect to="/not-found" />
           </Switch>

@@ -51,3 +51,28 @@ Total stops = 9
 
 
 2019-11-19 11:58:39.777  WARN 3141 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m15s466ms).
+2019-11-19 14:15:17.471  WARN 3141 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h22m37s377ms).
+2019-11-19 14:52:06.980  WARN 3141 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m19s320ms).
+2019-11-19 14:56:06.394  INFO 3141 --- [http-nio-8080-exec-7] c.r.ctrl.RoutePlannerController          : making a route query: start = All Saints --> dest = Archway
+2019-11-19 14:56:06.395  INFO 3141 --- [http-nio-8080-exec-7] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-11-19 14:56:06.403  INFO 3141 --- [http-nio-8080-exec-7] c.r.client.service.TravelInfoService     : Journey Display:  
+Start  All Saints
+End    Archway
+From All Saints take the Docklands Light Railway to Bank for 5 stops.
+From Bank take the Northern to Archway for 9 stops.
+Changes = 1
+Total stops = 14
+
+
+2019-11-19 15:16:44.715  WARN 3141 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m7s677ms).
+2019-11-19 16:44:53.770  WARN 3141 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h25m39s35ms).
+2019-11-19 16:47:16.104  INFO 3141 --- [http-nio-8080-exec-5] c.r.ctrl.RoutePlannerController          : making a route query: start = Aldgate East --> dest = Barbican
+2019-11-19 16:47:16.105  INFO 3141 --- [http-nio-8080-exec-5] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-11-19 16:47:16.106  INFO 3141 --- [http-nio-8080-exec-5] c.r.client.service.TravelInfoService     : Journey Display:  
+Start  Aldgate East
+End    Barbican
+From Aldgate East take the Hammersmith and City to Barbican for 3 stops.
+Changes = 0
+Total stops = 3
+
+

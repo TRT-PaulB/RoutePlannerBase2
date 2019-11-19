@@ -2,14 +2,14 @@ const hardCodedJWTDummy = "hardcoded_mockJWT";
 
 const tokenKey = "token";
 
-export async function login(username, password) {
+export async function login(username, password) { // async
     // hard coded here!!!     
-    if (username === "admin" && password === "password") {
+    if (username === "admin" && password === "pass") {
         const jwt = hardCodedJWTDummy; // plug in impl here eventually.....
         localStorage.setItem(tokenKey, jwt); 
         // fabricate this...!
         if (jwt === hardCodedJWTDummy) { // dummy....
-            return {data: { username: "admin", password: "password"}};
+            return {data: { username: "admin", password: "pass"}};
         }
     }
 

@@ -24,8 +24,6 @@ SET ROUTEPLANNER UP STANDALONE
 ----------------------------------
 ROUTE PLANNER JOBS BY DEC 12th, 2019
 
-- IN PROGRESS look at applying some dummy login mechanism
-  and handle in navbar
 - clean out react part and remove unused copied files
 - Find Route Screen
    --> start and finish combos should have a promt
@@ -72,6 +70,8 @@ ROUTE PLANNER JOBS BY DEC 12th, 2019
   --> search a user and view their payment types 
   --> search a user and view their purchase history 
 - login page
+  --> complete application of dummy login mechanism
+      and handle in navbar
   --> add in protection using ProtectedRoute impls
   --> remove history from chrome on mac!
   --> post login, if this is a first time pass,
