@@ -1,82 +1,150 @@
-Based on approach in Java Jugtours:
-https://developer.okta.com/blog/2018/07/19/simple-crud-react-and-spring-boot
+***************************************************************
+***************************************************************
+******* ROUTEPLANNER 2019 - React, Java, MySQL ****************
+***************************************************************
+***************************************************************
+HOW TO RUN RFOUTEPLANNER APP
 
+--> JavaWorkspace3/MainApp
+    ./mvnw spring-boot:run
 
-BASIC SPRING SECURITY MYSQL TUTORIAL:
-https://www.youtube.com/watch?v=TNt3GHuayXs
+--> internal react app
+    react-routeplanner-app
+    npm start
 
 ----------------------------------
-RESEARCH
-  
-- security research / links
-- microservices links:
-  https://www.udemy.com/course/spring-boot-microservices-with-spring-cloud-beginner-to-guru/
+----------------------------------
+SET ROUTEPLANNER UP STANDALONE
+
+--> install npx + npm
+--> use eclipse with jdk11
+--> install MySQL with root password
 
 ----------------------------------
-Mon 30th Sept, Thurs-Fri 3rd/4th Oct
-==> Tues + Wed in Oxford
-==> TEAM PROJECT
-==> RP
+----------------------------------
+ROUTE PLANNER JOBS BY DEC 12th, 2019
 
------------------------------------
-RP JOBS:
+1) Find Route Screen
 
-- backend methods tested with postman  (resume from basket controller)
-- implement transactions and test in service tests
-  [exception handling needs to be in the controllers]
-- test rewriting controllers as JSON handlers
+   --> start and finish combos should have a promt
+       which JOI understands is a blank value
+ 
+2) View Basket
+
+   --> add ticket form and plug into backend
+   
+   --> 
+      
+   --> 
 
 
-- service, integration and controller test POC
-==> research java microservices
-==> react bank docs and full gui structure
 
-- poc handling errors as recommended in Controllers and React
+
+NOW
 - add in basic front end for basket and making a purchase
   --> basket handling, contact details, purchase, sale confirmation 
   --> apply mosh style error handling in front end
   --> overview of react unit tests  
-- design admin flow and define security policy for system
 - develop admin and member areas (keep it simple)
-- apply security
+
+- ensure quality of controller code
+  [exception handling needs to be in the controllers]
+- service, integration and controller tests (3 types) 
+  for shopping part
+- implement transactions at service level
+- javadocs
+- beautify interface with images as appropriate
+
+
+
+LATER
+--> Add security: authentication and authorization
+--> Convert to microservices
+
+
+
 
 ----------------------------------
+----------------------------------
+ROUTE PLANNER ENDPOINTS
 
-http://localhost:8080/
-http://localhost:8080/home
+Get stations - http://localhost:8080/route/stations
+Get Route - http://localhost:8080/route/Farringdon/Piccadilly Circus
+General access - http://localhost:8080/route/
+User access - http://localhost:8080/route/user
+Save Contact Details - http://localhost:8080/reg/contact-details/persist
+Get a user by username - ????
+Get route queries for user - http://localhost:8080/route/query/1
+Save user - http://localhost:8080/reg/user/add
+Get Users - http://localhost:8080/reg/users
+Update contact details - http://localhost:8080/reg/contact-details/12
+Get a user by id - http://localhost:8080/reg/user/id/2
+Add Route - http://localhost:8080/route/add
+Add Ticket - http://localhost:8080/ticket/admin/add
+Get all tickets - http://localhost:8080/ticket/all
+Delete ticket - http://localhost:8080/ticket/admin/delete/1
+Get current basket or make one - http://localhost:8080/basket/current/2
+Get existing contact details for user - http://localhost:8080/reg/contact/4
+Add basket with no tickets - http://localhost:8080/basket/add
+Save existing basket with new ticket - http://localhost:8080/basket/update/18
+Get payment methods for user - http://localhost:8080/order/member/pm/1
+Add payment method - http://localhost:8080/order/member/pm/add
+Get orders for user - ????
+Post Order - http://localhost:8080/order/member/purchase
 
-http://localhost:8080/user
-http://localhost:8080/admin*
+----------------------------------
+----------------------------------
+MYSQL
 
-http://localhost:8080/error
+root / J03R00t123!
 
+Configure:
+spring.jpa.hibernate.ddl-auto
 
-INTERNAL REACT APP:
-react-routeplanner-app
+Database: new_routeplanner_shopping  (automatic JPA)
 
-- db: new_routeplanner_shopping
- - create table user (id bigint, active boolean, password varchar(50), roles varchar(50), user_name varchar(50) );
+----------------------------------
+----------------------------------
+PREPOPULATE DATABASE
+
+For various reasons these have not be added to data.sql,
+not yet anyway.
+
+--> insert users
+    insert into user values (1, 1, 'pass', 'ROLE_USER', 'user'); 
+    insert into user values (2, 1, 'pass', 'ROLE_ADMIN', 'admin');
  
- 
- ==========================================
- SETUP DATA (consider putting USER  and contact details inserts into data.sql....?)
- 
- INSERT USERS
- insert into user values (1, 1, 'pass', 'ROLE_USER', 'user'); 
- insert into user values (2, 1, 'pass', 'ROLE_ADMIN', 'admin');
- 
- INSERT ROUTE_QUERY DATA
- insert into route_query values(1, 'Farringdon', 'Oxford Circus', 1);
+--> insert route query data:
+    insert into route_query values(1, 'Farringdon', 'Oxford Circus', 1);
 
-INSERT TICKETS AND REGISTER THESE IN A BASKET 
- insert into ticket values(1, 3, 1, 'dest1', 4, 'start1', 2, '2019-10-04' );
+--> insert tickets, for example:
+    insert into ticket values(1, 3, 1, 'dest1', 4, 'start1', 2, '2019-10-04' ); 
  
- insert into basket_tickets values (18, 1);
-  insert into basket_tickets values (18, 3);
-   insert into basket_tickets values (18, 7);
-    insert into basket_tickets values (18, 13);
+--> insert basket full of tickets:
+    --> create basket
+    --> insert tickets into basket:  
+        --> insert into basket_tickets values (18, 1);
+        --> insert into basket_tickets values (18, 3);
+        --> insert into basket_tickets values (18, 7);
+        --> insert into basket_tickets values (18, 13);
+        
+ --> insert contact details for user 1:
+    insert into contact_details values (
+    17, 'ad1', 'add2', 'add3', 'GHlasgow', 'countryV', 'dsf@sdf.com', 
+    'fullnamneP', '987875', '765654', '435345', 'region', 'title', 1);
+        
+ --> insert p[ayment method for user 1:
+     insert into payment_method values(1, '1234132423412344', 2, 
+     '2022-10-04', 'Mr X Bloggs', '456', null, 1);
+ 
+ --> insert an order for basket 18: 
+     insert into orders values(1, 1, '2019-10-04 09:39:20', 18, 1);
 
-SQL TO CHECK THAT AN EMPTY USER'S BASKET HAS BEEN CREATED
+----------------------------------
+----------------------------------
+DATABASE SELECT STATEMENTS AND VIEWS
+
+--> check that user 1 has an empty basket created automatically
 select 
     b.id basketId, 
     b.open basketOpen,
@@ -89,7 +157,7 @@ select
  inner join user u on u.id = cd.user_id
  where u.id = 1
 
-GET TICKETS IN A USER'S BASKET
+--> List the tickets in a user's basket:
  select 
     b.id basketId, 
     b.open basketOpen,
@@ -105,31 +173,21 @@ GET TICKETS IN A USER'S BASKET
  inner join contact_details cd on cd.id = b.contact_details_id
  inner join user u on u.id = cd.user_id
  where u.id = 2
- 
- INSERT CONTACT DETAILS FOR USER 1
- insert into contact_details values (
-17, 'ad1', 'add2', 'add3', 'GHlasgow', 'countryV', 'dsf@sdf.com', 'fullnamneP', '987875', '765654', '435345', 'region', 'title', 1);
 
-GET ALL TICKETS FOR BASKET 18
+--> List all tickets in a specific basket: 
  select b.id basketId, t.*
  from Basket B
  inner join basket_tickets bt on bt.basket_id = b.id
  inner join ticket t on bt.tickets_id = t.id
  where b.id = 18
- 
- INSERT A PAYMENT MNETHOD FOR USER 1
- insert into payment_method values(1, '1234132423412344', 2, '2022-10-04', 'Mr X Bloggs', '456', null, 1);
- 
- GET ALL PAYMENT METHODS FOR USER 1
+
+--> Get all payment methods for user 1: 
  select u.id as userId, pm.*
  from user u
  inner join payment_method pm on pm.user_id = u.id
  where u.id = 1
  
- INSERT AN ORDER
- insert into orders values(1, 1, '2019-10-04 09:39:20', 18, 1);
- 
- FETCH ALL TICKETS
+ --> fetch all tickets on the system, regardless of basket or user
  select
     o.id orderId,
     o.purchased purchased,
@@ -148,38 +206,21 @@ GET ALL TICKETS FOR BASKET 18
  inner join ticket t on bt.tickets_id = t.id
  inner join contact_details cd on cd.id = b.contact_details_id
  inner join user u on u.id = cd.user_id
- 
- ========================================== 
- 
-logs:
-https://www.tutorialspoint.com/log4j/log4j_logging_files.htm
 
-
-//  REACT ROUTES: ==> http://localhost:8080/
-	//  --> routeplanner/                home
-    //  --> routeplanner/login           login attempt 		
-	//  --> routeplanner/query           query page after successful login
-
-
-Apply registration page
-Add admin pages + permissions
-
-========================================================================
- 
- 
+----------------------------------
+----------------------------------
+LATER RESEARCH
   
- 
- 
- 
-  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
+- security research / links (Jugtours, Mosh etc)
+- microservices links:
+  https://www.udemy.com/course/spring-boot-microservices-with-spring-cloud-beginner-to-guru/
+- log revision: https://www.tutorialspoint.com/log4j/log4j_logging_files.htm
+
+----------------------------------
+----------------------------------
+
+
+
+
+
+
