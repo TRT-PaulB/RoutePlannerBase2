@@ -1,78 +1,250 @@
-2019-11-19 09:21:21.562  INFO 3141 --- [main] com.routeplanner.MainAppApplication      : Starting MainAppApplication on CIC00290.local with PID 3141 (/Users/paulbickell/Documents/JavaWorkspace3/MainApp/target/classes started by paulbickell in /Users/paulbickell/Documents/JavaWorkspace3/MainApp)
-2019-11-19 09:21:21.570  INFO 3141 --- [main] com.routeplanner.MainAppApplication      : No active profile set, falling back to default profiles: default
-2019-11-19 09:21:22.033  INFO 3141 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-11-19 09:21:22.129  INFO 3141 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74ms. Found 7 repository interfaces.
-2019-11-19 09:21:22.581  INFO 3141 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$902e8c67] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-11-19 09:21:22.853  INFO 3141 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-11-19 09:21:22.885  INFO 3141 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-11-19 09:21:22.886  INFO 3141 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-11-19 09:21:22.974  INFO 3141 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-11-19 09:21:22.974  INFO 3141 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1357 ms
-2019-11-19 09:21:23.159  INFO 3141 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-11-19 09:21:23.619  INFO 3141 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-11-19 09:21:23.684  INFO 3141 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2019-11-20 14:24:25.564  INFO 10858 --- [main] com.routeplanner.MainAppApplication      : Starting MainAppApplication on CIC00290.local with PID 10858 (/Users/paulbickell/Documents/JavaWorkspace3/MainApp/target/classes started by paulbickell in /Users/paulbickell/Documents/JavaWorkspace3/MainApp)
+2019-11-20 14:24:25.571  INFO 10858 --- [main] com.routeplanner.MainAppApplication      : No active profile set, falling back to default profiles: default
+2019-11-20 14:24:26.000  INFO 10858 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-20 14:24:26.092  INFO 10858 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68ms. Found 7 repository interfaces.
+2019-11-20 14:24:26.516  INFO 10858 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$79869a08] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-20 14:24:26.779  INFO 10858 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-11-20 14:24:26.807  INFO 10858 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-20 14:24:26.807  INFO 10858 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-11-20 14:24:26.897  INFO 10858 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-20 14:24:26.897  INFO 10858 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1285 ms
+2019-11-20 14:24:27.079  INFO 10858 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-11-20 14:24:27.511  INFO 10858 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-11-20 14:24:27.575  INFO 10858 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-11-19 09:21:23.768  INFO 3141 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
-2019-11-19 09:21:23.769  INFO 3141 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2019-11-19 09:21:23.958  INFO 3141 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2019-11-19 09:21:24.117  INFO 3141 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2019-11-19 09:21:25.169  INFO 3141 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-11-19 09:21:25.514  INFO 3141 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2019-11-19 09:21:25.968  INFO 3141 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-19 09:21:26.017  WARN 3141 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-11-19 09:21:26.227  INFO 3141 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2019-11-19 09:21:26.228  INFO 3141 --- [main] com.routeplanner.MainAppApplication      : Started MainAppApplication in 10.082 seconds (JVM running for 15.607)
-2019-11-19 09:29:15.293  INFO 3141 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-11-19 09:29:15.294  INFO 3141 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-11-19 09:29:15.317  INFO 3141 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 22 ms
-2019-11-19 09:33:15.216  INFO 3141 --- [http-nio-8080-exec-1] c.r.ctrl.RoutePlannerController          : making a route query: start = Aldgate East --> dest = Arsenal
-2019-11-19 09:33:15.223  INFO 3141 --- [http-nio-8080-exec-1] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
-2019-11-19 09:33:15.228  INFO 3141 --- [http-nio-8080-exec-1] c.r.client.service.TravelInfoService     : Journey Display:  
-Start  Aldgate East
-End    Arsenal
-From Aldgate East take the Hammersmith and City to King's Cross St. Pancras for 5 stops.
-From King's Cross St. Pancras take the Piccadilly to Arsenal for 3 stops.
+2019-11-20 14:24:27.663  INFO 10858 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
+2019-11-20 14:24:27.665  INFO 10858 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-11-20 14:24:27.837  INFO 10858 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-11-20 14:24:28.016  INFO 10858 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-11-20 14:24:29.246  INFO 10858 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-11-20 14:24:29.715  INFO 10858 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-11-20 14:24:30.344  INFO 10858 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-20 14:24:30.410  WARN 10858 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-11-20 14:24:30.677  INFO 10858 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-11-20 14:24:30.679  INFO 10858 --- [main] com.routeplanner.MainAppApplication      : Started MainAppApplication in 10.519 seconds (JVM running for 16.006)
+2019-11-20 14:26:21.228  INFO 10858 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-20 14:26:21.229  INFO 10858 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-11-20 14:26:21.247  INFO 10858 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
+2019-11-20 14:26:35.902  INFO 10858 --- [http-nio-8080-exec-2] c.r.ctrl.RoutePlannerController          : making a route query: start = All Saints --> dest = Canons Park
+2019-11-20 14:26:35.908  INFO 10858 --- [http-nio-8080-exec-2] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-11-20 14:26:35.911  INFO 10858 --- [http-nio-8080-exec-2] c.r.client.service.TravelInfoService     : Journey Display:  
+Start  All Saints
+End    Canons Park
+From All Saints take the Docklands Light Railway to Bank for 5 stops.
+From Bank take the Waterloo and City to Waterloo for 1 stop.
+From Waterloo take the Jubilee to Baker Street for 4 stops.
+From Baker Street take the Metropolitan to Wembley Park for 2 stops.
+From Wembley Park take the Jubilee to Canons Park for 3 stops.
+Changes = 4
+Total stops = 15
+
+
+2019-11-20 14:26:42.043  INFO 10858 --- [http-nio-8080-exec-3] c.r.ctrl.RoutePlannerController          : making a route query: start = All Saints --> dest = Elephant and Castle
+2019-11-20 14:26:42.043  INFO 10858 --- [http-nio-8080-exec-3] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-11-20 14:26:42.044  INFO 10858 --- [http-nio-8080-exec-3] c.r.client.service.TravelInfoService     : Journey Display:  
+Start  All Saints
+End    Elephant and Castle
+From All Saints take the Docklands Light Railway to Bank for 5 stops.
+From Bank take the Northern to Elephant and Castle for 3 stops.
 Changes = 1
 Total stops = 8
 
 
-2019-11-19 11:06:23.636  WARN 3141 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=33m59s491ms).
-2019-11-19 11:18:59.814  INFO 3141 --- [http-nio-8080-exec-6] c.r.ctrl.RoutePlannerController          : making a route query: start = All Saints --> dest = Bond Street
-2019-11-19 11:18:59.817  INFO 3141 --- [http-nio-8080-exec-6] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
-2019-11-19 11:18:59.822  INFO 3141 --- [http-nio-8080-exec-6] c.r.client.service.TravelInfoService     : Journey Display:  
+2019-11-20 14:26:46.262  INFO 10858 --- [http-nio-8080-exec-4] c.r.ctrl.RoutePlannerController          : making a route query: start = All Saints --> dest = King's Cross St. Pancras
+2019-11-20 14:26:46.262  INFO 10858 --- [http-nio-8080-exec-4] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-11-20 14:26:46.263  INFO 10858 --- [http-nio-8080-exec-4] c.r.client.service.TravelInfoService     : Journey Display:  
 Start  All Saints
-End    Bond Street
+End    King's Cross St. Pancras
 From All Saints take the Docklands Light Railway to Bank for 5 stops.
-From Bank take the Waterloo and City to Waterloo for 1 stop.
-From Waterloo take the Jubilee to Bond Street for 3 stops.
-Changes = 2
+From Bank take the Northern to King's Cross St. Pancras for 4 stops.
+Changes = 1
 Total stops = 9
 
 
-2019-11-19 11:58:39.777  WARN 3141 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m15s466ms).
-2019-11-19 14:15:17.471  WARN 3141 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h22m37s377ms).
-2019-11-19 14:52:06.980  WARN 3141 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m19s320ms).
-2019-11-19 14:56:06.394  INFO 3141 --- [http-nio-8080-exec-7] c.r.ctrl.RoutePlannerController          : making a route query: start = All Saints --> dest = Archway
-2019-11-19 14:56:06.395  INFO 3141 --- [http-nio-8080-exec-7] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
-2019-11-19 14:56:06.403  INFO 3141 --- [http-nio-8080-exec-7] c.r.client.service.TravelInfoService     : Journey Display:  
+2019-11-20 14:26:49.565  INFO 10858 --- [http-nio-8080-exec-5] c.r.ctrl.RoutePlannerController          : making a route query: start = All Saints --> dest = Leyton
+2019-11-20 14:26:49.565  INFO 10858 --- [http-nio-8080-exec-5] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-11-20 14:26:49.565  INFO 10858 --- [http-nio-8080-exec-5] c.r.client.service.TravelInfoService     : Journey Display:  
 Start  All Saints
-End    Archway
-From All Saints take the Docklands Light Railway to Bank for 5 stops.
-From Bank take the Northern to Archway for 9 stops.
+End    Leyton
+From All Saints take the Docklands Light Railway to Stratford for 4 stops.
+From Stratford take the Central to Leyton for 1 stop.
 Changes = 1
-Total stops = 14
+Total stops = 5
 
 
-2019-11-19 15:16:44.715  WARN 3141 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m7s677ms).
-2019-11-19 16:44:53.770  WARN 3141 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h25m39s35ms).
-2019-11-19 16:47:16.104  INFO 3141 --- [http-nio-8080-exec-5] c.r.ctrl.RoutePlannerController          : making a route query: start = Aldgate East --> dest = Barbican
-2019-11-19 16:47:16.105  INFO 3141 --- [http-nio-8080-exec-5] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
-2019-11-19 16:47:16.106  INFO 3141 --- [http-nio-8080-exec-5] c.r.client.service.TravelInfoService     : Journey Display:  
+2019-11-20 14:26:52.508  INFO 10858 --- [http-nio-8080-exec-6] c.r.ctrl.RoutePlannerController          : making a route query: start = Balham --> dest = Leyton
+2019-11-20 14:26:52.509  INFO 10858 --- [http-nio-8080-exec-6] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-11-20 14:26:52.510  INFO 10858 --- [http-nio-8080-exec-6] c.r.client.service.TravelInfoService     : Journey Display:  
+Start  Balham
+End    Leyton
+From Balham take the Northern to Waterloo for 7 stops.
+From Waterloo take the Waterloo and City to Bank for 1 stop.
+From Bank take the Central to Leyton for 5 stops.
+Changes = 2
+Total stops = 13
+
+
+2019-11-20 14:26:56.109  INFO 10858 --- [http-nio-8080-exec-7] c.r.ctrl.RoutePlannerController          : making a route query: start = Arnos Grove --> dest = Leyton
+2019-11-20 14:26:56.109  INFO 10858 --- [http-nio-8080-exec-7] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-11-20 14:26:56.111  INFO 10858 --- [http-nio-8080-exec-7] c.r.client.service.TravelInfoService     : Journey Display:  
+Start  Arnos Grove
+End    Leyton
+From Arnos Grove take the Piccadilly to Finsbury Park for 5 stops.
+From Finsbury Park take the Victoria to King's Cross St. Pancras for 2 stops.
+From King's Cross St. Pancras take the Hammersmith and City to Liverpool Street for 4 stops.
+From Liverpool Street take the Central to Leyton for 4 stops.
+Changes = 3
+Total stops = 15
+
+
+Start  Arnos Grove
+End    Leyton
+From Arnos Grove take the Piccadilly to Finsbury Park for 5 stops.
+From Finsbury Park take the Victoria to King's Cross St. Pancras for 2 stops.
+From King's Cross St. Pancras take the Metropolitan to Liverpool Street for 4 stops.
+From Liverpool Street take the Central to Leyton for 4 stops.
+Changes = 3
+Total stops = 15
+
+
+Start  Arnos Grove
+End    Leyton
+From Arnos Grove take the Piccadilly to Finsbury Park for 5 stops.
+From Finsbury Park take the Victoria to King's Cross St. Pancras for 2 stops.
+From King's Cross St. Pancras take the Circle to Liverpool Street for 4 stops.
+From Liverpool Street take the Central to Leyton for 4 stops.
+Changes = 3
+Total stops = 15
+
+
+2019-11-20 14:26:59.546  INFO 10858 --- [http-nio-8080-exec-8] c.r.ctrl.RoutePlannerController          : making a route query: start = Alperton --> dest = Leyton
+2019-11-20 14:26:59.547  INFO 10858 --- [http-nio-8080-exec-8] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-11-20 14:26:59.553  INFO 10858 --- [http-nio-8080-exec-8] c.r.client.service.TravelInfoService     : Journey Display:  
+Start  Alperton
+End    Leyton
+From Alperton take the Piccadilly to Green Park for 13 stops.
+From Green Park take the Jubilee to Waterloo for 2 stops.
+From Waterloo take the Waterloo and City to Bank for 1 stop.
+From Bank take the Central to Leyton for 5 stops.
+Changes = 3
+Total stops = 21
+
+
+2019-11-20 14:27:02.478  INFO 10858 --- [http-nio-8080-exec-9] c.r.ctrl.RoutePlannerController          : making a route query: start = Alperton --> dest = Marble Arch
+2019-11-20 14:27:02.479  INFO 10858 --- [http-nio-8080-exec-9] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-11-20 14:27:02.479  INFO 10858 --- [http-nio-8080-exec-9] c.r.client.service.TravelInfoService     : Journey Display:  
+Start  Alperton
+End    Marble Arch
+From Alperton take the Piccadilly to Earl's Court for 8 stops.
+From Earl's Court take the District to Notting Hill Gate for 2 stops.
+From Notting Hill Gate take the Central to Marble Arch for 3 stops.
+Changes = 2
+Total stops = 13
+
+
+Start  Alperton
+End    Marble Arch
+From Alperton take the Piccadilly to Hammersmith for 6 stops.
+From Hammersmith take the Hammersmith and City to Shepherd's Bush for 2 stops.
+From Shepherd's Bush take the Central to Marble Arch for 5 stops.
+Changes = 2
+Total stops = 13
+
+
+2019-11-20 14:27:13.257  INFO 10858 --- [http-nio-8080-exec-10] c.r.ctrl.RoutePlannerController          : making a route query: start = Alperton --> dest = New Cross Gate
+2019-11-20 14:27:13.257  INFO 10858 --- [http-nio-8080-exec-10] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-11-20 14:27:13.268  INFO 10858 --- [http-nio-8080-exec-10] c.r.client.service.TravelInfoService     : Journey Display:  
+Start  Alperton
+End    New Cross Gate
+From Alperton take the Piccadilly to Green Park for 13 stops.
+From Green Park take the Jubilee to Canada Water for 6 stops.
+From Canada Water take the East London to Surrey Quays for 1 stop.
+From Surrey Quays take the East London to New Cross Gate for 1 stop.
+Changes = 3
+Total stops = 21
+
+
+2019-11-20 14:27:16.592  INFO 10858 --- [http-nio-8080-exec-1] c.r.ctrl.RoutePlannerController          : making a route query: start = Alperton --> dest = Northolt
+2019-11-20 14:27:16.592  INFO 10858 --- [http-nio-8080-exec-1] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-11-20 14:27:16.593  INFO 10858 --- [http-nio-8080-exec-1] c.r.client.service.TravelInfoService     : Journey Display:  
+Start  Alperton
+End    Northolt
+From Alperton take the Piccadilly to Ealing Common for 3 stops.
+From Ealing Common take the District to Ealing Broadway for 1 stop.
+From Ealing Broadway take the Central to North Acton for 2 stops.
+From North Acton take the Central to Northolt for 4 stops.
+Changes = 3
+Total stops = 10
+
+
+2019-11-20 14:27:19.784  INFO 10858 --- [http-nio-8080-exec-2] c.r.ctrl.RoutePlannerController          : making a route query: start = Alperton --> dest = Oxford Circus
+2019-11-20 14:27:19.784  INFO 10858 --- [http-nio-8080-exec-2] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-11-20 14:27:19.785  INFO 10858 --- [http-nio-8080-exec-2] c.r.client.service.TravelInfoService     : Journey Display:  
+Start  Alperton
+End    Oxford Circus
+From Alperton take the Piccadilly to Rayners Lane for 4 stops.
+From Rayners Lane take the Metropolitan to Harrow-on-the-Hill for 2 stops.
+From Harrow-on-the-Hill take the Metropolitan to Baker Street for 5 stops.
+From Baker Street take the Bakerloo to Oxford Circus for 2 stops.
+Changes = 3
+Total stops = 13
+
+
+2019-11-20 14:27:23.629  INFO 10858 --- [http-nio-8080-exec-3] c.r.ctrl.RoutePlannerController          : making a route query: start = Angel --> dest = Oxford Circus
+2019-11-20 14:27:23.629  INFO 10858 --- [http-nio-8080-exec-3] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-11-20 14:27:23.629  INFO 10858 --- [http-nio-8080-exec-3] c.r.client.service.TravelInfoService     : Journey Display:  
+Start  Angel
+End    Oxford Circus
+From Angel take the Northern to Warren Street for 3 stops.
+From Warren Street take the Victoria to Oxford Circus for 1 stop.
+Changes = 1
+Total stops = 4
+
+
+Start  Angel
+End    Oxford Circus
+From Angel take the Northern to Euston for 2 stops.
+From Euston take the Victoria to Oxford Circus for 2 stops.
+Changes = 1
+Total stops = 4
+
+
+Start  Angel
+End    Oxford Circus
+From Angel take the Northern to King's Cross St. Pancras for 1 stop.
+From King's Cross St. Pancras take the Victoria to Oxford Circus for 3 stops.
+Changes = 1
+Total stops = 4
+
+
+2019-11-20 14:28:10.124  INFO 10858 --- [http-nio-8080-exec-4] c.r.ctrl.RoutePlannerController          : making a route query: start = Aldgate East --> dest = Amersham
+2019-11-20 14:28:10.125  INFO 10858 --- [http-nio-8080-exec-4] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-11-20 14:28:10.125  INFO 10858 --- [http-nio-8080-exec-4] c.r.client.service.TravelInfoService     : Journey Display:  
 Start  Aldgate East
-End    Barbican
-From Aldgate East take the Hammersmith and City to Barbican for 3 stops.
-Changes = 0
-Total stops = 3
+End    Amersham
+From Aldgate East take the Hammersmith and City to Liverpool Street for 1 stop.
+From Liverpool Street take the Central to Bank for 1 stop.
+From Bank take the Waterloo and City to Waterloo for 1 stop.
+From Waterloo take the Jubilee to Baker Street for 4 stops.
+From Baker Street take the Metropolitan to Chalfont and Latimer for 13 stops.
+From Chalfont and Latimer take the Metropolitan to Amersham for 1 stop.
+Changes = 5
+Total stops = 21
 
 
+2019-11-20 14:28:26.675  INFO 10858 --- [http-nio-8080-exec-6] c.r.ctrl.RoutePlannerController          : making a route query: start = All Saints --> dest = Angel
+2019-11-20 14:28:26.675  INFO 10858 --- [http-nio-8080-exec-6] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-11-20 14:28:26.676  INFO 10858 --- [http-nio-8080-exec-6] c.r.client.service.TravelInfoService     : Journey Display:  
+Start  All Saints
+End    Angel
+From All Saints take the Docklands Light Railway to Bank for 5 stops.
+From Bank take the Northern to Angel for 3 stops.
+Changes = 1
+Total stops = 8
+
+
+2019-11-20 14:49:24.933  INFO 10858 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-20 14:49:24.938  INFO 10858 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-11-20 14:49:24.945  INFO 10858 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-11-20 14:49:24.962  INFO 10858 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

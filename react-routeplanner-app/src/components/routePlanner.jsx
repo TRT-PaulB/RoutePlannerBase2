@@ -47,20 +47,21 @@ class RoutePlanner extends Form {
 
   handleProceedToPurchase = () => {
     const { start, destination } = this.state.data;
+    const {routeInfo, successfulLastSearch} = this.state;
 
-    console.log("start = ", this.state.data.start);
-    console.log("destination = ", this.state.data.destination);
-    console.log("route info = ", this.state.routeInfo);
-    console.log("successful last search = ", this.state.successfulLastSearch);
+    console.log("start = ", start);
+    console.log("destination = ", destination);
+    console.log("route info = ", routeInfo);
+    console.log("successful last search = ", successfulLastSearch);
 
-    // SAVE TO BAS~ket HERE........... 
+    // TODO: SAVE TO BAS~ket HERE........... 
 
     //window.location = "/view_basket/" + start + "/" + destination + "";
     window.location = "/view_basket";
   };
 
   render() {
-    const { match, history } = this.props;
+    const { match, history } = this.props; // TODO 
     const { successfulLastSearch, routeQuery, stationList } = this.state;
 
     const stations = stationList.map((s)=> { 

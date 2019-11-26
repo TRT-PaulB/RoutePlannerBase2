@@ -22,9 +22,18 @@ SET ROUTEPLANNER UP STANDALONE
 
 ----------------------------------
 ----------------------------------
-ROUTE PLANNER JOBS BY DEC 12th, 2019
+ROUTE PLANNER JOBS END DEC, 2019
 
+FRONT END CHANGES
 - clean out react part and remove unused copied files
+- revise react tables from vidly mosh project
+
+
+- DONE research table lists: react-vidly-backend/Vidly
+       --> table layout
+       --> delete button
+       --> 2 forms on single page
+       --> sort, (order), pagination                    
 - Find Route Screen
    --> start and finish combos should have a promt
        which JOI understands is a blank value 
@@ -37,14 +46,16 @@ ROUTE PLANNER JOBS BY DEC 12th, 2019
    --> apply deletion of checked boxes
        & apply to backend
    --> apply react paging    
+
+------------
+
 - Contact Details
    --> improve presentation to use full screen
    --> save to database and ensure contact_details and
        user are saved correctly
 - Payment Details Screen
   --> list payment methods
-  --> restrict to a total of 3 payment methods
-  --> add in remove payment type functionality  
+  --> add in remove payment type functionality (restrict to 3)  
   --> select 1 and process payment, otherwise blank out submit 
       button
       --> save payment
@@ -53,6 +64,7 @@ ROUTE PLANNER JOBS BY DEC 12th, 2019
   --> table displaying details of the sale
   --> button to find another route
 - add purchase history screen
+  --> navbar 
   --> button to find another route
   --> display history with paging
 - registration screen
@@ -60,10 +72,15 @@ ROUTE PLANNER JOBS BY DEC 12th, 2019
 - distinguish between user types (ignore non-conformers):
   --> Admin - everything
       --> hide 'Register' on navbar
+      --> ensure logout displays          
   --> Member - no admin stuff
       --> hide 'Admin' on navbar 
-      --> hide 'Register' on navbar     
+      --> hide 'Register' on navbar 
+      --> ensure logout displays                    
   --> User
+      --> hide 'Admin' on navbar 
+      --> hide 'Purchase History' on navbar 
+      --> ensure login displays    
 - admin pages  [at least implement skeletons]
   --> Manager
   --> Add / View Ticket types system wide
@@ -71,7 +88,7 @@ ROUTE PLANNER JOBS BY DEC 12th, 2019
   --> search a user and view their purchase history 
 - login page
   --> complete application of dummy login mechanism
-      and handle in navbar
+      and handle in navbar + APP
   --> add in protection using ProtectedRoute impls
   --> remove history from chrome on mac!
   --> post login, if this is a first time pass,
@@ -80,17 +97,20 @@ ROUTE PLANNER JOBS BY DEC 12th, 2019
       --> change pass screen
           --> form and save to user table  
           --> button to progress to find another route
-- implement transactions at service level 
-- ensure quality of controller code
-  [exception handling needs to be in the controllers]
-- service, integration and controller tests (3 types) 
-  for shopping part
-- javadocs for shopping package
 - beautify interface 
   eg. with 
   --> images as appropriate
   --> css
-- smarten legacy backend code superficially
+
+          
+BACKEND CHANGES
+- implement transactions at service level 
+- ensure quality of controller code
+  [imoprioved exception handling needs to be in the controllers]
+- service, integration and controller tests (3 types) 
+  for shopping part
+- javadocs for shopping package
+- smarten legacy part of backend code superficially
 
 ----------------------------------
 ----------------------------------
@@ -113,7 +133,7 @@ ROUTEPLANNER EXTENSIONS - post Dec 12th, 2019
 
 ----------------------------------
 ----------------------------------
-ROUTE PLANNER ENDPOINTS
+ROUTE PLANNER ENDPOINTS (working 19/11/19)
 
 Get stations - http://localhost:8080/route/stations
 Get Route - http://localhost:8080/route/Farringdon/Piccadilly Circus
