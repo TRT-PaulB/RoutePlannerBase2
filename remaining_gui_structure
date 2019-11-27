@@ -1,0 +1,103 @@
+VIEW BASKET
+
+--> form of ticket to add
+    --> form
+        --> start, destination are populated from the find route page (read only) 
+        --> passenger type, travel date, ticket desc (defaults to be set) , number passengers, number items
+    --> cancel button redirects to route page
+    --> add ticket button
+        --> adds ticket to db
+        --> resets form and sets it as read only    
+        --> refreshes the page (to display the extra ticket)
+        --> implement paging or limit number of tickets allowed  
+    --> display a chart of tickets with parameters:
+        --> start, dest, passenger type, travel date, ticket desc (defaults to be set) , number passengers, number items, DELETE BUTTON
+    --> include button to proceed
+    
+--> Contact / Registration Details
+    This is a populated form because the user should have already logged in.
+    The user should be able to edit their registration details  
+    --> refactor to include username
+    --> save updated contact details to db
+
+--------------------------------------------------------
+
+--> Payment Info
+    --> parent radios to select existing OR add new payment type
+    --> display chart of existing payment details
+        --> params: name on card, cardtype, number, sec code, expiry date 
+        --> include delete button
+            --> deletes fropm db    
+        --> include select checkbox               
+    --> display form of (other) payment details
+        --> params: name on card, cardtype, number, sec code, expiry date
+        --> save and proceed
+            --> save to DB
+            --> proceed button (with the new payment info form object)
+    --> proceed button (with the selected item)
+        --> this button is deactivated until a radio has been selected
+        --> processes payment dummy service
+        --> save payment method
+        --> moves to next page: payment confirmation  
+        
+--> Sales Confirmation page
+    --> congratulations message and username
+    --> list of tickets:
+        --> start, dest, passenger type, travel date, ticket desc (defaults to be set) , number passengers, number items
+    --> payment details DTO (minimal):  params: name on card, cardtype, number, sec code, expiry date
+  
+--------------------------------------------------------
+
+--> beautify interface 
+  eg. with 
+  --> images as appropriate
+  --> css
+
+--> login and authorization method to be used   
+          
+BACKEND CHANGES
+- implement transactions at service level 
+- ensure quality of controller code
+  [improved exception handling needs to be in the controllers]
+- service, integration and controller tests (3 types) 
+  for shopping part
+ 
+--------------------------------------------------------    
+    
+--> registration details
+    --> add register link to login page
+    --> use existing form
+    --> button to save reg details to db
+        --> save to db
+        --> redirect user to login page with message to check emails....
+    
+--> Admin Corner
+    --> radios / tabs to select between admin users / ticket types / (passenger types) / purchase history
+    --> apply authorization     
+    
+--> Admin users
+    --> chart with paging to view all users on the system
+    --> add a search facility
+    --> form to add a new user
+    --> button to save new user
+
+--> Admin tickets        
+    --> list ticket types     
+    --> from to add new ticket type   
+
+--> Admin Purchase History
+    --> chart listing last 100 items of all users 
+    --> add search facility (username, to/from dates)
+    --> paging
+    
+--> Error pages    
+
+--> User Level Purchase History
+    --> chart listing last 100 items for the current user
+    --> add search facility by dates, start, destination
+    --> paging
+    
+--------------------------------------------------------
+
+
+    

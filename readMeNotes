@@ -46,9 +46,6 @@ FRONT END CHANGES
    --> apply deletion of checked boxes
        & apply to backend
    --> apply react paging    
-
-------------
-
 - Contact Details
    --> improve presentation to use full screen
    --> save to database and ensure contact_details and
@@ -106,7 +103,7 @@ FRONT END CHANGES
 BACKEND CHANGES
 - implement transactions at service level 
 - ensure quality of controller code
-  [imoprioved exception handling needs to be in the controllers]
+  [improved exception handling needs to be in the controllers]
 - service, integration and controller tests (3 types) 
   for shopping part
 - javadocs for shopping package
