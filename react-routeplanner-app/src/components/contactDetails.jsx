@@ -40,8 +40,6 @@ class ContactDetails extends Form {
     email: Joi.string().email({ minDomainAtoms: 2 })
   };
     
-  //async componentDidMount() {}
-
   doSubmit = () => {
     console.log("submitted contact details form - and proceed to payment details");
     this.props.history.push("/payment_details");

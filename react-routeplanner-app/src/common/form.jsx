@@ -55,8 +55,6 @@ class Form extends Component {
 
     if (errors) return;
 
-    // it is interesing that this can be implemented only at the subclass level
-    // ie. no need for empty doSubmit() function in this class
     this.doSubmit();
   };
 
@@ -68,20 +66,22 @@ class Form extends Component {
     );
   };
 
-  renderInput = (propName, label, autoFocus, type = "text") => {
-    const { data, errors } = this.state;
-    return (
-      <Input
-        type={type}
-        name={propName}
-        label={label}
-        value={data[propName]} //  value={data.propName}
-        onChange={this.handleChange}
-        error={errors[propName]} // error={errors.username}
-        autoFocus={autoFocus}
-      />
-    );
-  };
+
+renderInput = (propName, label, autoFocus, type = "text", width = "200px") => {
+  const { data, errors } = this.state;
+  return (
+    <Input
+      type={type}
+      name={propName}
+      label={label}
+      value={data[propName]} 
+      onChange={this.handleChange}
+      error={errors[propName]} 
+      autoFocus={autoFocus}
+      width={width}
+    />
+  );
+};
 
   renderReadOnlyTextArea = (propName, label, autoFocus, width, rows, value) => {
     const { data, errors } = this.state;
@@ -100,22 +100,19 @@ class Form extends Component {
 
   renderSelect = (propName, label, autoFocus, options, width) => {
     const { data, errors } = this.state;
-
-    // console.log("propname " + propName + ": ", data[propName]);
     return (
       <Select
         name={propName}
         width={width}
         label={label}
-        value={data[propName]} //  value={data.propName}
+        value={data[propName]} 
         autoFocus={autoFocus}
         options={options}
-        error={errors[propName]} // error={errors.username}
-        onChange={this.handleChange} // KEY: hook into this onChange event handler
+        error={errors[propName]} 
+        onChange={this.handleChange} 
       />
     );
   };
 }
-// note there is no render method because this component is for validation only
 
 export default Form;

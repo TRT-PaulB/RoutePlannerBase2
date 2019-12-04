@@ -29,19 +29,12 @@ code {
   width: auto !important;
 }
 
-/* .form-inline {
-   width: 80%; 
-} */
-
 .form-label-right {
   text-align: right;
   font-weight: bold;
   width: 100% !important;
 }
 
-.form-group {
-  width: 50%;
-}
 
 .semi-form-group {
   width: 50%;
@@ -72,4 +65,16 @@ span.input-group-addon {
 
 .broadForm {
   width: 75%;
+}
+
+
+/* .form-group {
+  width: 50%;
+} */
+.form-group {
+  width: 70%;
+}
+
+.formInputLabel {
+   width: 200px;
 }

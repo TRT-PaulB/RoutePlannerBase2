@@ -13,6 +13,7 @@ VIEW BASKET
     --> display a chart of tickets with parameters:
         --> start, dest, passenger type, travel date, ticket desc (defaults to be set) , number passengers, number items, DELETE BUTTON
     --> include button to proceed
+    --> when coming into view basket from the navigation bar, then blank out the add ticket part........as there is no start/destination
     
 --> Contact / Registration Details
     This is a populated form because the user should have already logged in.

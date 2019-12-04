@@ -1,250 +1,403 @@
-2019-11-20 14:24:25.564  INFO 10858 --- [main] com.routeplanner.MainAppApplication      : Starting MainAppApplication on CIC00290.local with PID 10858 (/Users/paulbickell/Documents/JavaWorkspace3/MainApp/target/classes started by paulbickell in /Users/paulbickell/Documents/JavaWorkspace3/MainApp)
-2019-11-20 14:24:25.571  INFO 10858 --- [main] com.routeplanner.MainAppApplication      : No active profile set, falling back to default profiles: default
-2019-11-20 14:24:26.000  INFO 10858 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-11-20 14:24:26.092  INFO 10858 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68ms. Found 7 repository interfaces.
-2019-11-20 14:24:26.516  INFO 10858 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$79869a08] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-11-20 14:24:26.779  INFO 10858 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2019-11-20 14:24:26.807  INFO 10858 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-11-20 14:24:26.807  INFO 10858 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
-2019-11-20 14:24:26.897  INFO 10858 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-11-20 14:24:26.897  INFO 10858 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1285 ms
-2019-11-20 14:24:27.079  INFO 10858 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-11-20 14:24:27.511  INFO 10858 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-11-20 14:24:27.575  INFO 10858 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+2019-12-04 09:46:48.805  INFO 5289 --- [main] com.routeplanner.MainAppApplication      : Starting MainAppApplication on CIC00290.local with PID 5289 (/Users/paulbickell/Documents/JavaWorkspace3/MainApp/target/classes started by paulbickell in /Users/paulbickell/Documents/JavaWorkspace3/MainApp)
+2019-12-04 09:46:48.812  INFO 5289 --- [main] com.routeplanner.MainAppApplication      : No active profile set, falling back to default profiles: default
+2019-12-04 09:46:49.247  INFO 5289 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-04 09:46:49.342  INFO 5289 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 87ms. Found 7 repository interfaces.
+2019-12-04 09:46:49.764  INFO 5289 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cf91eca0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-04 09:46:50.028  INFO 5289 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-04 09:46:50.062  INFO 5289 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-04 09:46:50.062  INFO 5289 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.24]
+2019-12-04 09:46:50.143  INFO 5289 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-04 09:46:50.144  INFO 5289 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1287 ms
+2019-12-04 09:46:50.306  INFO 5289 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-04 09:46:50.762  INFO 5289 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-04 09:46:50.823  INFO 5289 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-11-20 14:24:27.663  INFO 10858 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
-2019-11-20 14:24:27.665  INFO 10858 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
-2019-11-20 14:24:27.837  INFO 10858 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2019-11-20 14:24:28.016  INFO 10858 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2019-11-20 14:24:29.246  INFO 10858 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-11-20 14:24:29.715  INFO 10858 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
-2019-11-20 14:24:30.344  INFO 10858 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-20 14:24:30.410  WARN 10858 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-11-20 14:24:30.677  INFO 10858 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2019-11-20 14:24:30.679  INFO 10858 --- [main] com.routeplanner.MainAppApplication      : Started MainAppApplication in 10.519 seconds (JVM running for 16.006)
-2019-11-20 14:26:21.228  INFO 10858 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-11-20 14:26:21.229  INFO 10858 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-11-20 14:26:21.247  INFO 10858 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 18 ms
-2019-11-20 14:26:35.902  INFO 10858 --- [http-nio-8080-exec-2] c.r.ctrl.RoutePlannerController          : making a route query: start = All Saints --> dest = Canons Park
-2019-11-20 14:26:35.908  INFO 10858 --- [http-nio-8080-exec-2] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
-2019-11-20 14:26:35.911  INFO 10858 --- [http-nio-8080-exec-2] c.r.client.service.TravelInfoService     : Journey Display:  
-Start  All Saints
-End    Canons Park
-From All Saints take the Docklands Light Railway to Bank for 5 stops.
-From Bank take the Waterloo and City to Waterloo for 1 stop.
-From Waterloo take the Jubilee to Baker Street for 4 stops.
-From Baker Street take the Metropolitan to Wembley Park for 2 stops.
-From Wembley Park take the Jubilee to Canons Park for 3 stops.
+2019-12-04 09:46:50.903  INFO 5289 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.11.Final}
+2019-12-04 09:46:50.904  INFO 5289 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-12-04 09:46:51.092  INFO 5289 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-12-04 09:46:51.268  INFO 5289 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-12-04 09:46:52.332  INFO 5289 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-04 09:46:52.694  INFO 5289 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2019-12-04 09:46:53.151  INFO 5289 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-04 09:46:53.208  WARN 5289 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-04 09:46:53.422  INFO 5289 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-04 09:46:53.424  INFO 5289 --- [main] com.routeplanner.MainAppApplication      : Started MainAppApplication in 10.014 seconds (JVM running for 15.374)
+2019-12-04 09:48:55.350  INFO 5289 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-04 09:48:55.350  INFO 5289 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-04 09:48:55.362  INFO 5289 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2019-12-04 09:49:16.845  INFO 5289 --- [http-nio-8080-exec-3] c.r.ctrl.RoutePlannerController          : making a route query: start = Angel --> dest = Barking
+2019-12-04 09:49:16.849  INFO 5289 --- [http-nio-8080-exec-3] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-12-04 09:49:16.853  INFO 5289 --- [http-nio-8080-exec-3] c.r.client.service.TravelInfoService     : Journey Display:  
+Start  Angel
+End    Barking
+From Angel take the Northern to Moorgate for 2 stops.
+From Moorgate take the Hammersmith and City to Liverpool Street for 1 stop.
+From Liverpool Street take the Central to Stratford for 3 stops.
+From Stratford take the Jubilee to West Ham for 1 stop.
+From West Ham take the District to Barking for 4 stops.
 Changes = 4
-Total stops = 15
+Total stops = 11
 
 
-2019-11-20 14:26:42.043  INFO 10858 --- [http-nio-8080-exec-3] c.r.ctrl.RoutePlannerController          : making a route query: start = All Saints --> dest = Elephant and Castle
-2019-11-20 14:26:42.043  INFO 10858 --- [http-nio-8080-exec-3] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
-2019-11-20 14:26:42.044  INFO 10858 --- [http-nio-8080-exec-3] c.r.client.service.TravelInfoService     : Journey Display:  
-Start  All Saints
-End    Elephant and Castle
-From All Saints take the Docklands Light Railway to Bank for 5 stops.
-From Bank take the Northern to Elephant and Castle for 3 stops.
-Changes = 1
-Total stops = 8
+Start  Angel
+End    Barking
+From Angel take the Northern to Moorgate for 2 stops.
+From Moorgate take the Metropolitan to Liverpool Street for 1 stop.
+From Liverpool Street take the Central to Stratford for 3 stops.
+From Stratford take the Jubilee to West Ham for 1 stop.
+From West Ham take the District to Barking for 4 stops.
+Changes = 4
+Total stops = 11
 
 
-2019-11-20 14:26:46.262  INFO 10858 --- [http-nio-8080-exec-4] c.r.ctrl.RoutePlannerController          : making a route query: start = All Saints --> dest = King's Cross St. Pancras
-2019-11-20 14:26:46.262  INFO 10858 --- [http-nio-8080-exec-4] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
-2019-11-20 14:26:46.263  INFO 10858 --- [http-nio-8080-exec-4] c.r.client.service.TravelInfoService     : Journey Display:  
-Start  All Saints
-End    King's Cross St. Pancras
-From All Saints take the Docklands Light Railway to Bank for 5 stops.
-From Bank take the Northern to King's Cross St. Pancras for 4 stops.
-Changes = 1
-Total stops = 9
+Start  Angel
+End    Barking
+From Angel take the Northern to Moorgate for 2 stops.
+From Moorgate take the Circle to Liverpool Street for 1 stop.
+From Liverpool Street take the Central to Stratford for 3 stops.
+From Stratford take the Jubilee to West Ham for 1 stop.
+From West Ham take the District to Barking for 4 stops.
+Changes = 4
+Total stops = 11
 
 
-2019-11-20 14:26:49.565  INFO 10858 --- [http-nio-8080-exec-5] c.r.ctrl.RoutePlannerController          : making a route query: start = All Saints --> dest = Leyton
-2019-11-20 14:26:49.565  INFO 10858 --- [http-nio-8080-exec-5] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
-2019-11-20 14:26:49.565  INFO 10858 --- [http-nio-8080-exec-5] c.r.client.service.TravelInfoService     : Journey Display:  
-Start  All Saints
-End    Leyton
-From All Saints take the Docklands Light Railway to Stratford for 4 stops.
-From Stratford take the Central to Leyton for 1 stop.
-Changes = 1
-Total stops = 5
+Start  Angel
+End    Barking
+From Angel take the Northern to Moorgate for 2 stops.
+From Moorgate take the Hammersmith and City to Liverpool Street for 1 stop.
+From Liverpool Street take the Central to Stratford for 3 stops.
+From Stratford take the Jubilee to West Ham for 1 stop.
+From West Ham take the Hammersmith and City to Barking for 4 stops.
+Changes = 4
+Total stops = 11
 
 
-2019-11-20 14:26:52.508  INFO 10858 --- [http-nio-8080-exec-6] c.r.ctrl.RoutePlannerController          : making a route query: start = Balham --> dest = Leyton
-2019-11-20 14:26:52.509  INFO 10858 --- [http-nio-8080-exec-6] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
-2019-11-20 14:26:52.510  INFO 10858 --- [http-nio-8080-exec-6] c.r.client.service.TravelInfoService     : Journey Display:  
-Start  Balham
-End    Leyton
-From Balham take the Northern to Waterloo for 7 stops.
-From Waterloo take the Waterloo and City to Bank for 1 stop.
-From Bank take the Central to Leyton for 5 stops.
-Changes = 2
-Total stops = 13
+Start  Angel
+End    Barking
+From Angel take the Northern to Moorgate for 2 stops.
+From Moorgate take the Metropolitan to Liverpool Street for 1 stop.
+From Liverpool Street take the Central to Stratford for 3 stops.
+From Stratford take the Jubilee to West Ham for 1 stop.
+From West Ham take the Hammersmith and City to Barking for 4 stops.
+Changes = 4
+Total stops = 11
 
 
-2019-11-20 14:26:56.109  INFO 10858 --- [http-nio-8080-exec-7] c.r.ctrl.RoutePlannerController          : making a route query: start = Arnos Grove --> dest = Leyton
-2019-11-20 14:26:56.109  INFO 10858 --- [http-nio-8080-exec-7] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
-2019-11-20 14:26:56.111  INFO 10858 --- [http-nio-8080-exec-7] c.r.client.service.TravelInfoService     : Journey Display:  
-Start  Arnos Grove
-End    Leyton
-From Arnos Grove take the Piccadilly to Finsbury Park for 5 stops.
-From Finsbury Park take the Victoria to King's Cross St. Pancras for 2 stops.
-From King's Cross St. Pancras take the Hammersmith and City to Liverpool Street for 4 stops.
-From Liverpool Street take the Central to Leyton for 4 stops.
-Changes = 3
-Total stops = 15
+Start  Angel
+End    Barking
+From Angel take the Northern to Moorgate for 2 stops.
+From Moorgate take the Circle to Liverpool Street for 1 stop.
+From Liverpool Street take the Central to Stratford for 3 stops.
+From Stratford take the Jubilee to West Ham for 1 stop.
+From West Ham take the Hammersmith and City to Barking for 4 stops.
+Changes = 4
+Total stops = 11
 
 
-Start  Arnos Grove
-End    Leyton
-From Arnos Grove take the Piccadilly to Finsbury Park for 5 stops.
-From Finsbury Park take the Victoria to King's Cross St. Pancras for 2 stops.
-From King's Cross St. Pancras take the Metropolitan to Liverpool Street for 4 stops.
-From Liverpool Street take the Central to Leyton for 4 stops.
-Changes = 3
-Total stops = 15
-
-
-Start  Arnos Grove
-End    Leyton
-From Arnos Grove take the Piccadilly to Finsbury Park for 5 stops.
-From Finsbury Park take the Victoria to King's Cross St. Pancras for 2 stops.
-From King's Cross St. Pancras take the Circle to Liverpool Street for 4 stops.
-From Liverpool Street take the Central to Leyton for 4 stops.
-Changes = 3
-Total stops = 15
-
-
-2019-11-20 14:26:59.546  INFO 10858 --- [http-nio-8080-exec-8] c.r.ctrl.RoutePlannerController          : making a route query: start = Alperton --> dest = Leyton
-2019-11-20 14:26:59.547  INFO 10858 --- [http-nio-8080-exec-8] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
-2019-11-20 14:26:59.553  INFO 10858 --- [http-nio-8080-exec-8] c.r.client.service.TravelInfoService     : Journey Display:  
+2019-12-04 09:50:11.666  INFO 5289 --- [http-nio-8080-exec-6] c.r.ctrl.RoutePlannerController          : making a route query: start = Alperton --> dest = Becontree
+2019-12-04 09:50:11.667  INFO 5289 --- [http-nio-8080-exec-6] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-12-04 09:50:12.023  INFO 5289 --- [http-nio-8080-exec-6] c.r.client.service.TravelInfoService     : Journey Display:  
 Start  Alperton
-End    Leyton
+End    Becontree
 From Alperton take the Piccadilly to Green Park for 13 stops.
 From Green Park take the Jubilee to Waterloo for 2 stops.
 From Waterloo take the Waterloo and City to Bank for 1 stop.
-From Bank take the Central to Leyton for 5 stops.
-Changes = 3
-Total stops = 21
-
-
-2019-11-20 14:27:02.478  INFO 10858 --- [http-nio-8080-exec-9] c.r.ctrl.RoutePlannerController          : making a route query: start = Alperton --> dest = Marble Arch
-2019-11-20 14:27:02.479  INFO 10858 --- [http-nio-8080-exec-9] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
-2019-11-20 14:27:02.479  INFO 10858 --- [http-nio-8080-exec-9] c.r.client.service.TravelInfoService     : Journey Display:  
-Start  Alperton
-End    Marble Arch
-From Alperton take the Piccadilly to Earl's Court for 8 stops.
-From Earl's Court take the District to Notting Hill Gate for 2 stops.
-From Notting Hill Gate take the Central to Marble Arch for 3 stops.
-Changes = 2
-Total stops = 13
-
-
-Start  Alperton
-End    Marble Arch
-From Alperton take the Piccadilly to Hammersmith for 6 stops.
-From Hammersmith take the Hammersmith and City to Shepherd's Bush for 2 stops.
-From Shepherd's Bush take the Central to Marble Arch for 5 stops.
-Changes = 2
-Total stops = 13
-
-
-2019-11-20 14:27:13.257  INFO 10858 --- [http-nio-8080-exec-10] c.r.ctrl.RoutePlannerController          : making a route query: start = Alperton --> dest = New Cross Gate
-2019-11-20 14:27:13.257  INFO 10858 --- [http-nio-8080-exec-10] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
-2019-11-20 14:27:13.268  INFO 10858 --- [http-nio-8080-exec-10] c.r.client.service.TravelInfoService     : Journey Display:  
-Start  Alperton
-End    New Cross Gate
-From Alperton take the Piccadilly to Green Park for 13 stops.
-From Green Park take the Jubilee to Canada Water for 6 stops.
-From Canada Water take the East London to Surrey Quays for 1 stop.
-From Surrey Quays take the East London to New Cross Gate for 1 stop.
-Changes = 3
-Total stops = 21
-
-
-2019-11-20 14:27:16.592  INFO 10858 --- [http-nio-8080-exec-1] c.r.ctrl.RoutePlannerController          : making a route query: start = Alperton --> dest = Northolt
-2019-11-20 14:27:16.592  INFO 10858 --- [http-nio-8080-exec-1] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
-2019-11-20 14:27:16.593  INFO 10858 --- [http-nio-8080-exec-1] c.r.client.service.TravelInfoService     : Journey Display:  
-Start  Alperton
-End    Northolt
-From Alperton take the Piccadilly to Ealing Common for 3 stops.
-From Ealing Common take the District to Ealing Broadway for 1 stop.
-From Ealing Broadway take the Central to North Acton for 2 stops.
-From North Acton take the Central to Northolt for 4 stops.
-Changes = 3
-Total stops = 10
-
-
-2019-11-20 14:27:19.784  INFO 10858 --- [http-nio-8080-exec-2] c.r.ctrl.RoutePlannerController          : making a route query: start = Alperton --> dest = Oxford Circus
-2019-11-20 14:27:19.784  INFO 10858 --- [http-nio-8080-exec-2] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
-2019-11-20 14:27:19.785  INFO 10858 --- [http-nio-8080-exec-2] c.r.client.service.TravelInfoService     : Journey Display:  
-Start  Alperton
-End    Oxford Circus
-From Alperton take the Piccadilly to Rayners Lane for 4 stops.
-From Rayners Lane take the Metropolitan to Harrow-on-the-Hill for 2 stops.
-From Harrow-on-the-Hill take the Metropolitan to Baker Street for 5 stops.
-From Baker Street take the Bakerloo to Oxford Circus for 2 stops.
-Changes = 3
-Total stops = 13
-
-
-2019-11-20 14:27:23.629  INFO 10858 --- [http-nio-8080-exec-3] c.r.ctrl.RoutePlannerController          : making a route query: start = Angel --> dest = Oxford Circus
-2019-11-20 14:27:23.629  INFO 10858 --- [http-nio-8080-exec-3] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
-2019-11-20 14:27:23.629  INFO 10858 --- [http-nio-8080-exec-3] c.r.client.service.TravelInfoService     : Journey Display:  
-Start  Angel
-End    Oxford Circus
-From Angel take the Northern to Warren Street for 3 stops.
-From Warren Street take the Victoria to Oxford Circus for 1 stop.
-Changes = 1
-Total stops = 4
-
-
-Start  Angel
-End    Oxford Circus
-From Angel take the Northern to Euston for 2 stops.
-From Euston take the Victoria to Oxford Circus for 2 stops.
-Changes = 1
-Total stops = 4
-
-
-Start  Angel
-End    Oxford Circus
-From Angel take the Northern to King's Cross St. Pancras for 1 stop.
-From King's Cross St. Pancras take the Victoria to Oxford Circus for 3 stops.
-Changes = 1
-Total stops = 4
-
-
-2019-11-20 14:28:10.124  INFO 10858 --- [http-nio-8080-exec-4] c.r.ctrl.RoutePlannerController          : making a route query: start = Aldgate East --> dest = Amersham
-2019-11-20 14:28:10.125  INFO 10858 --- [http-nio-8080-exec-4] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
-2019-11-20 14:28:10.125  INFO 10858 --- [http-nio-8080-exec-4] c.r.client.service.TravelInfoService     : Journey Display:  
-Start  Aldgate East
-End    Amersham
-From Aldgate East take the Hammersmith and City to Liverpool Street for 1 stop.
-From Liverpool Street take the Central to Bank for 1 stop.
-From Bank take the Waterloo and City to Waterloo for 1 stop.
-From Waterloo take the Jubilee to Baker Street for 4 stops.
-From Baker Street take the Metropolitan to Chalfont and Latimer for 13 stops.
-From Chalfont and Latimer take the Metropolitan to Amersham for 1 stop.
+From Bank take the Central to Stratford for 4 stops.
+From Stratford take the Jubilee to West Ham for 1 stop.
+From West Ham take the District to Becontree for 6 stops.
 Changes = 5
-Total stops = 21
+Total stops = 27
 
 
-2019-11-20 14:28:26.675  INFO 10858 --- [http-nio-8080-exec-6] c.r.ctrl.RoutePlannerController          : making a route query: start = All Saints --> dest = Angel
-2019-11-20 14:28:26.675  INFO 10858 --- [http-nio-8080-exec-6] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
-2019-11-20 14:28:26.676  INFO 10858 --- [http-nio-8080-exec-6] c.r.client.service.TravelInfoService     : Journey Display:  
-Start  All Saints
-End    Angel
-From All Saints take the Docklands Light Railway to Bank for 5 stops.
-From Bank take the Northern to Angel for 3 stops.
+2019-12-04 09:52:57.239  INFO 5289 --- [http-nio-8080-exec-3] c.r.ctrl.RoutePlannerController          : making a route query: start = Angel --> dest = Blackfriars
+2019-12-04 09:52:57.240  INFO 5289 --- [http-nio-8080-exec-3] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-12-04 09:52:57.241  INFO 5289 --- [http-nio-8080-exec-3] c.r.client.service.TravelInfoService     : Journey Display:  
+Start  Angel
+End    Blackfriars
+From Angel take the Northern to Bank for 3 stops.
+From Bank take the Waterloo and City to Waterloo for 1 stop.
+From Waterloo take the Northern to Embankment for 1 stop.
+From Embankment take the District to Blackfriars for 2 stops.
+Changes = 3
+Total stops = 7
+
+
+Start  Angel
+End    Blackfriars
+From Angel take the Northern to Bank for 3 stops.
+From Bank take the Waterloo and City to Waterloo for 1 stop.
+From Waterloo take the Bakerloo to Embankment for 1 stop.
+From Embankment take the District to Blackfriars for 2 stops.
+Changes = 3
+Total stops = 7
+
+
+Start  Angel
+End    Blackfriars
+From Angel take the Northern to Bank for 3 stops.
+From Bank take the Waterloo and City to Waterloo for 1 stop.
+From Waterloo take the Northern to Embankment for 1 stop.
+From Embankment take the Circle to Blackfriars for 2 stops.
+Changes = 3
+Total stops = 7
+
+
+Start  Angel
+End    Blackfriars
+From Angel take the Northern to Bank for 3 stops.
+From Bank take the Waterloo and City to Waterloo for 1 stop.
+From Waterloo take the Bakerloo to Embankment for 1 stop.
+From Embankment take the Circle to Blackfriars for 2 stops.
+Changes = 3
+Total stops = 7
+
+
+2019-12-04 09:55:12.941  INFO 5289 --- [http-nio-8080-exec-8] c.r.ctrl.RoutePlannerController          : making a route query: start = Alperton --> dest = Beckton Park
+2019-12-04 09:55:12.941  INFO 5289 --- [http-nio-8080-exec-8] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-12-04 09:55:12.955  INFO 5289 --- [http-nio-8080-exec-8] c.r.client.service.TravelInfoService     : Journey Display:  
+Start  Alperton
+End    Beckton Park
+From Alperton take the Piccadilly to Green Park for 13 stops.
+From Green Park take the Jubilee to Canning Town for 9 stops.
+From Canning Town take the Docklands Light Railway to Beckton Park for 5 stops.
+Changes = 2
+Total stops = 27
+
+
+2019-12-04 09:55:53.025  INFO 5289 --- [http-nio-8080-exec-10] c.r.ctrl.RoutePlannerController          : making a route query: start = Angel --> dest = Blackwall
+2019-12-04 09:55:53.025  INFO 5289 --- [http-nio-8080-exec-10] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-12-04 09:55:53.025  INFO 5289 --- [http-nio-8080-exec-10] c.r.client.service.TravelInfoService     : Journey Display:  
+Start  Angel
+End    Blackwall
+From Angel take the Northern to Bank for 3 stops.
+From Bank take the Docklands Light Railway to Poplar for 4 stops.
+From Poplar take the Docklands Light Railway to Blackwall for 1 stop.
+Changes = 2
+Total stops = 8
+
+
+2019-12-04 09:56:18.335  INFO 5289 --- [http-nio-8080-exec-2] c.r.ctrl.RoutePlannerController          : making a route query: start = Alperton --> dest = Beckton
+2019-12-04 09:56:18.335  INFO 5289 --- [http-nio-8080-exec-2] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-12-04 09:56:18.349  INFO 5289 --- [http-nio-8080-exec-2] c.r.client.service.TravelInfoService     : Journey Display:  
+Start  Alperton
+End    Beckton
+From Alperton take the Piccadilly to Green Park for 13 stops.
+From Green Park take the Jubilee to Canning Town for 9 stops.
+From Canning Town take the Docklands Light Railway to Beckton for 8 stops.
+Changes = 2
+Total stops = 30
+
+
+2019-12-04 09:57:11.545  INFO 5289 --- [http-nio-8080-exec-4] c.r.ctrl.RoutePlannerController          : making a route query: start = Aldgate East --> dest = Arsenal
+2019-12-04 09:57:11.545  INFO 5289 --- [http-nio-8080-exec-4] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-12-04 09:57:11.545  INFO 5289 --- [http-nio-8080-exec-4] c.r.client.service.TravelInfoService     : Journey Display:  
+Start  Aldgate East
+End    Arsenal
+From Aldgate East take the Hammersmith and City to King's Cross St. Pancras for 5 stops.
+From King's Cross St. Pancras take the Piccadilly to Arsenal for 3 stops.
 Changes = 1
 Total stops = 8
 
 
-2019-11-20 14:49:24.933  INFO 10858 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-11-20 14:49:24.938  INFO 10858 --- [Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-11-20 14:49:24.945  INFO 10858 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2019-11-20 14:49:24.962  INFO 10858 --- [Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-04 10:05:38.411  INFO 5289 --- [http-nio-8080-exec-10] c.r.ctrl.RoutePlannerController          : making a route query: start = Alperton --> dest = Barkingside
+2019-12-04 10:05:38.412  INFO 5289 --- [http-nio-8080-exec-10] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-12-04 10:05:38.415  INFO 5289 --- [http-nio-8080-exec-10] c.r.client.service.TravelInfoService     : Journey Display:  
+Start  Alperton
+End    Barkingside
+From Alperton take the Piccadilly to Green Park for 13 stops.
+From Green Park take the Jubilee to Waterloo for 2 stops.
+From Waterloo take the Waterloo and City to Bank for 1 stop.
+From Bank take the Central to Leytonstone for 6 stops.
+From Leytonstone take the Central to Barkingside for 5 stops.
+Changes = 4
+Total stops = 27
+
+
+2019-12-04 10:05:56.500  INFO 5289 --- [http-nio-8080-exec-1] c.r.ctrl.RoutePlannerController          : making a route query: start = Bank --> dest = Barons Court
+2019-12-04 10:05:56.500  INFO 5289 --- [http-nio-8080-exec-1] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-12-04 10:05:56.501  INFO 5289 --- [http-nio-8080-exec-1] c.r.client.service.TravelInfoService     : Journey Display:  
+Start  Bank
+End    Barons Court
+From Bank take the Waterloo and City to Waterloo for 1 stop.
+From Waterloo take the Jubilee to Green Park for 2 stops.
+From Green Park take the Piccadilly to Barons Court for 6 stops.
+Changes = 2
+Total stops = 9
+
+
+2019-12-04 10:23:58.331  INFO 5289 --- [http-nio-8080-exec-3] c.r.ctrl.RoutePlannerController          : making a route query: start = All Saints --> dest = Bayswater
+2019-12-04 10:23:58.332  INFO 5289 --- [http-nio-8080-exec-3] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-12-04 10:23:58.332  INFO 5289 --- [http-nio-8080-exec-3] c.r.client.service.TravelInfoService     : Journey Display:  
+Start  All Saints
+End    Bayswater
+From All Saints take the Docklands Light Railway to Bank for 5 stops.
+From Bank take the Waterloo and City to Waterloo for 1 stop.
+From Waterloo take the Jubilee to Baker Street for 4 stops.
+From Baker Street take the Circle to Bayswater for 3 stops.
+Changes = 3
+Total stops = 13
+
+
+2019-12-04 10:24:10.786  INFO 5289 --- [http-nio-8080-exec-4] c.r.ctrl.RoutePlannerController          : making a route query: start = Aldgate East --> dest = Arsenal
+2019-12-04 10:24:10.786  INFO 5289 --- [http-nio-8080-exec-4] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-12-04 10:24:10.787  INFO 5289 --- [http-nio-8080-exec-4] c.r.client.service.TravelInfoService     : Journey Display:  
+Start  Aldgate East
+End    Arsenal
+From Aldgate East take the Hammersmith and City to King's Cross St. Pancras for 5 stops.
+From King's Cross St. Pancras take the Piccadilly to Arsenal for 3 stops.
+Changes = 1
+Total stops = 8
+
+
+2019-12-04 10:44:29.521  WARN 5289 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=12m38s372ms).
+2019-12-04 11:01:19.041  INFO 5289 --- [http-nio-8080-exec-6] c.r.ctrl.RoutePlannerController          : making a route query: start = Aldgate East --> dest = Barking
+2019-12-04 11:01:19.043  INFO 5289 --- [http-nio-8080-exec-6] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-12-04 11:01:19.043  INFO 5289 --- [http-nio-8080-exec-6] c.r.client.service.TravelInfoService     : Journey Display:  
+Start  Aldgate East
+End    Barking
+From Aldgate East take the Hammersmith and City to Liverpool Street for 1 stop.
+From Liverpool Street take the Central to Stratford for 3 stops.
+From Stratford take the Jubilee to West Ham for 1 stop.
+From West Ham take the District to Barking for 4 stops.
+Changes = 3
+Total stops = 9
+
+
+Start  Aldgate East
+End    Barking
+From Aldgate East take the District to Mile End for 3 stops.
+From Mile End take the Central to Stratford for 1 stop.
+From Stratford take the Jubilee to West Ham for 1 stop.
+From West Ham take the District to Barking for 4 stops.
+Changes = 3
+Total stops = 9
+
+
+Start  Aldgate East
+End    Barking
+From Aldgate East take the Hammersmith and City to Mile End for 3 stops.
+From Mile End take the Central to Stratford for 1 stop.
+From Stratford take the Jubilee to West Ham for 1 stop.
+From West Ham take the District to Barking for 4 stops.
+Changes = 3
+Total stops = 9
+
+
+Start  Aldgate East
+End    Barking
+From Aldgate East take the Hammersmith and City to Liverpool Street for 1 stop.
+From Liverpool Street take the Central to Stratford for 3 stops.
+From Stratford take the Jubilee to West Ham for 1 stop.
+From West Ham take the Hammersmith and City to Barking for 4 stops.
+Changes = 3
+Total stops = 9
+
+
+Start  Aldgate East
+End    Barking
+From Aldgate East take the District to Mile End for 3 stops.
+From Mile End take the Central to Stratford for 1 stop.
+From Stratford take the Jubilee to West Ham for 1 stop.
+From West Ham take the Hammersmith and City to Barking for 4 stops.
+Changes = 3
+Total stops = 9
+
+
+Start  Aldgate East
+End    Barking
+From Aldgate East take the Hammersmith and City to Mile End for 3 stops.
+From Mile End take the Central to Stratford for 1 stop.
+From Stratford take the Jubilee to West Ham for 1 stop.
+From West Ham take the Hammersmith and City to Barking for 4 stops.
+Changes = 3
+Total stops = 9
+
+
+2019-12-04 11:02:51.432  INFO 5289 --- [http-nio-8080-exec-8] c.r.ctrl.RoutePlannerController          : making a route query: start = Angel --> dest = Barons Court
+2019-12-04 11:02:51.433  INFO 5289 --- [http-nio-8080-exec-8] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-12-04 11:02:51.445  INFO 5289 --- [http-nio-8080-exec-8] c.r.client.service.TravelInfoService     : Journey Display:  
+Start  Angel
+End    Barons Court
+From Angel take the Northern to Warren Street for 3 stops.
+From Warren Street take the Victoria to Green Park for 2 stops.
+From Green Park take the Piccadilly to Barons Court for 6 stops.
+Changes = 2
+Total stops = 11
+
+
+Start  Angel
+End    Barons Court
+From Angel take the Northern to Euston for 2 stops.
+From Euston take the Victoria to Green Park for 3 stops.
+From Green Park take the Piccadilly to Barons Court for 6 stops.
+Changes = 2
+Total stops = 11
+
+
+Start  Angel
+End    Barons Court
+From Angel take the Northern to King's Cross St. Pancras for 1 stop.
+From King's Cross St. Pancras take the Victoria to Green Park for 4 stops.
+From Green Park take the Piccadilly to Barons Court for 6 stops.
+Changes = 2
+Total stops = 11
+
+
+2019-12-04 11:03:30.224  INFO 5289 --- [http-nio-8080-exec-9] c.r.ctrl.RoutePlannerController          : making a route query: start = Alperton --> dest = Baker Street
+2019-12-04 11:03:30.224  INFO 5289 --- [http-nio-8080-exec-9] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-12-04 11:03:30.224  INFO 5289 --- [http-nio-8080-exec-9] c.r.client.service.TravelInfoService     : Journey Display:  
+Start  Alperton
+End    Baker Street
+From Alperton take the Piccadilly to Rayners Lane for 4 stops.
+From Rayners Lane take the Metropolitan to Harrow-on-the-Hill for 2 stops.
+From Harrow-on-the-Hill take the Metropolitan to Baker Street for 5 stops.
+Changes = 2
+Total stops = 11
+
+
+2019-12-04 11:15:33.265  INFO 5289 --- [http-nio-8080-exec-9] c.r.ctrl.RoutePlannerController          : making a route query: start = Alperton --> dest = Arsenal
+2019-12-04 11:15:33.266  INFO 5289 --- [http-nio-8080-exec-9] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-12-04 11:15:33.266  INFO 5289 --- [http-nio-8080-exec-9] c.r.client.service.TravelInfoService     : Journey Display:  
+Start  Alperton
+End    Arsenal
+From Alperton take the Piccadilly to Rayners Lane for 4 stops.
+From Rayners Lane take the Metropolitan to Harrow-on-the-Hill for 2 stops.
+From Harrow-on-the-Hill take the Metropolitan to King's Cross St. Pancras for 8 stops.
+From King's Cross St. Pancras take the Piccadilly to Arsenal for 3 stops.
+Changes = 3
+Total stops = 17
+
+
+2019-12-04 11:40:32.343  INFO 5289 --- [http-nio-8080-exec-2] c.r.ctrl.RoutePlannerController          : making a route query: start = Angel --> dest = Arsenal
+2019-12-04 11:40:32.344  INFO 5289 --- [http-nio-8080-exec-2] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-12-04 11:40:32.344  INFO 5289 --- [http-nio-8080-exec-2] c.r.client.service.TravelInfoService     : Journey Display:  
+Start  Angel
+End    Arsenal
+From Angel take the Northern to King's Cross St. Pancras for 1 stop.
+From King's Cross St. Pancras take the Piccadilly to Arsenal for 3 stops.
+Changes = 1
+Total stops = 4
+
+
+2019-12-04 11:40:49.431  INFO 5289 --- [http-nio-8080-exec-3] c.r.ctrl.RoutePlannerController          : making a route query: start = Bank --> dest = Beckton
+2019-12-04 11:40:49.432  INFO 5289 --- [http-nio-8080-exec-3] com.routeplanner.engine.RoutePlanner     : Route Planner has been set up successfully......
+2019-12-04 11:40:49.432  INFO 5289 --- [http-nio-8080-exec-3] c.r.client.service.TravelInfoService     : Journey Display:  
+Start  Bank
+End    Beckton
+From Bank take the Northern to London Bridge for 1 stop.
+From London Bridge take the Jubilee to Canning Town for 5 stops.
+From Canning Town take the Docklands Light Railway to Beckton for 8 stops.
+Changes = 2
+Total stops = 14
+
+
+Start  Bank
+End    Beckton
+From Bank take the Central to Stratford for 4 stops.
+From Stratford take the Jubilee to Canning Town for 2 stops.
+From Canning Town take the Docklands Light Railway to Beckton for 8 stops.
+Changes = 2
+Total stops = 14
+
+

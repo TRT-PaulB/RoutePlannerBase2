@@ -1,6 +1,7 @@
 import Form from "../common/form";
 import React, { Component } from "react";
 import Joi from "joi";
+import { getAllStations, determineRoute } from "../services/routePlannerService";
 
 class RoutePlanner extends Form {
   state = {
@@ -11,8 +12,6 @@ class RoutePlanner extends Form {
     stationList: [],
     successfulLastSearch: false,
     routeQuery: {
-      currRouteStart: "",
-      currRouteDest: "",
       routeInfo: ""
     },
     errors: {},
@@ -21,21 +20,18 @@ class RoutePlanner extends Form {
   schema = {
     _id: Joi.string(),
     start: Joi.string()
-      .required()
-      .label("Start"),
+      .required(),
     destination: Joi.string()
       .required()
-      .label("Destination"),
   };
 
   async componentDidMount() {
-    await fetch('/route/stations').then(response => response.json())
-             .then(stationList => this.setState({stationList}) );
+    await getAllStations().then(response => response.json())
+                .then(stationList => this.setState({stationList}) );
   }
 
-
   async findRoute(start, destination) {
-      await fetch('/route/' + start + '/' + destination)
+      await determineRoute(start, destination)
       .then(response => response.json())
       .then(data => this.setState({routeQuery: data, successfulLastSearch: true}));
   }
@@ -53,11 +49,9 @@ class RoutePlanner extends Form {
     console.log("destination = ", destination);
     console.log("route info = ", routeInfo);
     console.log("successful last search = ", successfulLastSearch);
+    console.log("TODO: PERSIST BASKET HERE");
 
-    // TODO: SAVE TO BAS~ket HERE........... 
-
-    //window.location = "/view_basket/" + start + "/" + destination + "";
-    window.location = "/view_basket";
+    window.location = "/view_basket/" + start + "/" + destination;
   };
 
   render() {

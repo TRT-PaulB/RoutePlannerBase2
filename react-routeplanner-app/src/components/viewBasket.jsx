@@ -4,26 +4,27 @@ import Joi from "joi";
 
 class ViewBasket extends Form {
   state = {
-    routeQuery: {
+    data: {
       start: "",
       destination: ""
-    }
+    },
+    errors: {}
   };
 
   schema = {
-    // _id: Joi.string(),
-    // start: Joi.string()
-    //   .required()
-    //   .label("Start"),
-    // destination: Joi.string()
-    //   .required()
-    //   .label("Destination")
+    _id: Joi.string(),
+    start: Joi.string()
+      .required()
   };
 
   async componentDidMount() {
     const { start, destination } = this.props.match.params;
-    const routeQuery = { start, destination };
-    this.setState({ routeQuery });
+
+    console.log("start = " + start); 
+    console.log("destination = " + destination); 
+
+    const data = { start, destination };
+    this.setState({ data });
   }
 
   doSubmit = () => {
@@ -32,7 +33,6 @@ class ViewBasket extends Form {
 
   handleProceedToCheckout = () => {
     console.log("proceeding to checkout....");
-    //window.location = "/contact_details";
     this.props.history.push("/contact_details");
   };
 
@@ -42,20 +42,29 @@ class ViewBasket extends Form {
   };
 
   render() {
-    const { start, destination } = this.state.routeQuery;
+    const { start, destination } = this.state.data;
+
+    console.log("render start = " + start); 
+    console.log("redner destination = " + destination); 
 
     return (
       <React.Fragment>
         <form onSubmit={this.handleSubmit} className="main-content">
           <div className="dataBox">
             <h1>
-              Add New Ticket for trains from {start} to {destination}
+              Add New Ticket for trains 
             </h1>
+            {this.renderInput("start", "Start", true, "text", "300px")}
           </div>
           <div className="col">
             {this.renderButton("Add Ticket", "btn btn-primary m-4")}
           </div>
         </form>
+
+
+
+
+
         <br />
         <br />
         <br />

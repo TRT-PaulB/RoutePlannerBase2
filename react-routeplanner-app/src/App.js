@@ -40,7 +40,7 @@ class App extends Component {
             <Route path="/register" exact component={RegisterForm} />
             <Route path="/route_planner" exact component={RoutePlanner} />
             <Route
-              path="/view_basket"
+              path="/view_basket/:start?/:destination?"
               exact
               component={ViewBasket}
             />
